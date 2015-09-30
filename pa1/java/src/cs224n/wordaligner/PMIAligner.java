@@ -69,7 +69,7 @@ public class PMIAligner implements WordAligner {
     	}
     }
   }
-     
+       
   public double scoreAlignment(String sWord, String tWord) {
   	double sCount = sourceCounts.getCount(sWord) + 1;
   	double tCount = targetCounts.getCount(tWord) + 1;
