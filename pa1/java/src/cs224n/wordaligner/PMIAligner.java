@@ -49,6 +49,11 @@ public class PMIAligner implements WordAligner {
   }
 
   public void train(List<SentencePair> trainingPairs) {
+    // initialize global counters
+    sourceTargetCounts = new CounterMap<String,String>();
+    sourceCounts = new Counter<String>();
+    targetCounts = new Counter<String>();
+    
     List<String> sourceWords;
     List<String> targetWords;
   	
