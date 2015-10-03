@@ -97,4 +97,8 @@ public class IBMModel1Aligner implements WordAligner {
 		  }
 	  }
   }
+  
+  public CounterMap<String,String> getTransProb() {
+  	return transProb;
+  }
 }
