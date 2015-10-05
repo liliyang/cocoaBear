@@ -78,9 +78,11 @@ public class IBMModel2Aligner implements WordAligner {
 
 	  // iterate 
 	  List<String> sourceWords, targetWords;
-	  double sum = 0.0;
-	  double prob;
-	  for (int k = 0; k < 100; k++){
+	  double sum = 0.0, delta = 1.0;
+	  double prob, newDelta;
+	  int k = 0;
+	  while (delta > 0.005){
+	  	k++;
 	  	for (SentencePair p : trainingPairs) {
 	  		sourceWords = p.getSourceWords();
 	  		targetWords = p.getTargetWords();
@@ -107,6 +109,7 @@ public class IBMModel2Aligner implements WordAligner {
 		  Counter<String> sCounter;
 		  double dCountTotal;
 		  Counter<Integer> dCounter;
+		  delta = 0.0;
 		  for (String tWord: transProb.keySet()){
 			  sCounter = transProb.getCounter(tWord);
 			  sCountTotal = countAlignment.getCounter(tWord).totalCount();
@@ -118,9 +121,15 @@ public class IBMModel2Aligner implements WordAligner {
 		  	dCounter = distortion.getCounter(base);
 		  	dCountTotal = countDistortion.getCounter(base).totalCount();
 		  	for (Integer j: dCounter.keySet()){
-		  		distortion.setCount(base, j, countDistortion.getCount(base, j) / dCountTotal);
+		  		prob = countDistortion.getCount(base, j) / dCountTotal;
+			  	newDelta = Math.abs(distortion.getCount(base, j) - prob);
+			  	if (newDelta > delta) {
+			  		delta = newDelta;
+			  	}
+		  		distortion.setCount(base, j, prob);
 		  	}
 		  }
+		  System.out.println("Iteration " + k + " Max Delta: " + delta);
 	  }
   }
 }
