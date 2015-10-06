@@ -80,7 +80,7 @@ public class IBMModel2Aligner implements WordAligner {
 	  List<String> sourceWords, targetWords;
 	  double sum = 0.0;
 	  double prob;
-	  for (int k = 0; k < 100; k++){
+	  for (int k = 0; k < 80; k++){
 	  	for (SentencePair p : trainingPairs) {
 	  		sourceWords = p.getSourceWords();
 	  		targetWords = p.getTargetWords();

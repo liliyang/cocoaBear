@@ -67,7 +67,7 @@ public class IBMModel1Aligner implements WordAligner {
 	  }
 
 	// iterate 
-	  for (int i = 0; i < 100; i++){
+	  for (int i = 0; i < 80; i++){
 		  for (SentencePair p : trainingPairs) {
 			  sourceWords = p.getSourceWords();
 			  targetWords = p.getTargetWords();
