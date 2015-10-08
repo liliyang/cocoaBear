@@ -1,0 +1,3246 @@
+/// CS224n Word Alignment Tester ///
+Language: french
+Data path: /afs/ir/class/cs224n/data/pa1//french
+Evaluation set: test
+Using up to 10000 training sentences.
+Training set size: 10000
+Evaluation set size: 111
+Model: cs224n.wordaligner.IBMModel2Aligner
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.36385382392941745
+Iteration 3 Max Delta: 0.2977450802347856
+Iteration 4 Max Delta: 0.1804971877289262
+Iteration 5 Max Delta: 0.12133121713410489
+Iteration 6 Max Delta: 0.10478845780095913
+Iteration 7 Max Delta: 0.08042283866719302
+Iteration 8 Max Delta: 0.06750558939918505
+Iteration 9 Max Delta: 0.056066062898603886
+Iteration 10 Max Delta: 0.05696610884863816
+Iteration 11 Max Delta: 0.051546324783325465
+Iteration 12 Max Delta: 0.053060007107887955
+Iteration 13 Max Delta: 0.04934116473454264
+Iteration 14 Max Delta: 0.04279884065332143
+Iteration 15 Max Delta: 0.034749149808078444
+Iteration 16 Max Delta: 0.03070922011390742
+Iteration 17 Max Delta: 0.02788415675112929
+Iteration 18 Max Delta: 0.027460286395466493
+Iteration 19 Max Delta: 0.025035198386337776
+Iteration 20 Max Delta: 0.021893024320049505
+Iteration 21 Max Delta: 0.025985473247956345
+Iteration 22 Max Delta: 0.030386093305844672
+Iteration 23 Max Delta: 0.028790392893033298
+Iteration 24 Max Delta: 0.023390869955442928
+Iteration 25 Max Delta: 0.019483736975542454
+Iteration 26 Max Delta: 0.01766211834872547
+Iteration 27 Max Delta: 0.017602463923022865
+Iteration 28 Max Delta: 0.015359609038563343
+Iteration 29 Max Delta: 0.012313920644572152
+Iteration 30 Max Delta: 0.01153643137751481
+Iteration 31 Max Delta: 0.011357651836951602
+Iteration 32 Max Delta: 0.010576374109279266
+Iteration 33 Max Delta: 0.012640449007005424
+Iteration 34 Max Delta: 0.01914748207339263
+Iteration 35 Max Delta: 0.019405694182355618
+Iteration 36 Max Delta: 0.013865331325655345
+Iteration 37 Max Delta: 0.009220066932527325
+Iteration 38 Max Delta: 0.009490119751312254
+Iteration 39 Max Delta: 0.009294746847045142
+Iteration 40 Max Delta: 0.008714963885770546
+Iteration 41 Max Delta: 0.007890781810357003
+Iteration 42 Max Delta: 0.0069679420980229
+Iteration 43 Max Delta: 0.006060075730223741
+Iteration 44 Max Delta: 0.008275544077797901
+Iteration 45 Max Delta: 0.010282131090035194
+Iteration 46 Max Delta: 0.010555895653761013
+Iteration 47 Max Delta: 0.00910616906491201
+Iteration 48 Max Delta: 0.006980629436216301
+Iteration 49 Max Delta: 0.006742907207086892
+Iteration 50 Max Delta: 0.007855566522457811
+Iteration 51 Max Delta: 0.008382684697413725
+Iteration 52 Max Delta: 0.00819079939618448
+Iteration 53 Max Delta: 0.00740066471843729
+Iteration 54 Max Delta: 0.006291740923358172
+Iteration 55 Max Delta: 0.005139068059765578
+Iteration 56 Max Delta: 0.0047895689197441655
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.5209127444923817
+Iteration 3 Max Delta: 0.39715452045253996
+Iteration 4 Max Delta: 0.33588670244318
+Iteration 5 Max Delta: 0.35375244930353045
+Iteration 6 Max Delta: 0.32971428348937415
+Iteration 7 Max Delta: 0.3872522326371856
+Iteration 8 Max Delta: 0.23426643522161084
+Iteration 9 Max Delta: 0.2561200284621547
+Iteration 10 Max Delta: 0.3220819693349424
+Iteration 11 Max Delta: 0.5204771075309391
+Iteration 12 Max Delta: 0.3146592847687806
+Iteration 13 Max Delta: 0.38259204952284315
+Iteration 14 Max Delta: 0.32127436099093454
+Iteration 15 Max Delta: 0.29936564432197477
+Iteration 16 Max Delta: 0.3430410291756393
+Iteration 17 Max Delta: 0.32558845743215126
+Iteration 18 Max Delta: 0.24327245782189105
+Iteration 19 Max Delta: 0.3161024645621153
+Iteration 20 Max Delta: 0.22010272948694865
+Iteration 21 Max Delta: 0.250751661876417
+Iteration 22 Max Delta: 0.2712194215011332
+Iteration 23 Max Delta: 0.22481810280321324
+Iteration 24 Max Delta: 0.1593288022275524
+Alignment:
+[#]   | 2
+   [#]| .
+------'
+ 2  . 
+
+Alignment:
+[#]   | 2
+   [#]| .
+------'
+ 2  . 
+
+Alignment:
+[#]         | oh
+   [#]      | ,
+      [#]   | oh
+         [#]| !
+------------'
+ o  ,  o  ! 
+ h     h    
+
+Alignment:
+[#]         | oh
+   [#]      | ,
+      [#]   | oh
+         [#]| !
+------------'
+ o  ,  o  ! 
+ h     h    
+
+Alignment:
+[#]         | oh
+   [#]      | ,
+      [#]   | oh
+         [#]| !
+------------'
+ o  ,  o  ! 
+ h     h    
+
+Alignment:
+( )   [ ]                                     #             | souvenons
+ #                                                          | -
+   [#]                                                      | nous
+         [#]                                                | ,
+            [#]                                             | monsieur
+               ( )                         #                | le
+               [ ]          #                               | Orateur
+                  [#]                                       | ,
+                     [#]                                    | que
+                      #                                     | ce
+                            #                               | sont
+                        [#]                                 | ces
+                           [#]                              | secteurs
+                              [#]                           | de
+                                 [#]                        | notre
+                                    [#]                     | soci?t?
+                                        #                   | qui
+                                       ( )    #             | servent
+                               #       ( )( )               | de
+                                             [#]            | ?pine
+                                             [#]            | dorsale
+                         #                      [ ]         | ?
+                                                   [#]      | notre
+                                                      [#]   | ?conomie
+                                                         [#]| .
+------------------------------------------------------------'
+ l  u  r  ,  M  S  ,  t  t  s  o  o  s  f  t  b  o  o  e  . 
+ e  s  e     r  p     h  h  e  f  u  o  o  h  a  f  u  c    
+ t     m     .  e     a  e  g     r  c  r  e  c     r  o    
+       e        a     t  s  m        i  m     k        n    
+       m        k        e  e        e        b        o    
+       b        e           n        t        o        m    
+       e        r           t        y        n        y    
+       r                    s                 e             
+
+Alignment:
+(#)( )( )   | bravo
+ #       [ ]| !
+------------'
+ h  ,  h  ! 
+ e     e    
+ a     a    
+ r     r    
+
+Alignment:
+(#)( )( )   | bravo
+ #       [ ]| !
+------------'
+ h  ,  h  ! 
+ e     e    
+ a     a    
+ r     r    
+
+Alignment:
+[#]                                    | monsieur
+   (#)                                 | le
+   [ ]             #                   | Orateur
+      [#]                              | ,
+         [#]                           | ma
+            [#]                        | question
+               ( )(#)                  | se
+               ( )(#)                  | adresse
+                     [#]               | ?
+                        [#]            | le
+                           [#]         | ministre
+                   #                   | charg?
+                              [#]      | de
+                              ( )(#)   | les
+                   #             [ ]   | transports
+                                    [#]| .
+---------------------------------------'
+ M  S  ,  m  q  i  d  t  t  M  o  T  . 
+ r  p     y  u  s  i  o  h  i  f  r    
+ .  e        e     r     e  n     a    
+    a        s     e        i     n    
+    k        t     c        s     s    
+    e        i     t        t     p    
+    r        o     e        e     o    
+             n     d        r     r    
+                                  t    
+
+Alignment:
+[ ]                   #                   | tous
+[#]                                       | deux
+   [ ]                            #       | poss?dent
+   ( )(#)                                 | de
+      [#]                                 | nombreuses
+         [#]                              | ann?es
+         ( )( )                      #    | de
+            [#]                           | exp?rience
+               [#]                        | dans
+                  [ ] #                   | la
+                     [ ]          #       | fabrication
+                        [#]               | et
+                      #    ( )            | la
+                           [#]            | distribution
+                              [#]         | de
+                              ( )   (#)   | les
+                                    [#]   | produits
+                                 [#]      | forestiers
+                                       [#]| .
+------------------------------------------'
+ b  h  m  y  e  i  t  m  a  d  o  f  p  . 
+ o  a  a  e  x  n  h  a  n  i  f  o  r    
+ t  v  n  a  p     e  n  d  s     r  o    
+ h  e  y  r  e        u     t     e  d    
+          s  r        f     r     s  u    
+             i        a     i     t  c    
+             e        c     b        t    
+             n        t     u        s    
+             c        u     t             
+             e        r     i             
+                      e     o             
+                            n             
+
+Alignment:
+[#]   | 1
+   [#]| .
+------'
+ 1  . 
+
+Alignment:
+      [#]( )( )( )( )                                             | je
+      ( )( )(#)( )( )                                             | voudrais
+( )( )                               #                            | aussi
+      ( )( )( )( )( )                #                            | parler
+      ( )( )( )( )( )          #                                  | de
+                        [ ]       #                               | le
+                           [#]                                    | droit
+                              [#]                                 | de
+                         #       [ ]                              | le
+                                    [#]                           | fournisseur
+                               #       [ ]                        | de
+                                          [#]                     | choisir
+                                             [#]                  | ses
+                                                [#]               | clients
+                #                                  ( )( )( )( )   | ?
+                                              #    ( )( )( )( )   | son
+                                     #             ( )( )( )( )   | gr?
+                                                               [#]| .
+------------------------------------------------------------------'
+ a  p  I  s  l  t  d  i  t  r  o  t  s  t  c  h  c  a  h  s  f  . 
+ n  o     h  i  o  i  s  h  i  f  h  u  o  h  i  u  s  e  e  i    
+ o  i     o  k     s     e  g     e  p     o  s  s        e  t    
+ t  n     u  e     c        h        p     o     t        s       
+ h  t     l        u        t        l     s     o                
+ e        d        s                 i     e     m                
+ r                 s                 e           e                
+                                     r           r                
+                                                 s                
+
+Alignment:
+[#]( )( )( )( )( )( )                                                   | je
+( )( )(#)( )( )( )( )                                                   | en
+( )( )( )( )( )( )( )                   #                               | ai
+( )( )( )( )( )(#)( )                                                   | assez
+( )( )( )( )( )( )( )                            #                      | de
+                                        #                               | voir
+       #                                                                | que
+          #          ( )                                                | les
+                     [#]                                                | ministres
+                           [#]                                          | semblent
+                              ( )( )( )(#)( )( )                        | ?prouver
+                              ( )( )(#)( )( )( )                        | certains
+                              ( )( )( )(#)( )( )                        | complexes
+                                                ( )    #                | ?
+                                                   ( )    #             | le
+                                                   [#]                  | ?gard
+                                     #                [ ]               | de
+                                                         [#]            | la
+                                                               [#][ ]   | n?gociation
+                                                            [#]         | collective
+                                                                     [#]| .
+------------------------------------------------------------------------'
+ i  a  g  s  a  t  o  m  w  s  t  h  s  h  -  u  w  r  t  t  c  b  p  . 
+    m  e  i  n  i  f  i  h  e  o  a  o  a     p  i  e  o  h  o  a  r    
+       t  c  d  r     n  o  e     v  m  n        t  g     e  l  r  o    
+       t  k     e     i     m     e  e  g        h  a        l  g  c    
+       i        d     s                             r        e  a  e    
+       n              t                             d        c  i  s    
+       g              e                                      t  n  s    
+                      r                                      i  i       
+                      s                                      v  n       
+                                                             e  g       
+
+Alignment:
+                        [#]                                             | je
+                           ( )(#)                                       | voudrais
+                #                ( )[ ]( )                              | commenter
+         [#]                                                            | un
+                # ( )                                                   | autre
+               [#]                                                      | point
+            [ ] #                                                       | particulier
+                                                            [#]         | ,
+                                                               [#]      | monsieur
+                                                                  (#)   | le
+                #                                                 [ ]   | Orateur
+                                                             #          | ,
+                #                            ( )( )( )( )( )            | avant
+                                  #          ( )( )( )( )( )            | de
+             #                               ( )( )( )( )( )            | me
+                #                            ( )( )( )( )( )            | taire
+                                                                     [#]| .
+------------------------------------------------------------------------'
+ t  i  j  o  s  i  m  t  I  w  l  t  c  u  a  t  I  w  s  d  ,  M  S  . 
+ h  s  u  n  p  t  o  h     o  i  o  o  p  n  h     i  i  o     r  p    
+ e     s  e  e  e  r  a     u  k     m  o  d  e     l  t  w     .  e    
+ r     t     c  m  e  t     l  e     m  n     n     l     n        a    
+ e           i              d        e                             k    
+             f                       n                             e    
+             i                       t                             r    
+             c                                                          
+
+Alignment:
+(#)( )( )   | a
+(#)( )( )   | le
+[#]( )( )   | ordre
+         [#]| .
+------------'
+ o  ,  p  . 
+ r     l    
+ d     e    
+ e     a    
+ r     s    
+       e    
+
+Alignment:
+[#]   | 3
+   [#]| .
+------'
+ 3  . 
+
+Alignment:
+( )( )( )(#)( )                                                      | il
+               [ ]                                        #          | ne
+( )( )(#)( )( )                                                      | y
+( )( )(#)( )( )                                                      | a
+               [#]                                                   | pas
+( )( )( )( )( )( )                            #                      | de
+                  [#]                                                | meilleure
+                     [#]                                             | autorit?
+                   #    [ ]                                          | en
+                           [ ]       #                               | la
+                              [ ]                               #    | mati?re
+                                 [#]                                 | que
+                                    [#]                              | le
+                                       ( )(#)                        | d?put?
+                                             [#]                     | de
+                                                [#]                  | Don
+                                                   [#]               | Valley
+                                                      [#]            | ,
+                #                                        [ ]         | non
+                                                         [#]         | pas
+                                                               [#]   | moi
+                                                            [ ] #    | exclusivement
+                                                                  [#]| .
+---------------------------------------------------------------------'
+ i  c  r  h  t  n  b  a  o  t  s  t  t  h  m  f  D  V  ,  n  j  m  . 
+    a  e  i  o  o  e  u  n  h  u  h  h  o  e  o  o  a     o  u  y    
+    n  f  m        t  t     e  b  a  e  n  m  r  n  l     t  s  s    
+       e           t  h        j  n     .  b        l        t  e    
+       r           e  o        e           e        e           l    
+                   r  r        c           r        y           f    
+                      i        t                                     
+                      t                                              
+                      y                                              
+
+Alignment:
+(#)            | ce
+   [#]         | est
+      (#)      | tout
+      ( ) #    | ?
+      ( ) #    | fait
+         [#]   | compr?hensible
+            [#]| .
+---------------'
+ i  i  q  u  . 
+ t  s  u  n    
+       i  d    
+       t  e    
+       e  r    
+          s    
+          t    
+          a    
+          n    
+          d    
+          a    
+          b    
+          l    
+          e    
+
+Alignment:
+(#)( )                                       | en
+( )(#)                                       | outre
+      [#]                                    | ,
+         ( )             #                   | elle
+            [#]                              | pourrait
+               ( )       #                   | constituer
+                  [#]                        | une
+                     [ ] #                   | s?rieuse
+                        [#]                  | menace
+                      #    [ ]               | pour
+                              (#)            | la
+                              [#]            | Conf?d?ration
+                                 [#]         | et
+                                     # ( )   | le
+                                       [#]   | unit?
+                                    [#]      | nationale
+                                          [#]| .
+---------------------------------------------'
+ i  a  ,  i  c  b  a  s  t  t  C  a  n  u  . 
+ n  d     t  o  e     e  h  o  o  n  a  n    
+    d        u  c     r  r     n  d  t  i    
+    i        l  o     i  e     f     i  t    
+    t        d  m     o  a     e     o  y    
+    i           e     u  t     d     n       
+    o                 s        e     a       
+    n                          r     l       
+                               a             
+                               t             
+                               i             
+                               o             
+                               n             
+
+Alignment:
+( )(#)( )( )                                          | pour
+( )( )( )(#)                                          | cette
+( )( )( )( )             #                            | raison
+            [#]                                       | ,
+( )            [#]( )( )( )                           | nous
+( )            ( )( )( )( )                      #    | ne
+( )            ( )( )( )( )                      #    | avons
+( )            ( )( )( )(#)                           | pas
+( )            ( )( )( )( )                      #    | cru
+( )            ( )( )( )( )                      #    | bon
+       #                   [ ]                        | de
+                              [#]                     | assister
+                            # ( )( )                  | ?
+                                 [ ] #                | la
+                         #          [ ]               | r?union
+                                       [#]            | et
+                         #                   ( )      | en
+                                             ( ) #    | avons
+                                             [#]      | inform?
+                                  #             ( )   | le
+                                                [#]   | COJO
+                         #                ( )         | en
+                                          ( )    #    | cons?quence
+                                                   [#]| .
+------------------------------------------------------'
+ i  v  o  t  ,  w  d  i  i  t  a  t  m  a  s  i  C  . 
+ n  i  f  h     e  e  t  n  o  t  h  e  n  o  n  O    
+    e     i        e     a     t  e  e  d     f  J    
+    w     s        m     d     e     t        o  O    
+                   e     v     n     i        r       
+                   d     i     d     n        m       
+                         s           g        e       
+                         a                    d       
+                         b                            
+                         l                            
+                         e                            
+
+Alignment:
+[#]                                                | monsieur
+   (#)                                             | le
+   [ ]                                     #       | Orateur
+      [#]                                          | ,
+         [#]                                       | le
+            [#]                                    | ministre
+               (#)                                 | a
+               ( )                         #       | laiss?
+               (#)                                 | entendre
+                  [#]                              | que
+                     [#]      ( )                  | un
+                              [#]                  | programme
+                           (#)( )                  | de
+                           [ ]             #       | construction
+                        (#)                        | plus
+                        ( )                #       | consid?rable
+                                 (#)               | peut
+                                 (#)               | -
+                                 (#)               | ?tre
+                                     #       ( )   | une
+                                           # [ ]   | pouss?e
+                                          [#]      | inflationniste
+                                                [#]| .
+---------------------------------------------------'
+ M  S  ,  t  m  s  t  a  g  b  p  m  l  t  i  p  . 
+ r  p     h  i  u  h     r  u  r  i  e  o  n  r    
+ .  e     e  n  g  a     e  i  o  g  a     f  e    
+    a        i  g  t     a  l  g  h  d     l  s    
+    k        s  e        t  d  r  t        a  s    
+    e        t  s        e  i  a           t  u    
+    r        e  t        r  n  m           i  r    
+             r  e           g              o  e    
+                d                          n       
+                                           a       
+                                           r       
+                                           y       
+
+Alignment:
+[#]                           | je
+   (#)( )                     | ne
+   ( )( )       #             | partage
+   (#)( )                     | pas
+         [#]                  | le
+            ( )(#)            | avis
+               ( )(#)         | de
+                     [#]      | le
+                        [#]   | ministre
+                           [#]| .
+------------------------------'
+ i  d  w  t  a  a  b  t  m  . 
+    i  i  h  r  d  y  h  i    
+    s  t  e  g  v     e  n    
+    a  h     u  a        i    
+    g        m  n        s    
+    r        e  c        t    
+    e        n  e        e    
+    e        t  d        r    
+
+Alignment:
+[#][ ]                                    | il
+[#][ ]                                    | y
+[ ][ ]             #                      | a
+      [ ][#]                              | beaucoup
+            (#)( )( )                     | ?
+          # ( )( )( )                     | dire
+            ( )( )( )[#]                  | sur
+                        (#)               | les
+                        (#)               | deux
+                           [#]            | aspects
+                              [#]         | de
+                            #    [ ]      | cette
+                                    [#]   | question
+                                       [#]| .
+------------------------------------------'
+ t  i  a  l  t  b  s  o  b  s  o  t  q  . 
+ h  s     o  o  e  a  n  o  i  f  h  u    
+ e        t        i     t  d     a  e    
+ r                 d     h  e     t  s    
+ e                          s        t    
+                                     i    
+                                     o    
+                                     n    
+
+Alignment:
+(#)   | a
+(#)   | le
+[#]   | ordre
+   [#]| .
+------'
+ o  . 
+ r    
+ d    
+ e    
+ r    
+
+Alignment:
+[#]                                                                              | monsieur
+   (#)                                                                           | le
+   [ ]                                                                   #       | Orateur
+      [#]                                                                        | ,
+         [#]                                                                     | comme
+            [#]( )                                                               | je
+                               #                                                 | le
+            ( )(#)                                                               | ai
+            ( )( )                                                       #       | signal?
+                  [#]                                                            | ?
+                     [#]                                                         | le
+                        [#]                                                      | chef
+                           [#]                                                   | de
+                              [#]                                                | le
+                                 [#]                                             | opposition
+                                    [#]                                          | ,
+                                       [#]                                       | je
+                                          ( )[#]                                 | esp?re
+                                                ( )[#]                           | faire
+                                                      [#]                        | une
+                                                         [ ]             #       | d?claration
+                                                 #          [ ]                  | ?
+                                                               [#]               | ce
+                                                                  [ ]    #       | sujet
+                                                                     ( ) # ( )   | le1er
+                                                                        [#]      | novembre
+                                                                              [#]| .
+---------------------------------------------------------------------------------'
+ M  S  ,  a  I  i  t  t  L  o  t  O  ,  I  w  h  t  m  a  a  o  t  q  o  N  1  . 
+ r  p     s     n  o  h  e  f  h  p        o  o  o  a  n  n  n  h  u  n  o       
+ .  e           d     e  a     e  p        u  p     k     n     i  e     v       
+    a           i        d        o        l  e     e     o     s  s     e       
+    k           c        e        s        d              u        t     m       
+    e           a        r        i                       n        i     b       
+    r           t                 t                       c        o     e       
+                e                 i                       e        n     r       
+                d                 o                       m                      
+                                  n                       e                      
+                                                          n                      
+                                                          t                      
+
+Alignment:
+(#)( )   | ce
+(#)( )   | est
+( )(#)   | bien
+(#)( )   | cela
+      [#]| .
+---------'
+ q  r  . 
+ u  i    
+ i  g    
+ t  h    
+ e  t    
+
+Alignment:
+(#)( )( )( )( )( )( )( )( )( )( )( )( )( )   | ce
+( )( )(#)( )( )( )( )( )( )( )( )( )( )( )   | ne
+( )(#)( )( )( )( )( )( )( )( )( )( )( )( )   | est
+( )( )(#)( )( )( )( )( )( )( )( )( )( )( )   | pas
+( )( )( )( )( )( )( )( )( )(#)( )( )( )( )   | en
+( )( )( )( )( )( )( )(#)( )( )( )( )( )( )   | isolant
+( )( )( )( )[#]( )( )( )( )( )( )( )( )( )   | quelque
+( )( )( )( )[ ]( )( )(#)( )( )( )( )( )( )   | un
+( )(#)( )( )( )( )( )( )( )( )( )( )( )( )   | que
+( )( )( )( )( )( )( )( )( )(#)( )( )( )( )   | on
+( )( )( )( )( )( )( )( )( )( )( )( )(#)( )   | le
+( )( )( )( )( )( )( )( )( )(#)( )( )( )( )   | aide
+( )( )( )( )( )( )( )( )(#)( )( )( )( )( )   | ?
+( )( )( )( )( )( )( )( )( )(#)( )( )( )( )   | se
+( )( )( )( )( )( )( )( )( )(#)( )( )( )( )   | r?adapter
+                                          [#]| .
+---------------------------------------------'
+ i  d  n  b  a  c  t  r  t  i  h  f  t  p  . 
+ t  o  o  r  n  l  o  e  o  s  i  r  h  u    
+    e  t  i  y  o     h     o  m  o  e  b    
+    s     n  b  s     a     l     m     l    
+          g  o  e     b     a           i    
+             d  r     i     t           c    
+             y        l     e                
+                      i                      
+                      t                      
+                      a                      
+                      t                      
+                      i                      
+                      o                      
+                      n                      
+
+Alignment:
+[#]                  | il
+   [ ]    #          | laissait
+      [#]            | une
+         [#]         | femme
+            [#]      | et
+       #       ( )   | une
+               [#]   | famille
+                  [#]| .
+---------------------'
+ h  l  a  w  a  f  . 
+ e  e     i  n  a    
+    f     f  d  m    
+    t     e     i    
+                l    
+                y    
+
+Alignment:
+                  [#]                                                   | monsieur
+                     ( )             #                                  | le
+                     [#]                                                | pr?sident
+( )( )( )( )( )             #                                           | je
+( )( )( )( )( )                                  #                      | invoque
+( )( )( )( )( )                      #                                  | le
+( )( )(#)( )[ ]                                                         | R?glement
+               [ ]      ( )                                  #          | ;
+                           [#]                                          | je
+                              [#]                                       | suis
+                                 [ ]                         #          | persuad?
+                                  #                                     | que
+                                    [#]   ( )                           | le
+                                       [ ][#]                           | d?put?
+                                             [#]                        | de
+                                                [#]                     | Verdun
+                                                      [#]               | ne
+                                                   [ ]   [ ] #          | aurait
+                                                      [#]               | pas
+                                                            (#)         | d?pr?ci?
+                                                               [#]      | ma
+                                                                  [#]   | position
+                                                                     [#]| .
+------------------------------------------------------------------------'
+ o  a  p  o  o  ,  M  C  ,  I  a  s  t  h  m  f  V  w  n  h  d  m  p  . 
+ n     o  f  r     r  h        m  u  h  o  e  o  e  o  o  a  e  y  o    
+       i     d     .  a           r  e  n  m  r  r  u  t  v  n     s    
+       n     e        i           e     .  b     d  l     e  i     i    
+       t     r        r                    e     u  d        g     t    
+                      m                    r     n           r     i    
+                      a                                      a     o    
+                      n                                      t     n    
+                                                             e          
+                                                             d          
+
+Alignment:
+ # [ ]                           | les
+         ( )                #    | compagnies
+      ( )( ) #                   | de
+      [#]                        | assurance
+[ ]                         #    | peuvent
+       #                         | -
+                            #    | elles
+            (#)( )               | ?
+            ( )( )          #    | leur
+            ( )(#)               | tour
+                      #          | ,
+                  [#]            | agir
+                     [#]         | comme
+                        ( )(#)   | compagnies
+                        ( )(#)   | a?riennes
+                              [#]| ?
+---------------------------------'
+ c  t  i  i  i  t  a  a  a  a  ? 
+ a  h  n  n  n  u  c  s  n  i    
+ n  e  s  d     r  t        r    
+       u  u     n           l    
+       r  s                 i    
+       a  t                 n    
+       n  r                 e    
+       c  y                      
+       e                         
+
+Alignment:
+[#]                                                         | je
+         ( )[#]                                             | vous
+      ( )                                  #                | le
+   [ ]                                                 #    | d?clare
+               [#]                                          | ,
+                  [#]                                       | monsieur
+                     ( )                   #                | le
+                     [ ]                               #    | Orateur
+                #       ( )                                 | ,
+                           [ ]             #                | la
+                              [#]                           | population
+                                 [#]                        | de
+                                    [#]                     | Toronto
+                                       [#]                  | sait
+                                       (#)                  | que
+                            #             [ ]               | le
+                                             [#]            | gouvernement
+                                                (#)( )( )   | est
+                                                ( )( )(#)   | incapable
+                                  #             ( )( )( )   | de
+                                                ( )( )(#)   | fournir
+                                                ( )( )(#)   | une
+                                                ( )( )(#)   | r?ponse
+                                                         [#]| .
+------------------------------------------------------------'
+ i  s  t  t  y  ,  M  S  :  t  p  o  T  k  t  g  h  n  a  . 
+    a  h  o  o     r  p     h  e  f  o  n  h  o  a  o  n    
+    y  i     u     .  e     e  o     r  o  e  v  s     s    
+       s              a        p     o  w     e        w    
+                      k        l     n        r        e    
+                      e        e     t        n        r    
+                      r              o        m        s    
+                                              e             
+                                              n             
+                                              t             
+
+Alignment:
+                      # ( )( )( )( )( )   | on
+                        (#)( )( )( )( )   | a
+                        ( )( )( )( )(#)   | tout
+       #                ( )( )( )( )( )   | ?
+                      # ( )( )( )( )( )   | fait
+                      # ( )( )( )( )( )   | tenu
+                        ( )( )( )( )(#)   | compte
+                #       ( )( )( )( )( )   | de
+[#]                                       | leur
+   ( )                #                   | avis
+      [#]                                 | sur
+         [#]                              | le
+            [ ]       #                   | ?tat
+               [ ]                #       | de
+                  ( )( )       #          | la
+                     [ ]       #          | r?serve
+                                  #       | de
+                                     #    | poisson
+                                       [#]| .
+------------------------------------------'
+ t  e  o  t  s  o  e  s  w  t  f  i  a  . 
+ h  v  n  h  t  f  a  t  a  a  u  n  c    
+ e  i     e  a     c  o  s  k  l  t  c    
+ i  d        t     h  c     e  l  o  o    
+ r  e        e        k     n  y     u    
+    n                                n    
+    c                                t    
+    e                                     
+
+Alignment:
+( )( )( )( )                #                                  | je
+( )[#]( )( )                                                   | vous
+(#)( )( )( )                                                   | remercie
+            [#]                                                | ,
+               [#]                                             | monsieur
+                  ( )                            #             | le
+                  [ ]                      #                   | Orateur
+                     [#]                                       | ,
+                        [#]                                    | et
+                           [#]                                 | je
+                              [#]                              | remercie
+                                 ( )(#)                        | les
+                                 [ ][#]                        | d?put?s
+          #                            [ ]                     | de
+                                             [#]               | me
+                                          [#]                  | permettre
+                                                      [ ] #    | de
+                                                         [#]   | poursuivre
+                                                            [#]| .
+---------------------------------------------------------------'
+ t  y  v  m  ,  M  S  ,  a  I  t  h  m  f  a  m  t  p  t  c  . 
+ h  o  e  u     r  p     n     h  o  e  o  l  e  h  r  o  o    
+ a  u  r  c     .  e     d     a  n  m  r  l     e  i     n    
+ n     y  h        a           n  .  b     o        v     t    
+ k                 k           k     e     w        i     i    
+                   e                 r     i        l     n    
+                   r                 s     n        e     u    
+                                           g        g     e    
+                                                    e          
+
+Alignment:
+[#]                                                                  | je
+   (#)                                                               | r?clame
+   (#)                                                               | instamment
+      [#]                                                            | cette
+            [#]                                                      | ?tude
+         [ ] #                                                       | approfondie
+               [#]                                                   | ,
+                  [#]                                                | monsieur
+                     (#)                                             | le
+          #          [ ]                                             | Orateur
+                        [#]                                          | ,
+          #                [ ]                                       | car
+                              [#]                                    | nous
+                                    ( )(#)                           | ne
+                                 [#]                                 | savons
+          #                         ( )( )                           | presque
+          #                         ( )( )                           | rien
+                                          [ ]                #       | de
+                                             [ ]                #    | les
+                                                [#]                  | raisons
+                                                 # [ ]               | qui
+          #                                           [ ]            | transforment
+                                                         (#)         | les
+                                                         [#]         | gens
+                                                            [#]      | en
+                                                               [#]   | criminels
+                                                                  [#]| .
+---------------------------------------------------------------------'
+ i  u  t  i  s  ,  M  S  ,  f  w  k  s  l  a  t  r  t  t  p  i  c  . 
+    r  h  n  t     r  p     o  e  n  o  i  b  h  e  h  u  e  n  r    
+    g  i  t  u     .  e     r     o     t  o  e  a  a  r  o  t  i    
+    e  s  e  d        a           w     t  u     s  t  n  p  o  m    
+          n  y        k                 l  t     o        l     i    
+          s           e                 e        n        e     n    
+          i           r                          s              a    
+          v                                                     l    
+          e                                                     s    
+
+Alignment:
+[#]                                                | le
+   [#]                                             | gouvernement
+      [#]                                          | doit
+         [#]                                       | aider
+            [#]                                    | ses
+               [#]                                 | propres
+                  [#]                              | employ?s
+                     [#]                           | qui
+                        ( )                   #    | peuvent
+                           [ ]                #    | avoir
+                           [#]                     | besoin
+                           [ ]       #             | de
+                              [#]                  | une
+                              [#]                  | autre
+                                 [#]               | langue
+                                    [ ](#)( )( )   | pour
+                                    ( )( )[#]( )   | leur
+                                    ( )( )( )(#)   | avancement
+                                                [#]| .
+---------------------------------------------------'
+ t  g  m  a  i  o  e  w  m  n  a  l  t  a  t  c  . 
+ h  o  u  s  t  w  m  h  a  e  n  a  o  d  h  a    
+ e  v  s  s  s  n  p  o  y  e  o  n     v  e  r    
+    e  t  i        l        d  t  g     a  i  e    
+    r     s        o           h  u     n  r  e    
+    n     t        y           e  a     c     r    
+    m              e           r  g     e     s    
+    e              e              e                
+    n              s                               
+    t                                              
+
+Alignment:
+[#]                                       | je
+      [#]                                 | ne
+   ( )   [ ]                      #       | ai
+      [#]                                 | pas
+            ( )    #                      | de
+               [#]                        | scrupule
+                # ( )                     | quant
+                  (#)                     | ?
+                     [#]                  | le
+                        [#]               | genre
+                           [#]            | de
+                              [#]         | langage
+                               #          | que
+                                 [#]      | je
+                #                   ( )   | tiens
+                                       [#]| .
+------------------------------------------'
+ i  d  n  h  a  q  a  t  t  o  l  I  u  . 
+    o  o  a  n  u  b  h  y  f  a     s    
+       t  v  y  a  o  e  p     n     e    
+          e     l  u     e     g          
+                m  t           u          
+                s              a          
+                               g          
+                               e          
+
+Alignment:
+ #          | (
+(#)         | la
+[#]         | motion
+   (#)( )   | est
+ # ( )( )   | adopt?e
+         [#]| .
+    #       | )
+------------'
+ m  a  t  . 
+ o  g  o    
+ t  r       
+ i  e       
+ o  e       
+ n  d       
+
+Alignment:
+[#]                                             | monsieur
+   (#)                                          | le
+   ( )                #                         | pr?sident
+      [#]                                       | ,
+         ( )(#)( )( )( )                        | la
+         ( )[#]( )( )( )                        | d?cision
+         (#)( )( )( )( )                        | ne
+         ( )( )(#)( )( )                        | est
+         (#)( )( )( )( )                        | pas
+         ( )(#)( )( )( )                        | prise
+                      # ( )( )                  | ?
+                      # ( )( )                  | ce
+                      # ( )( )                  | moment
+                      # ( )( )                  | -
+                      # ( )( )                  | ci
+                               #                | ,
+                              [#]               | mais
+                                 [#]            | je
+                      #             ( )( )      | imagine
+                                        #       | que
+                      #                         | ce
+                #                               | est
+                      #                         | oui
+                                             [#]| .
+------------------------------------------------'
+ M  S  ,  n  d  h  b  r  a  y  b  I  s  t  s  . 
+ r  p     o  e  a  e  e  s  e  u     h  h  o    
+ .  e        c  s  e  a     t  t     o  i       
+    a        i     n  c              u  n       
+    k        s        h              l  k       
+    e        i        e              d          
+    r        o        d                         
+             n                                  
+
+Alignment:
+[#]                                          | la
+   [#]                                       | question
+      [#]                                    | de
+          # ( )                              | les
+            [#]                              | relations
+         [ ]             #                   | commerciales
+               [#]                           | avec
+                  [#]                        | nos
+                        [#]                  | homologues
+                     [ ] #                   | europ?ens
+                           [#]               | devrait
+                              [#]            | ?tre
+                         #             [ ]   | envisag?e
+                                 [#]         | tr?s
+                                    [#]      | s?rieusement
+                                          [#]| .
+---------------------------------------------'
+ t  m  o  t  r  w  o  E  c  s  b  v  s  c  . 
+ h  a  f  r  e  i  u  u  o  h  e  e  e  o    
+ e  t     a  l  t  r  r  u  o     r  r  n    
+    t     d  a  h     o  n  u     y  i  s    
+    e     e  t        p  t  l        o  i    
+    r        i        e  e  d        u  d    
+             o        a  r           s  e    
+             n        n  p           l  r    
+             s           a           y  e    
+                         r              d    
+                         t                   
+                         s                   
+
+Alignment:
+(#)( )( )( )( )( )                                                      | ce
+( )( )( )( )( )( )                         #                            | dont
+( )[#]( )( )( )( )                                                      | nous
+          #                                                             | ,
+                  ( )( )( )                   #                         | les
+                  ( )( )( )                      #                      | Canadiens
+                                                    #                   | ,
+( )( )( )( )( )( )                         #                            | devons
+( )(#)( )( )( )( )                                                      | nous
+( )( )( )( )( )( )                         #                            | soucier
+                                                    #                   | ,
+                      #    ( )                                          | ce
+                           [#]                                          | est
+                              [ ]             #                         | les
+                                 [ ]       #                            | cas
+                                    [ ]    #                            | o?
+                                           # ( )( )( )( )( )            | on
+                                             ( )(#)( )( )( )            | exporte
+                                       [#]                              | ces
+                                          [ ]    #                      | animaux
+                   #                                        ( )( )( )   | dans
+ #                                                          ( )[ ]( )   | ce
+                                                            ( )( )[#]   | but
+                                                 #          ( )( )( )   | -
+                                                            ( )( )(#)   | l?
+                                                                     [#]| .
+------------------------------------------------------------------------'
+ w  w  s  b  c  w  i  t  c  i  t  s  w  t  a  a  s  o  o  C  f  t  p  . 
+ h  e  h  e  o  i  n  h  o  s  h  i  h  h  n  r  h  u  f  a  o  h  u    
+ a     o     n  t     i  u     e  t  e  e  i  e  i  t     n  r  i  r    
+ t     u     c  h     s  n        u  n  s  m     p        a     s  p    
+       l     e           t        a     e  a     p        d        o    
+       d     r           r        t        l     e        a        s    
+             n           y        i        s     d                 e    
+             e                    o                                     
+             d                    n                                     
+
+Alignment:
+[#]                                       | ils
+   [#]                                    | ont
+      [#]                                 | d?j?
+         ( )( )(#)( )                     | indiqu?
+          #          [ ]                  | les
+                        (#)               | embranchements
+                         #                | que
+                           [#]            | ils
+                         #    [ ]         | songeaient
+                                 [#]      | ?
+                                    [#]   | fermer
+                                       [#]| .
+------------------------------------------'
+ t  h  a  g  a  i  o  t  b  t  i  t  c  . 
+ h  a  l  i  n  n  f  h  r  h  n  o  l    
+ e  v  r  v     d     e  a  e  t     o    
+ y  e  e  e     i        n  y  e     s    
+       a  n     c        c     n     e    
+       d        a        h     d          
+       y        t        e                
+                i        s                
+                o                         
+                n                         
+
+Alignment:
+[#]                                                               | ce
+   [#]                                                            | ministre
+      ( )                                     #                   | assurait
+      (#)                                                         | la
+      ( )                                     #                   | garde
+         [ ]                                  #                   | tandis
+         [#]                                                      | que
+            (#)                                                   | la
+            [#]                                                   | moiti?
+            ( )( )          #                                     | de
+               [ ]                               #                | les
+                  [ ]    #                                        | recettes
+                     [#]                                          | et
+                        ( ) #                                     | de
+                        ( )          #                            | les
+                        [#]                                       | b?n?fices
+                           [ ]    #                               | de
+                              [ ]       #                         | le
+                                       [#]                        | industrie
+                                    [ ]       #                   | agricole
+                                 [#]                              | canadienne
+                                          [ ] #                   | ?taient
+                         #                   [ ][ ]               | balay?s
+                                              #    ( )( )( )( )   | par
+                                                   ( )( )( )(#)   | le
+                                              #    ( )( )( )( )   | expos?
+                                                   ( )( )(#)( )   | budg?taire
+                                                               [#]| .
+------------------------------------------------------------------'
+ t  m  w  w  h  t  p  a  p  o  t  C  a  i  w  s  a  i  a  b  s  . 
+ h  i  a  h  a  h  r  n  r  f  h  a  g  n  e  w  w  n     u  p    
+ i  n  t  i  l  e  o  d  o     e  n  r  d  r  e  a        d  e    
+ s  i  c  l  f     c     f        a  i  u  e  p  y        g  e    
+    s  h  e        e     i        d  c  s     t           e  c    
+    t  e           e     t        i  u  t                 t  h    
+    e  d           d     s        a  l  r                         
+    r              s              n  t  y                         
+                                     u                            
+                                     r                            
+                                     e                            
+
+Alignment:
+    #    ( )( )   | en
+    #    ( )( )   | aucune
+    #    ( )( )   | fa?on
+      [#]         | ,
+[#]               | monsieur
+   (#)            | le
+   [#]            | pr?sident
+               [#]| .
+------------------'
+ M  C  ,  a  n  . 
+ r  h     b  o    
+ .  a     s  n    
+    i     o  e    
+    r     l       
+    m     u       
+    a     t       
+    n     e       
+          l       
+          y       
+
+Alignment:
+[#]                                                            | nous
+                                                 #             | en
+   ( )(#)                                                      | faisons
+       #       [ ]                                             | actuellement
+   ( )( ) #                                                    | le
+   ( )(#)                                                      | analyse
+                  [#]                                          | et
+                     [#]                                       | je
+                        [#]                                    | esp?re
+                         # ( )                                 | que
+                                                ( )( )(#)( )   | bient?t
+                              ( )( )( )( )[ ]( )       #       | la
+                              ( )( )( )( )( )[#]               | Chambre
+       #                      ( )( )( )( )( )( )               | pourra
+       #                      ( )( )( )( )( )( )               | ?tre
+       #                      ( )( )( )( )( )( )               | saisie
+                              ( )( )( )( )( )( ) #             | de
+    #                         ( )( )( )( )( )( )               | les
+                              ( )( )[#]( )( )( )               | renseignements
+       #                      ( )( )( )( )( )( )               | pertinents
+                                                            [#]| .
+---------------------------------------------------------------'
+ w  a  a  t  r  n  a  I  h  t  h  s  i  f  t  H  i  t  n  f  . 
+ e  r  n  h  e  o  n     o  o  a  o  n  o  h  o  n  h  e  u    
+    e  a  e  p  w  d     p     v  m  f  r  e  u     e  a  t    
+       l     o           e     e  e  o        s        r  u    
+       y     r                       r        e           r    
+       s     t                       m                    e    
+       i                             a                         
+       n                             t                         
+       g                             i                         
+                                     o                         
+                                     n                         
+
+Alignment:
+(#)( )( )   | bravo
+ #       [ ]| !
+------------'
+ h  ,  h  ! 
+ e     e    
+ a     a    
+ r     r    
+
+Alignment:
+(#)( )( )   | bravo
+ #       [ ]| !
+------------'
+ h  ,  h  ! 
+ e     e    
+ a     a    
+ r     r    
+
+Alignment:
+[#]                                                         | je
+   ( )   ( )                      #                         | proposerais
+      [#]                                                   | donc
+            [#]                                             | ,
+               (#)( )                                       | avec
+               ( )( ) #                                     | le
+               ( )( )                               #       | appui
+               ( )(#)                                       | de
+                     [#]                                    | le
+                        [ ][#]                              | d?put?
+                              [#]                           | de
+                                       [#]                  | Halifax
+                                    [#]                     | -
+                                          [ ]       #       | East
+                                             [#]            | (
+                                  #             [ ]         | M.
+                                                   [#]      | Forrestall
+                                                      [#]   | )
+                                                         [#]| :
+------------------------------------------------------------'
+ i  w  t  m  ,  s  b  t  h  m  f  D  -  H  E  (  M  F  )  : 
+    o  h  o     e  y  h  o  e  o  a     a  a     r  o       
+    u  e  v     c     e  n  m  r  r     l  s     .  r       
+    l  r  e     o        .  b     t     i  t        r       
+    d  e        n           e     m     f           e       
+       f        d           r     o     a           s       
+       o        e                 u     x           t       
+       r        d                 t                 a       
+       e                          h                 l       
+                                                    l       
+
+Alignment:
+[#]                                                                     | quand
+   ( )                #                                                 | on
+      ( )                #                                              | a
+      ( )             #                                                 | saisi
+         [#]                                                            | le
+            ( )       #                                                 | ?normit?
+               [#]                                                      | de
+                  [#]                                                   | le
+                     [#]                                                | ravage
+                      # ( )                                             | exerc?
+                           [#]                                          | par
+          #                      ( )                                    | le
+                                 [#]                                    | crime
+                              [#]                                       | organis?
+                                    [#]                                 | dans
+                                       [#]                              | notre
+                                          [#]                           | pays
+                                             [#]                        | ,
+                                                (#)                     | on
+                                                   [#]                  | doit
+                      #                               [ ]               | envisager
+                #                                                 ( )   | de
+                                                       #          ( )   | les
+                                                                  [#]   | solutions
+                            #                            ( )( )( )      | en
+                                                         ( )( )(#)      | profondeur
+                                                                     [#]| .
+------------------------------------------------------------------------'
+ w  w  r  t  e  o  t  r  c  b  o  c  i  o  c  ,  w  m  c  d  -  r  s  . 
+ h  e  e  h  x  f  h  a  a  y  r  r  n  u  o     e  u  o  e     o  o    
+ e     a  e  t     e  v  u     g  i     r  u        s  n  e     o  l    
+ n     l     e        a  s     a  m        n        t  s  p     t  u    
+       i     n        g  e     n  e        t           i        e  t    
+       z     t        e  d     i           r           d        d  i    
+       e              s        z           y           e           o    
+                               e                       r           n    
+                               d                                   s    
+
+Alignment:
+         [#]                           | leur
+            [#]                        | popularit?
+               (#)                     | a
+               (#)                     | mont?
+             # ( )                     | en
+               (#)                     | fl?che
+                  [#]                  | et
+                     [#]               | ils
+                #       ( )( )( )( )   | ont
+                        (#)( )( )( )   | travers?
+             #          ( )( )( )( )   | la
+                        (#)( )( )( )   | crise
+                        (#)( )( )( )   | avec
+                        (#)( )( )( )   | facilit?
+                        ( )(#)( )( )   | gr?ce
+                        ( )( )(#)( )   | ?
+                        (#)( )( )[ ]   | cela
+                                    [#]| .
+---------------------------------------'
+ b  o  h  t  p  s  a  t  c  t  o  t  . 
+ u  h  o  h  o  o  n  h  o  h  n  h    
+ t     w  e  p  a  d  e  a  r     a    
+          i  u  r     y  s  o     t    
+          r  l  e        t  u          
+             a  d        e  g          
+             r           d  h          
+             i                         
+             t                         
+             y                         
+
+Alignment:
+[#]                                                               | (
+   [#]                                                            | 2
+      [#]                                                         | )
+         [ ]                               #                      | Un
+            [#]                                                   | comit?
+               ( )( )( )                   #                      | doit
+               ( )( )( )                   #                      | se
+               ( )( )(#)                                          | en
+               ( )( )( )                   #                      | tenir
+                                  #    ( )                        | ?
+                                                   ( ) #          | le
+                                                      [#]         | ordre
+                                              #          [ ]      | de
+                                                            (#)   | renvoi
+                           (#)                                    | et
+                               #                                  | ne
+                   #                                              | saurait
+                                     #                            | y
+                                           #                      | d?roger
+                                                               [#]| .
+------------------------------------------------------------------'
+ (  2  )  A  c  i  b  b  ,  a  n  a  l  t  d  f  ,  t  o  o  r  . 
+             o  s  o  y     n  o  t  i  o  e  r     h  r  f  e    
+             m     u        d  t     b     p  o     e  d     f    
+             m     n                 e     a  m        e     e    
+             i     d                 r     r           r     r    
+             t                       t     t                 e    
+             t                       y                       n    
+             e                                               c    
+             e                                               e    
+
+Alignment:
+               [ ]                   #                                  | je
+                  ( )(#)                                                | voudrais
+                        ( )( )                                  #       | pr?ciser
+      [#]                                                               | un
+         [#]                                                            | autre
+            [#]                                                         | point
+                              [#]                                       | ,
+                                 [#]                                    | et
+                                    [#]                                 | je
+                                          (#)                           | le
+                                       [ ]          #                   | fais
+                                             [ ]    #                   | parce
+                                        #    [ ]                        | que
+                                                [#]                     | je
+                                                   [#]                  | estime
+                                              #    ( )                  | que
+ #                                                    ( )( )            | il
+                                                    # ( )( )( )         | se
+                                                      ( )( )( ) #       | agit
+                                                      ( )(#)( )         | de
+                                                            [#]         | un
+                                                                  [#]   | d?bat
+                                                               [#]      | g?n?ral
+                                                                     [#]| .
+------------------------------------------------------------------------'
+ t  i  o  o  p  I  s  l  t  m  ,  a  I  d  s  a  I  f  t  i  a  g  d  . 
+ h  s  n  t  o     h  i  o  a     n     o  o  s     e  h  s     e  e    
+ e     e  h  i     o  k     k     d                 e  i        n  b    
+ r        e  n     u  e     e                       l  s        e  a    
+ e        r  t     l                                            r  t    
+                   d                                            a  e    
+                                                                l       
+
+Alignment:
+[#]                                          | en
+   [#]                                       | d?cembre
+                            #                | ,
+                     (#)( )                  | la
+                     (#)[ ]                  | Colombie
+                     ( )(#)                  | -
+                     [#]( )                  | Britannique
+      ( )(#)( )( )( )                        | a
+    # ( )( )( )( )( )                        | fait
+      ( )( )( )( )( )                   #    | savoir
+      ( )( )( )( )[#]                        | que
+      ( )( )( )( )( )                   #    | elle
+                           ( )( )( )    #    | allait
+                           ( )( )(#)         | se
+                           ( )( )(#)         | retirer
+                                    [#]      | de
+                            #          ( )   | le
+                                       [#]   | Office
+                                       [#]   | canadien
+                               #       [ ]   | de
+                                       [#]   | commercialisation
+                                     # [ ]   | de
+                                  #    [ ]   | les
+                                       [#]   | oeufs
+                                          [#]| .
+---------------------------------------------'
+ i  D  t  w  a  a  t  B  C  w  b  w  f  C  . 
+ n  e  h  a  n  n  h  r  o  o  e  i  r  E    
+    c  e  s     n  a  i  l  u     t  o  M    
+    e  r        o  t  t  u  l     h  m  A    
+    m  e        u     i  m  d     d          
+    b           n     s  b        r          
+    e           c     h  i        a          
+    r           e        a        w          
+                m                 i          
+                e                 n          
+                n                 g          
+                t                            
+
+Alignment:
+                   #                                           | bien
+    #                                                          | de
+    #                         ( )                              | les
+                           ( )(#)                              | d?put?s
+                #                ( )                           | de
+                                    [#]                        | tous
+          #                         ( )( )                     | les
+                                       [#]                     | partis
+                                          [#]                  | de
+                                             (#)( )            | ce
+                                             ( )[#]            | c?t?
+                                             ( )(#)            | -
+                                             ( )(#)            | ci
+                                           #       [ ]         | de
+                                                      [#]      | la
+                                                         [#]   | Chambre
+( )( )( )( )( )( )(#)( )                                       | se
+( )( )( )( )( )( )(#)( )                                       | y
+( )( )( )( )( )( )(#)( )                                       | sont
+( )( )(#)( )( )( )( )( )                                       | ?galement
+( )( )( )( )( )( )(#)( )                                       | fortement
+( )( )( )( )( )( )(#)( )                                       | oppos?s
+                                                            [#]| .
+---------------------------------------------------------------'
+ t  h  a  g  r  t  c  o  b  h  m  i  a  p  o  t  s  o  t  H  . 
+ h  a  l  i  i  o  o  p  y  o  e  n  l  a  n  h  i  f  h  o    
+ e  v  s  v  s     n  p     n  m     l  r     i  d     e  u    
+ y  e  o  e  e     s  o     .  b        t     s  e        s    
+          n        i  s        e        i                 e    
+                   d  i        r        e                      
+                   e  t        s        s                      
+                   r  i                                        
+                   a  o                                        
+                   b  n                                        
+                   l                                           
+                   e                                           
+
+Alignment:
+( )( )( )                            #       | ce
+( )( )[#]                                    | ne
+( )( )( )                               #    | est
+( )( )[#]                                    | pas
+             #                ( )            | de
+ #       ( )                                 | ces
+            [#]                              | lignes
+               [#]                           | que
+                  ( )(#)( )( )               | il
+                  ( )(#)( )( )               | faudrait
+                  ( )( )( )(#)( )            | se
+             #    ( )( )( )( )( )            | inqui?ter
+ #                               ( )         | pour
+                                    (#)      | le
+             #                         ( )   | instant
+                                          [#]| .
+---------------------------------------------'
+ t  a  n  t  l  t  o  s  b  c  a  a  t  t  . 
+ h  r  o  h  i  h  n  h  e  o  b  t  h  i    
+ o  e  t  e  n  a  e  o     n  o     i  m    
+ s           e  t     u     c  u     s  e    
+ e           s        l     e  t             
+                      d     r                
+                            n                
+                            e                
+                            d                
+
+Alignment:
+         [#]                                                      | le
+            [ ][#]                                                | d?put?
+( )( )(#)                                                         | a
+( )( )( )             #                                           | pu
+                      #                                           | poser
+                  [#]                                             | deux
+                      #                                           | questions
+                     [#]                                          | suppl?mentaires
+                        [#]                                       | et
+                                              #                   | ,
+                           [ ] #                                  | en
+                               #                                  | toute
+                              [#]                                 | justice
+                            #                                     | ,
+                                 [#]                              | je
+                                    [#]                           | pense
+                                    (#)                           | que
+                                       [#]                        | nous
+                      #                   [ ]                     | devrions
+       #                                     ( )                  | laisser
+                               #             ( )                  | la
+                      #                      ( )                  | parole
+                                                [#]               | ?
+                                                    # ( )         | de
+                                                      [#]         | autres
+                                                         [ ][#]   | d?put?s
+                                                               [#]| .
+------------------------------------------------------------------'
+ i  h  a  t  h  m  t  s  a  i  f  I  t  w  s  g  t  s  o  h  m  . 
+    a  l  h  o  e  w  u  n  n  a     h  e  h  o  o  o  t  o  e    
+    v  l  e  n  m  o  p  d     i     i     o        m  h  n  m    
+    e  o     .  b     p        r     n     u        e  e  .  b    
+       w        e     l        n     k     l           r     e    
+       e        r     e        e           d                 r    
+       d              m        s                             s    
+                      e        s                                  
+                      n                                           
+                      t                                           
+                      a                                           
+                      r                                           
+                      i                                           
+                      e                                           
+                      s                                           
+
+Alignment:
+[#]               | je
+   [#]            | crois
+      [#]         | que
+       # ( )      | ce
+         [#]      | est
+            (#)   | une
+            [#]   | bonne
+            (#)   | chose
+               [#]| .
+------------------'
+ i  t  t  i  g  . 
+    h  h  s  o    
+    i  a     o    
+    n  t     d    
+    k             
+
+Alignment:
+[#]                                                                           | je
+   [#]                                                                        | crois
+      [#]                                                                     | que
+         ( )( )( )    #                                        ( )( )( )( )   | il
+         ( )( )( )                                             (#)( )( )( )   | a
+         ( )( )[#]                                             ( )( )( )( )   | pris
+         ( )( )( )                                             ( )( )(#)( )   | trop
+         ( )( )( ) #                                           ( )( )( )( )   | de
+         ( )[#]( )                                             ( )( )( )( )   | temps
+                  (#)( )                                                      | ?
+                  ( )( )    #                                                 | ?tudier
+                     ( )   ( ) #                                              | de
+                #       ( )( )( )( )( )( )                                    | les
+                        ( )(#)( )( )( )( )                                    | demandes
+                        ( )(#)( )( )( )( )                                    | courantes
+                        ( )( )[ ]( )(#)( )                                    | de
+                                 [#]                                          | changements
+                                    [#]                                       | de
+                                       [#]                                    | installations
+          #                               [ ]                                 | le
+                                          [ ]                            #    | long
+                                          [ ]          #                      | de
+                                             [#]                              | un
+                      #                         [ ]                           | pipe
+                      #                         [ ]                           | -
+                      #                         [ ]                           | line
+                                                   [ ]       #                | ,
+                                                      [ ] #                   | par
+                                                         [#]                  | exemple
+                                                                           [#]| .
+------------------------------------------------------------------------------'
+ i  t  t  t  t  t  i  h  r  a  f  c  o  f  a  a  p  ,  f  e  ,  h  b  t  l  . 
+    h  h  h  i  a  n  a  o  p  o  h  f  a  l     i     o  x     a  e  o  o    
+    i  a  e  m  k     n  u  p  r  a     c  o     p     r  a     s  e  o  n    
+    n  t     e  e     d  t  l     n     i  n     e        m        n     g    
+    k           n     l  i  i     g     l  g     l        p                   
+                      i  n  c     e     i        i        l                   
+                      n  e  a     s     t        n        e                   
+                      g     t           i        e                            
+                            i           e                                     
+                            o           s                                     
+                            n                                                 
+                            s                                                 
+
+Alignment:
+      [#]                                             | le
+         [#]                                          | ministre
+    #    ( )                                          | de
+         ( )             #                            | ?tat
+            ( )( )[ ]    #                            | charg?
+                     (#)                              | de
+                      # ( )                           | les
+                        [#]                           | Sciences
+                           [#]                        | et
+                     (#)                              | de
+                              (#)                     | la
+                         #    [ ]                     | Technologie
+                         #             ( )( )( )( )   | devrait
+                         #             ( )( )( )( )   | conna?tre
+                         #             ( )( )( )( )   | son
+                         #             ( )( )( )( )   | rayon
+                                                   [#]| .
+------------------------------------------------------'
+ h  i  t  m  w  i  r  f  s  a  t  ,  a  h  d  n  k  . 
+ e  s  h  i  h  s  e  o  c  n  e     n  e  o  o  n    
+       e  n  o     s  r  i  d  c     d     e  t  o    
+          i        p     e     h           s     w    
+          s        o     n     n                      
+          t        n     c     o                      
+          e        s     e     l                      
+          r        i           o                      
+                   b           g                      
+                   l           y                      
+                   e                                  
+
+Alignment:
+(#)( )( )                                       | les
+( )( )[#]                                       | menuisiers
+( )( )( )    #                                  | de
+( )( )(#)                                       | le
+( )[#]( )                                       | gouvernement
+[ ]( )( )       #                               | f?d?ral
+         [ ]    #                               | touchent
+            [ ] #                               | $
+               [#]                              | 6.42
+                  [ ] #                         | ?
+                     [#]                        | Toronto
+                        ( )    #                | contre
+                           [ ] #                | $
+                              [#]               | 5.23
+                                 [#]            | ?
+                                    [#]         | Halifax
+                                       [#]      | et
+                                          [#]   | Moncton
+                                             [#]| .
+------------------------------------------------'
+ f  g  c  g  $  6  i  T  a  $  5  i  H  a  M  . 
+ e  o  a  e     .  n  o  n     .  n  a  n  o    
+ d  v  r  t     4     r  d     2     l  d  n    
+ e  e  p        2     o        3     i     c    
+ r  r  e              n              f     t    
+ a  n  n              t              a     o    
+ l  m  t              o              x     n    
+    e  e                                        
+    n  r                                        
+    t  s                                        
+
+Alignment:
+         [#]                                                                     | je
+            ( )[#]                                                               | aimerais
+                  ( )[ ]( )                                  #                   | mentionner
+( )( )( )          #    ( )                                                      | ?
+( )( )(#)                                                                        | ce
+( )( )( )                                                    #                   | sujet
+                           [#]                                                   | un
+                                 [ ]                                        #    | communiqu?
+                              ( )                         #                      | de
+                              [#]                                                | presse
+                                    [#]                                          | qui
+                                       ( )                                  #    | a
+                                       [#]                                       | suivi
+                                          [ ]          #                         | la
+                                                      [#]                        | conf?rence
+                                             [ ]             #                   | f?d?rale
+                                                [#]                              | -
+                                                   [ ]       #                   | provinciale
+                                                         [#]                     | de
+                                                    #    ( )                     | les
+                                                            [#]                  | procureurs
+                                                             # [ ]               | g?n?raux
+                                                          #       [ ]            | de
+                                                                     [#]         | octobre
+                                                                           [#]   | 1975
+                                                                              [#]| .
+---------------------------------------------------------------------------------'
+ f  t  r  I  w  l  t  r  t  a  p  r  w  f  t  f  -  p  c  o  a  g  i  O  ,  1  . 
+ o  h  e     o  i  o  e  o     r  e  h  o  h  e     r  o  f  t  e  n  c     9    
+ r  e  c     u  k     f        e  l  i  l  e  d     o  n     t  n     t     7    
+       o     l  e     e        s  e  c  l     e     v  f     o  e     o     5    
+       r     d        r        s  a  h  o     r     i  e     r  r     b          
+       d                          s     w     a     n  r     n  a     e          
+                                  e     e     l     c  e     e  l     r          
+                                        d           i  n     y                   
+                                                    a  c     s                   
+                                                    l  e                         
+
+Alignment:
+[#]                              | monsieur
+   (#)                           | le
+   [ ]       #                   | Orateur
+      [#]                        | ,
+         [#]                     | je
+            ( )( )( )(#)( )( )   | invoque
+            ( )( )( )( )( )(#)   | le
+            ( )( )( )(#)( )[ ]   | R?glement
+                              [#]| .
+---------------------------------'
+ M  S  ,  I  r  o  a  p  o  o  . 
+ r  p        i  n     o  f  r    
+ .  e        s        i     d    
+    a        e        n     e    
+    k                 t     r    
+    e                            
+    r                            
+
+Alignment:
+[#]                              | je
+   [#]                           | pense
+   (#)                           | que
+      [#]                        | le
+          # [ ]                  | terme
+         [#]                     | ferroviaire
+               [#]               | est
+                  [ ]       #    | ?
+          #          ( )[ ]      | chargement
+                     ( )(#)      | sur
+                     [ ](#)      | demande
+                           [#]   | ?
+                              [#]| .
+---------------------------------'
+ i  t  t  r  t  i  ?  d  l  ?  . 
+    h  h  a  e  s     e  o       
+    i  e  i  r        m  a       
+    n     l  m        a  d       
+    k     r           n  i       
+          o           d  n       
+          a              g       
+          d                      
+
+Alignment:
+[#]                              | je
+   ( )( )             #          | reviendrai
+                      #          | plus
+                      #          | tard
+         [#]( )( )( )            | ?
+         ( )( )(#)( )            | ce
+         ( )( )(#)( )            | que
+         ( )( )( )( ) #          | co?te
+                      #          | un
+                     (#)         | b?timent
+                   # ( )         | de
+                     (#)         | p?che
+                   #    ( )( )   | de
+                      # ( )( )   | nos
+                        ( )[#]   | jours
+                              [#]| .
+---------------------------------'
+ i  w  c  t  t  c  o  b  t  d  . 
+    i  o  o  h  o  f  o  h  a    
+    l  m     e  s     a  e  y    
+    l  e        t     t  s  s    
+                      s  e       
+
+Alignment:
+[#]                                                         | dans
+   (#)                                                      | la
+   [#]                                                      | plupart
+   ( )                                     #                | de
+   ( )(#)                                                   | les
+      [#]                                                   | provinces
+         [ ]                   #                            | ,
+            ( )( )( )                      #                | de
+            ( )( )( ) #                                     | les
+            ( )( )[#]                                       | r?glements
+            [ ](#)( )                                       | g?n?raux
+            ( )(#)( )   ( )                                 | sur
+            ( )( )( )             #                         | le
+            ( )[#]( )                                       | bruit
+                     [#]                                    | ont
+                        [#]                                 | ?t?
+                #          ( )                              | mis
+                           ( )                      #       | en
+                   #       ( )                              | application
+          #                   [ ]                           | ,
+                            #                               | et
+                            #             [ ][ ]            | dont
+                                 [#]                        | le
+                                       [#]                  | principe
+             #                      [ ]                     | g?n?ral
+                                                ( )( )(#)   | se
+                #                               ( )( )( )   | ?nonce
+                #                               ( )( )( )   | ainsi
+                                                         [#]| :
+------------------------------------------------------------'
+ i  m  p  ,  g  n  r  h  b  i  ,  t  m  p  o  w  i  a  f  : 
+ n  o  r     e  o  e  a  e  m     h  a  r  f  h  s  s  o    
+    s  o     n  i  g  v  e  p     e  i  i     i        l    
+    t  v     e  s  u  e  n  l        n  n     c        l    
+       i     r  e  l        e           c     h        o    
+       n     a     a        m           i              w    
+       c     l     t        e           p              s    
+       e           i        n           l                   
+       s           o        t           e                   
+                   n        e                               
+                   s        d                               
+
+Alignment:
+(#)   | de
+(#)   | accord
+   [#]| .
+------'
+ a  . 
+ g    
+ r    
+ e    
+ e    
+ d    
+
+Alignment:
+[#]                                                                                    | apr?s
+   [#]                                                                                 | tout
+      [#]                                                                              | ,
+         ( )                                              #                            | le
+         [#]                                                                           | ?nergie
+            [#]( )( )( )( )( )( )                                                      | est
+            ( )( )( )( )( )( )( )                      #                               | un
+            ( )( )( )( )( )( )( )                #                                     | bien
+            ( )( )( )( )( )( )( )                                  #                   | collectif
+                                    [#]                                                | et
+                            #          [ ]                                             | le
+                                          [#]                                          | gouvernement
+                                             [ ]                   #                   | pourrait
+                                                ( )                #                   | fort
+                                                [#]                                    | bien
+                                                   ( )( )( )( )    #                   | adopter
+                                                      [#]      ( )                     | une
+                                                         (#)( )( )( )                  | politique
+                                                         ( )( )( )( ) #                | de
+                                                         ( )( )( )(#)                  | encouragement
+                                                    #                                  | comme
+                                                                   #                   | celle
+                                                                   # ( )( )            | dont
+                                                                           [#]         | je
+                                                                            # [ ]      | ai
+                                                                                 (#)   | parl?
+                                                                                    [#]| .
+---------------------------------------------------------------------------------------'
+ a  a  ,  e  i  u  b  p  t  t  n  ,  a  t  g  m  w  c  a  a  u  t  i  t  w  I  h  r  . 
+ f  l     n  s  s  y  e  h  h  a     n  h  o  i  e  o  n  p  s  h  n  o  h     a  e    
+ t  l     e     e     o  r  e  t     d  e  v  g  l  n     p  i  e  c     i     v  f    
+ e        r     d     p  o     i           e  h  l  s     r  n     e     c     e  e    
+ r        g           l  u     o           r  t     i     o  g     n     h        r    
+          y           e  g     n           n        d     a        t              r    
+                         h                 m        e     c        i              e    
+                         o                 e        r     h        v              d    
+                         u                 n                       e                   
+                         t                 t                                           
+
+Alignment:
+[#]   | 6
+   [#]| .
+------'
+ 6  . 
+
+Alignment:
+[#]                                                                                 | je
+   [ ][ ]                                                                   #       | serai
+         [#]                                                                        | heureux
+            [ ]             #                                                       | ,
+               [#]                                                                  | quand
+                  [#]                                                               | nous
+                         #                                                          | en
+                     [ ]                                                    #       | aurons
+    #                   ( )                                                         | le
+                        [#]                                                         | temps
+                           [#]                                                      | ,
+    #                         [ ]                                                   | de
+          #                      ( )( )                                             | me
+                                 [ ]( )                                     #       | asseoir
+                                       [#]                                          | avec
+                                          ( )( )             #                      | les
+                                          [ ][ ]                            #       | d?put?
+                                                [#]                                 | et
+                                                   ( )      ( ) #                   | de
+                                                   ( )( )( )( )             #       | explorer
+                                                   ( )( )( )( )       #             | la
+                                                   ( )( )[#]( )                     | question
+                                        #                      ( )( )( )( )( )( )   | de
+                                                               ( )( )( )( )(#)( )   | fa?on
+                                                               ( )( )[#]( )( )( )   | productive
+                                                                                 [#]| .
+------------------------------------------------------------------------------------'
+ i  w  b  g  ,  w  w  h  t  ,  t  s  d  w  h  m  a  w  t  m  o  o  a  p  a  p  b  . 
+    i  e  l     h  e  a  i     o  i  o  i  o  e  n  o  h  a  u  n     r  n  r  a    
+    l     a     e     v  m        t  w  t  n  m  d  r  i  t  t        o  d  o  s    
+    l     d     n     e  e           n  h  .  b     k  s  t           d     s  i    
+                                              e           e           u     p  s    
+                                              r           r           c     e       
+                                              s                       t     c       
+                                                                      i     t       
+                                                                      v     i       
+                                                                      e     v       
+                                                                            e       
+
+Alignment:
+ # [ ]                                                                              | le
+      [#]                                                                           | ministre
+( )      ( )                                     #                                  | prendra
+( )      ( )                #                                                       | il
+            ( )                                                             #       | de
+            ( )       #                                                             | les
+            (#)                                                                     | mesures
+          #    [ ]                                                                  | pour
+                  [ ][ ]                         #                                  | r?soudre
+ #                      ( )                                                         | les
+                           [#]                                                      | difficult?s
+                                                             #                      | ,
+                              [#]( )                                                | car
+                            #       ( )( )( )                                       | il
+                                    ( )(#)( )                                       | est
+                                    ( )(#)( )                                       | absolument
+                                    ( )( )( )          #                            | n?cessaire
+                                             [ ]                            #       | de
+                                                [#]                                 | passer
+ #                                                 [ ]                              | les
+                                                 #    [ ]                           | commandes
+                                                         [#]                        | maintenant
+                                                               [#]                  | et
+                                                       #          [ ]( )( )( )( )   | non
+             #                                                    ( )( )( )( )( )   | dans
+                                                 #                ( )[ ]( )( )( )   | quelques
+                                                                  ( )( )[#]( )( )   | mois
+                                                                                 [#]| ?
+------------------------------------------------------------------------------------'
+ w  t  m  t  a  t  c  u  a  d  b  o  t  a  n  f  p  t  o  n  ,  a  n  s  m  f  n  ? 
+ i  h  i  a  c  o  l  p  n  i  e  f  h  b  e  o  l  h  r  o     n  o  o  o  r  o    
+ l  e  n  k  t     e     y  f  c     e  s  e  r  a  e  d  w     d  t  m  n  o  w    
+ l     i  e  i     a        f  a        o  d     c     e              e  t  m       
+       s     o     r        i  u        l        i     r                 h          
+       t     n              c  s        u        n     s                 s          
+       e                    u  e        t        g                                  
+       r                    l           e                                           
+                            t                                                       
+                            i                                                       
+                            e                                                       
+                            s                                                       
+
+Alignment:
+[#]                                                   | cela
+   ( )[ ]                     ( )    #    ( )( )( )   | encouragera
+         [ ]                            #             | la
+            [#]                                       | construction
+               [#]                                    | de
+                  [#]                                 | nouvelles
+                        [#]                           | embarcations
+                     ( )                   #          | de
+                     ( ) #                            | p?che
+                           [#]                        | et
+                              ( )       # ( )( )( )   | la
+       #                      ( )         ( )( )( )   | cr?ation
+                                 ( )       #          | de
+                                 [#]                  | nouvelles
+                                    (#)( )            | conserveries
+                                                   [#]| .
+------------------------------------------------------'
+ i  w  s  t  c  o  n  f  b  a  c  n  p  f  t  b  b  . 
+ t  i  p  h  o  f  e  i  o  n  a  e  r  a  o  e  u    
+    l  u  e  n     w  s  a  d  u  w  o  c        i    
+    l  r     s        h  t     s     c  i        l    
+             t        i  s     e     e  l        t    
+             r        n              s  i             
+             u        g              s  t             
+             c                       i  i             
+             t                       n  e             
+             i                       g  s             
+             o                                        
+             n                                        
+
+Alignment:
+(#)( )( )( )                           | il
+(#)( )( )( )                           | y
+(#)( )( )( )                           | a
+( )( )( )( )                      #    | bien
+( )( )( )( )          #                | de
+( )(#)( )( )                           | les
+( )( )( )[#]                           | choses
+                   #                   | que
+            [#]                        | je
+               [ ]                #    | pourrais
+                  [#]                  | dire
+                   # ( )               | ?
+                     ( )          #    | propos
+                     (#)               | de
+                #       ( )            | le
+                        [ ]       #    | bill
+                           [#]         | C
+                              [#]      | -
+                                 [#]   | 19
+                                    [#]| .
+---------------------------------------'
+ t  a  m  t  I  c  s  a  B  C  -  1  . 
+ h  r  a  h     o  a  b  i        9    
+ e  e  n  i     u  y  o  l             
+ r     y  n     l     u  l             
+ e        g     d     t                
+          s                            
+
+Alignment:
+[#]                                                                                    | je
+   ( )( )( )( )                                     #                                  | reviendrai
+                              [ ]( )                               #                   | sur
+                         #    ( )( )                                                   | cet
+                              ( )( )                #                                  | aspect
+                # [ ]                                                                  | un
+                     [#]                                                               | peu
+                        (#)( )                                                         | plus
+                        (#)( )                                                         | tard
+                                     #                                                 | ,
+                                    [#]                                                | car
+                                       [#]                                             | je
+                                          [#]                                          | pense
+                                  #       ( )                                          | que
+                                              #                                        | ce
+                                                 #                                     | est
+                   #                                                                   | un
+                                                    #                                  | ?l?ment
+                                  #                                                    | que
+                                             [#]                                       | il
+                                                [#]                                    | est
+                                                   [#]                                 | essentiel
+                                                      ( )       #                      | de
+                                                    #                                  | souligner
+                                                                              [ ] #    | cet
+                                                                                 [#]   | apr?s
+                                                                                 [#]   | -
+                                                                                 [#]   | midi
+                                                                                    [#]| .
+---------------------------------------------------------------------------------------'
+ i  a  g  t  s  s  a  b  l  o  a  t  b  I  t  i  i  e  t  t  k  o  d  w  a  h  t  a  . 
+    m  o  o  a  o     i  a  n  b  h  e     h  t  s  s  o  h  i  f  e  e  r  a  h  f    
+       i     y  m     t  t     o  a  c     i        s     e  n     b     e  v  i  t    
+       n        e        e     u  t  a     n        e        d     a        i  s  e    
+       g        t        r     t     u     k        n              t        n     r    
+                h                    s              t              e        g     n    
+                i                    e              i                             o    
+                n                                   a                             o    
+                g                                   l                             n    
+
+Alignment:
+(#)                                          | les
+[ ]                      #                   | soci?t?s
+   [ ]             #                         | trouvent
+      [#]                                    | que
+         [ ]    #                            | les
+            [ ]    #                         | r?glements
+               [#]                           | sont
+                  [ ]    #                   | compliqu?s
+                     [#]                     | ,
+                        [#]                  | lourds
+                           [#]               | et
+       #                      ( )            | que
+                   #          ( )            | on
+                #             ( )            | les
+                         #    ( )            | modifie
+                         #       ( )( )( )   | sans
+                   #             ( )( )( )   | cesse
+                                          [#]| .
+---------------------------------------------'
+ c  f  t  t  r  a  c  ,  c  a  c  a  t  t  . 
+ o  i  h  h  u  r  o     u  n  h  l  h  i    
+ m  n  a  e  l  e  m     m  d  a  l  e  m    
+ p  d  t     e     p     b     n        e    
+ a           s     l     e     g             
+ n                 i     r     i             
+ i                 c     s     n             
+ e                 a     o     g             
+ s                 t     m                   
+                   e     e                   
+                   d                         
+
+Alignment:
+[#]                                                | monsieur
+   (#)                                             | le
+   [ ]                         #                   | Orateur
+      [#]                                          | ,
+         [#]                                       | ma
+            [#]                                    | question
+               ( )( )          #                   | se
+             # ( )( )                              | adresse
+               ( )( )       #                      | ?
+                     [#]                           | le
+                        [#]                        | ministre
+                           ( )(#)                  | charg?
+                                 [#]               | de
+                                    [ ]       #    | la
+                                       ( )(#)[ ]   | Commission
+                                       [#]( )( )   | canadienne
+                                       (#)( )( )   | de
+                                       ( )( )(#)   | le
+                                       ( )[#]( )   | bl?
+                                                [#]| .
+---------------------------------------------------'
+ M  S  ,  m  q  i  f  t  m  i  c  o  t  C  W  B  . 
+ r  p     y  u  s  o  h  i  n  h  f  h  a  h  o    
+ .  e        e     r  e  n     a     e  n  e  a    
+    a        s           i     r        a  a  r    
+    k        t           s     g        d  t  d    
+    e        i           t     e        i          
+    r        o           e              a          
+             n           r              n          
+
+Alignment:
+                                     #             | si
+[#]                                                | je
+   [#]                                             | comprends
+                                              #    | bien
+                            #                      | ,
+                                       ( )( )(#)   | on
+                                       ( )( )(#)   | pr?voit
+         [#]                                       | un
+            [#]                                    | taux
+            ( )( )                         #       | de
+            ( )                               #    | int?r?ts
+                                 [ ][ ]       #    | annuel
+               ( )                         #       | de
+                        [ ]                   #    | 70
+                           [ ][ ]             #    | %
+                                                [#]| .
+---------------------------------------------------'
+ i  u  t  a  r  o  a  l  7  p  c  p  a  i  b  c  . 
+    n  h     a  f  t  e  0  e  e  e  n  s  e  o    
+    d  a     t        a     r  n  r  n     i  n    
+    e  t     e        s        t     u     n  t    
+    r                 t              m     g  e    
+    s                                         m    
+    t                                         p    
+    a                                         l    
+    n                                         a    
+    d                                         t    
+                                              e    
+                                              d    
+
+Alignment:
+( )( )(#)( )( )                  | nous
+( )( )( )( )( )       #          | souhaitons
+            ( )( )( )(#)         | parvenir
+            (#)( )( )( )         | ?
+            ( )( )[#]( )         | une
+            ( )( )( )[#]         | d?cision
+                        [#]      | cette
+                           [#]   | semaine
+                              [#]| .
+---------------------------------'
+ i  i  o  h  t  m  a  d  t  w  . 
+ t  s  u  o  o  a     e  h  e    
+       r  p     k     c  i  e    
+          e     e     i  s  k    
+                      s          
+                      i          
+                      o          
+                      n          
+
+Alignment:
+[#]            | nous
+   [#]         | acceptons
+      [#]      | votre
+         [#]   | opinion
+            [#]| .
+---------------'
+ w  a  y  v  . 
+ e  c  o  i    
+    c  u  e    
+    e  r  w    
+    p          
+    t          
+
+Alignment:
+( )(#)                  | il
+( )(#)                  | fit
+( )( )    #             | campagne
+    #       ( )( )      | l?
+    #       ( )( )      | -
+    #       ( )( )      | dessus
+    #       ( )( )      | pendant
+      ( ) #             | les
+         (#)            | ?lections
+                     [#]| .
+------------------------'
+ t  f  a  e  o  t  p  . 
+ h  o  n  l  n  h  o    
+ e  u     e     a  s    
+ y  g     c     t  i    
+    h     t        t    
+    t     i        i    
+          o        o    
+          n        n    
+
+Alignment:
+[#]   | 12
+   [#]| .
+------'
+ 1  . 
+ 2    
+
+Alignment:
+[#]                                                      | monsieur
+   (#)                                                   | le
+   [ ]                            #                      | Orateur
+      [#]                                                | ,
+         ( )( )( )( )                         #          | voici
+         ( )( )( )( )    #                               | ce
+         ( )( )( )(#)                                    | que
+         [#]( )( )( )                                    | je
+         (#)( )( )( )                                    | ai
+         ( )( )(#)( )                                    | ?
+         ( )( )( )( )             #                      | en
+         ( )[#]( )( )                                    | dire
+                     [#]                                 | :
+                        [ ]( )    #                      | quelle
+                              [#]                        | cruelle
+                           ( )   (#)                     | com?die
+                                    [#]                  | ,
+                                       [#]               | car
+                         #                ( )( )( )( )   | ce
+                                          ( )( )( )(#)   | est
+                                          ( )(#)( )( )   | jouer
+                                          ( )(#)( )( )   | la
+                                          ( )(#)( )( )   | com?die
+                                                      [#]| .
+---------------------------------------------------------'
+ M  S  ,  I  s  t  t  :  w  a  c  h  ,  b  a  h  i  i  . 
+ r  p        a  o  h     h     r  o     e     o  t  s    
+ .  e        y     a     a     u  a     c     a          
+    a              t     t     e  x     a     x          
+    k                          l        u                
+    e                                   s                
+    r                                   e                
+
+Alignment:
+[#]                                 | monsieur
+   (#)                              | le
+   [ ]                #             | Orateur
+      [#]                           | ,
+         [#]                        | nous
+            ( )[ ]    # ( )         | essaierons
+                # [ ]               | de
+          #          ( )            | nous
+                     (#)            | en
+                     (#)            | tenir
+                        [#]         | ?
+                           [ ] #    | cette
+                              [#]   | suggestion
+                                 [#]| .
+------------------------------------'
+ M  S  ,  w  w  t  t  s  t  t  s  . 
+ r  p     e  i  r  o  t  o  h  u    
+ .  e        l  y     i     a  g    
+    a        l        c     t  g    
+    k                 k        e    
+    e                          s    
+    r                          t    
+                               i    
+                               o    
+                               n    
+
+Alignment:
+[#]                                                               | 1
+   [#]                                                            | .
+         [ ]                      #                               | a
+            [#]                                                   | )
+               [ ] #                                              | $
+                  [#]                                             | 98,355
+                     [ ]                                        # | .
+                           [#]                                    | b
+                              [#]                                 | )
+                                 [#]                              | Ils
+                                  # ( )( )( )                     | sont
+                                  # ( )( )( )                     | disponibles
+                                    ( )(#)( )                     | dans
+                                        #                         | tous
+                                     #       ( )   ( )            | les
+                   #                         ( )                  | grands
+                                                ( )[#]            | bureaux
+                                              # ( )( )            | de
+                   #                            [ ]( )            | poste
+                #                                     ( )( )( )   | de
+                                                      ( )[#]( )   | le
+                                                      ( )( )[#]   | pays
+                                                               [#]| .
+------------------------------------------------------------------'
+ 1  .  (  a  )  $  9  .  (  b  )  T  a  d  t  m  p  o  a  t  c  . 
+                   8              h  r  i  h  a  o  f  c  h  o    
+                   ,              e  e  s  r  j  s  f  r  e  u    
+                   3              y     t  o  o  t  i  o     n    
+                   5                    r  u  r     c  s     t    
+                   5                    i  g        e  s     r    
+                                        b  h        s        y    
+                                        u                         
+                                        t                         
+                                        e                         
+                                        d                         
+
+Alignment:
+               ( )( )( )( )    #                            | en
+               ( )( )( )(#)                                 | vertu
+               ( )(#)( )( )                                 | de
+ #             ( )( )( )( )                                 | la
+               ( )( )( )[#]                                 | constitution
+                           [#]                              | ,
+( )       #                                                 | le
+( )                      #                                  | activit?
+( )                                  #                      | criminelle
+   [ ]( )( )( )                      #                      | est
+   ( )( )( )( )    #                                        | de
+   ( )( )( )( )          #                                  | comp?tence
+   ( )( )( )( )                      #                      | f?d?rale
+                            #                               | ,
+                              [ ]    #                      | tandis
+                              [#]                           | que
+                                 ( )( )( )( )( )( )(#)( )   | le
+                                 ( )(#)( )( )( )( )( )( )   | application
+                   #             ( )( )( )( )( )( )( )( )   | de
+                                 ( )( )( )( )( )( )( )(#)   | la
+                                 [#]( )( )( )( )( )( )( )   | loi
+                                 ( )(#)( )( )( )( )( )( )   | rel?ve
+                                 ( )( )( )(#)( )( )( )( )   | de
+                                 ( )( )( )( )( )( )(#)( )   | les
+                                 ( )( )( )( )(#)( )( )( )   | provinces
+                                 ( )( )( )( )( )(#)( )( )   | et
+                                 ( )( )( )( )(#)( )( )( )   | de
+                                 ( )( )( )( )( )( )(#)( )   | les
+                                 ( )(#)( )( )( )( )( )( )   | municipalit?s
+                                                         [#]| .
+------------------------------------------------------------'
+ c  i  a  n  p  a  t  o  c  ,  w  l  e  i  a  p  a  l  r  . 
+ r  s     a  r  c  o  u  o     h  a  n  s     r  n  o  e    
+ i        t  o  c     r  n     i  w  f        o  d  c  s    
+ m        i  b  o        s     l     o        v     a  p    
+ e        o  l  r        t     e     r        i     l  o    
+          n  e  d        i           c        n        n    
+          a  m  i        t           e        c        s    
+          l     n        u           m        i        i    
+                g        t           e        a        b    
+                         i           n        l        i    
+                         o           t                 l    
+                         n                             i    
+                                                       t    
+                                                       y    
+
+Alignment:
+[#]                                                                              | je
+   (#)                                                                           | pr?tends
+      [#]( )( )( )( )( )                                                         | que
+         ( )( )( )( )(#)( )                                                      | mes
+         ( )( )( )( )(#)( )                                                      | remarques
+         ( )( )( )( )( )( )         ( ) #                                        | concernant
+                           [#]                                                   | le
+                      #       [ ]                                                | bill
+                                 [#]                                             | ,
+                            #          ( )                                       | le
+    #                                  [ ]                                       | argent
+                                          ( )[#]                                 | d?pens?
+                                        #       [ ]                              | pour
+                                                   ( )                   #       | les
+    #                                              [ ]                           | soins
+    #                                              [ ]                           | m?dicaux
+                                                      [#]                        | et
+                                                         [#]( )( )( )( )( )( )   | la
+                                                         ( )[#]( )( )( )( )( )   | fa?on
+                                                         ( )( )( )( )( )( )(#)   | dont
+                                           #             ( )( )( )( )( )( )( )   | on
+                            #                            ( )( )( )( )( )( )( )   | le
+                                        #                ( )( )( )( )( )( )( )   | d?pense
+                                                                              [#]| .
+---------------------------------------------------------------------------------'
+ i  s  t  w  I  s  i  p  t  t  b  ,  t  m  b  s  o  m  a  t  m  i  w  t  a  s  . 
+    u  h  h     a  s  e  o  h  i     o  o  e  p  n  e  n  h  a  n  h  h  r  p    
+    b  a  a     y     r     e  l        n  i  e     d  d  e  n     i  e  e  e    
+    m  t  t           t        l        e  n  n     i        n     c  y     n    
+    i                 i                 y  g  t     c        e     h        t    
+    t                 n                 s           a        r                   
+                      e                             r                            
+                      n                             e                            
+                      t                                                          
+
+Alignment:
+ #                                        | de
+                #                         | abord
+[ ][#]                                    | quelques
+      [#]                                 | mots
+         ( )             #                | ?
+         ( ) #                            | le
+         ( )    #                         | sujet
+         ( )                      #       | de
+            [#]                           | cette
+               [#]                        | maladie
+                  ( )(#)( )( )( )( )( )   | pour
+                  ( )( )( )( )( )( )(#)   | vous
+                # ( )( )( )( )( )( )( )   | situer
+                                       [#]| .
+------------------------------------------'
+ a  f  w  a  t  d  m  h  t  p  t  i  p  . 
+    e  o  b  h  i  i  e  o  u  h  n  e    
+    w  r  o  i  s  g  l     t  i  t  r    
+       d  u  s  e  h  p        n  o  s    
+       s  t     a  t           g     p    
+                s              s     e    
+                e                    c    
+                                     t    
+                                     i    
+                                     v    
+                                     e    
+
+Alignment:
+[#]                                          | heureusement
+                                  #          | ,
+   ( )( )( )                            #    | il
+   ( )( )( )                            #    | y
+   ( )( )( )                   #             | en
+   ( )( )( )                            #    | a
+   ( )( )[#]                                 | moins
+            [#]                              | cette
+               [#]                           | ann?e
+                  [#]                        | ,
+                                        #    | elles
+       #                                     | sont
+                     (#)                     | plus
+                        [#]                  | raisonnables
+                                 (#)         | ,
+                     (#)                     | plus
+                              ( )       #    | s?rieuses
+                            #                | et
+                                    [#]      | plus
+                                       [#]   | conciliantes
+                                          [#]| .
+---------------------------------------------'
+ f  t  a  f  t  y  ,  m  r  a  r  ,  m  c  . 
+ o  h  r  e  h  e     o  e  n  e     o  o    
+ r  e  e  w  i  a     r  a  d  s     r  n    
+ t  y     e  s  r     e  s     p     e  c    
+ u        r              o     o        i    
+ n                       n     n        l    
+ a                       a     s        i    
+ t                       b     i        a    
+ e                       l     b        t    
+ l                       e     l        o    
+ y                             e        r    
+                                        y    
+
+Alignment:
+[#]                                    | ce
+   (#)                                 | projet
+   ( )                #                | de
+   (#)                                 | loi
+      (#)( )( )( )( )                  | est
+      ( )( )(#)( )( )                  | ?
+      ( )( )( )(#)( )                  | le
+      ( )( )(#)( )( )                  | ?tude
+      ( )( )( )( )( ) #                | ?
+      ( )( )( )[ ](#)                  | la
+      ( )( )( )( )[#]                  | Chambre
+          #          [ ]               | depuis
+                        [#]            | plus
+          #                [ ]         | de
+                              [#]      | un
+                                 [#]   | an
+                                    [#]| .
+---------------------------------------'
+ t  b  h  b  b  t  H  f  m  t  a  y  . 
+ h  i  a  e  e  h  o  o  o  h     e    
+ i  l  s  e  f  e  u  r  r  a     a    
+ s  l     n  o     s     e  n     r    
+             r     e                   
+             e                         
+
+Alignment:
+                   #                      | cette
+                   #                      | personne
+( )          #                            | a
+(#)                                       | pris
+( )                #                      | sa
+(#)                                       | retraite
+   ( )                               #    | le
+      [#]                                 | 30
+   [#]                                    | d?cembre
+            [#]                           | 1975
+               ( )(#)( )                  | apr?s
+               ( )(#)( )                  | avoir
+               ( )(#)( )                  | compl?t?
+                        [#]               | 34
+                           [#]            | ann?es
+                #             [ ]         | ?
+                                    (#)   | le
+                                 ( )[#]   | service
+                               # ( )( )   | de
+                                 ( )(#)   | le
+                                 [#]( )   | public
+                                       [#]| .
+------------------------------------------'
+ r  D  3  ,  1  f  c  o  3  y  o  p  s  . 
+ e  e  0     9  o  o  f  4  e  f  u  e    
+ t  c        7  l  m        a     b  r    
+ i  e        5  l  p        r     l  v    
+ r  m           o  l        s     i  i    
+ e  b           w  e              c  c    
+ d  e           i  t                 e    
+    r           n  i                      
+                g  o                      
+                   n                      
+
+Alignment:
+( )( )(#)( )( )( )( )                                                      | le
+(#)( )( )( )( )( )( )                                                      | adoption
+( )(#)( )( )( )( )( )                                                      | de
+( )( )(#)( )( )( )( )                                                      | la
+( )( )( )( )( )( )[#]                                                      | motion
+( )(#)( )( )( )( )( )                                                      | de
+( )( )(#)( )( )( )( )                                                      | le
+( )( )( )( )(#)( )( )                                                      | d?put?
+                     [ ][ ]                            #                   | signifierait
+                           [#]                                             | que
+ #                                              ( )[ ]( )                  | la
+                                                ( )( )(#)                  | loi
+                #                      ( )( )( )( )                        | pr?ciserait
+                                       ( )(#)( )( )                        | en
+                                       ( )(#)( )( )                        | d?tail
+                              [ ]       #                                  | les
+                                 ( )[ ]                #                   | exigences
+                                 ( )( )          #                         | de
+                                 [#]( )                                    | contenu
+                                                         [#]               | et
+                            #                                              | que
+                                                            [#]            | nous
+                #                                              [ ]         | pourrions
+                                                                     (#)   | les
+                                           #                      [ ]      | discuter
+                                                                        [#]| .
+---------------------------------------------------------------------------'
+ p  o  t  h  m  '  m  w  m  t  t  c  r  a  s  o  i  t  s  a  w  c  d  t  . 
+ a  f  h  o  e  s  o  o  e  h  h  o  e  r  p  u  n  h  t  n  e  o  e  h    
+ s     e  n  m     t  u  a  a  e  n  q  e  e  t     e  a  d     u  b  e    
+ s        .  b     i  l  n  t     t  u     l           t        l  a  m    
+ a           e     o  d           e  i     l           u        d  t       
+ g           r     n              n  r     e           t           e       
+ e                                t  e     d           e                   
+                                     m                                     
+                                     e                                     
+                                     n                                     
+                                     t                                     
+                                     s                                     
+
+Alignment:
+[#]                                          | cela
+   (#)( )   ( )                              | ne
+   ( )( )   ( )       #                      | veut
+   ( )(#)   ( )                              | pas
+   ( )( )   [#]                              | dire
+         [#]                                 | n?cessairement
+   (#)( )   ( )( )( )( )                     | que
+             # ( )( )( )                     | il
+             # ( )( )( )                     | y
+               (#)( )( )                     | a
+               ( )( )(#)                     | d?faut
+               ( )( )( ) #                   | de
+          #    ( )( )( )                     | se
+             # ( )( )( )                     | y
+          #    ( )( )( )                     | conformer
+                        [ ]       #          | de
+                           [ ]       #       | la
+                      #       [ ]            | part
+                                 [#]         | de
+                                    [ ] #    | les
+                                       [#]   | parties
+                                          [#]| .
+---------------------------------------------'
+ t  d  n  n  i  n  -  c  o  t  p  o  t  p  . 
+ h  o  o  e  n  o     o  n  h  a  f  h  a    
+ i  e  t  c  d  n     m     e  r     e  r    
+ s  s     e  i        p        t        t    
+          s  c        l                 i    
+          s  a        i                 e    
+          a  t        a                 s    
+          r  e        n                      
+          i           c                      
+          l           e                      
+          y                                  
+
+Alignment:
+[#]( )( )( )                                 | je
+( )( )[#]( )                                 | ne
+( )( )( )(#)                     ( )         | lui
+( )( )( )( )          #                      | ai
+( )( )[#]( )                                 | pas
+( )( )( )( )          #                      | demand?
+            (#)( )( )( )                     | de
+            ( )( )( )(#)                     | me
+            ( )( )( )(#)                     | fournir
+            ( )( )( )( )    #                | de
+            ( )( )( )(#)                     | telles
+            ( )( )( )(#)                     | explications
+          #             ( )( )( )( )( )( )   | sur
+                      # ( )( )( )( )( )( )   | ces
+                      # ( )( )( )( )( )( )   | activit?s
+                                          [#]| .
+---------------------------------------------'
+ i  w  n  a  f  a  d  e  a  t  w  h  w  d  . 
+    a  o  s  o     e  x  s  o  h  e  a  o    
+    s  t  k  r     t  p        a     s  i    
+          i        a  l        t        n    
+          n        i  a                 g    
+          g        l  n                      
+                   e  a                      
+                   d  t                      
+                      i                      
+                      o                      
+                      n                      
+
+Alignment:
+[#]                                                         | comment
+   (#)                                                      | peut
+   ( )                                                    # | -
+   ( )          #                                           | on
+      ( )( )                                  #             | tant
+            ( )( )                            #             | demander
+               ( )   (#)( )( )( )                           | de
+                     ( )( )[#]( )                           | une
+                     ( )( )( )(#)                           | part
+                                    [#]                     | et
+            (#)                              ( )            | ?tre
+            ( )                              (#)            | assur?
+            ( )       #                      ( )            | de
+                                       [#]                  | si
+                                          [#]               | peu
+                                                [#]         | de
+                                                   [#]      | le
+                                                      [#]   | autre
+                                                         [#]| ?
+------------------------------------------------------------'
+ h  c  s  m  b  a  ,  o  t  o  h  ,  a  s  l  a  o  t  o  ? 
+ o  a  o  u  e  s     n  h  n  a     n  o  i  n  n  h  t    
+ w  n     c     k        e  e  n     d     t  s     e  h    
+          h     e              d           t  w        e    
+                d                          l  e        r    
+                                           e  r             
+                                              e             
+                                              d             
+
+Alignment:
+            [#]                                                      | peut
+            [#]                                                      | -
+            [#]                                                      | ?tre
+               ( )( )( )( )                                     #    | proposera
+               [#]( )( )( )                                          | il
+( )( )( )                                                       #    | ensuite
+    #                         ( )                                    | une
+                              (#)                                    | mesure
+                                                                #    | nouvelle
+                                                          #          | et
+                           [#]                                       | diff?rente
+                                 [#]                                 | qui
+                                       [#]                           | ne
+                                             ( )       #             | le
+                                    ( )   ( )   ( )             #    | exposera
+                                       [#]                           | pas
+                                                   [#]               | ?
+                                     #                ( )            | les
+                                                         ( )( )(#)   | accusations
+                                                         ( )[#]( )   | de
+                                                         ( )( )[#]   | censure
+                                                                  [#]| .
+---------------------------------------------------------------------'
+ a  a  r  ,  p  h  w  b  i  d  l  w  w  n  l  h  o  t  t  c  o  c  . 
+ s     e     e  e  i  r  n  i  e  h  i  o  a  i  p  o  h  h  f  e    
+       s     r     l  i     f  g  i  l  t  y  m  e     e  a     n    
+       u     h     l  n     f  i  c  l           n        r     s    
+       l     a        g     e  s  h                       g     o    
+       t     p              r  l                          e     r    
+             s              e  a                                s    
+                            n  t                                h    
+                            t  i                                i    
+                               o                                p    
+                               n                                     
+
+Alignment:
+[ ]                   #                      ( )( )( )( )( )( )( )( )( )   | ou
+   [#]                                                                     | ils
+      [ ]       #                                                          | font
+         [#]                                                               | leur
+            [#]                                                            | travail
+               [ ]                                                    #    | convenablement
+                  [#]                                                      | ,
+                     [#]                                                   | ou
+                        ( )( )             #                               | ce
+ #                      ( )( )                                             | est
+                        ( )( )                                        #    | ?
+                        [ ]( )                #                            | vous
+             #          ( )( )                                             | de
+                #             [ ]                                          | obtenir
+                                 [#]                                       | le
+                                    [#]                                    | pouvoir
+                                       ( )( )                         #    | n?cessaire
+                               #       ( )( )                              | pour
+                                             ( )( )(#)( )( )( )( )( )( )   | les
+                                             ( )( )( )( )( )( )( )( )(#)   | amener
+                                             ( )( )( )( )( )( )(#)( )( )   | ?
+                                  #          ( )( )( )( )( )( )( )( )( )   | le
+                                             ( )( )( )( )( )( )( )( )(#)   | faire
+                                                                        [#]| .
+---------------------------------------------------------------------------'
+ e  t  d  t  j  p  ,  o  y  m  g  t  p  s  t  y  c  b  s  t  t  d  i  p  . 
+ i  h  o  h  o  r     r  o  u  e  h  o  o  h  o  a  e  u  h  h  o  t  r    
+ t  e     e  b  o        u  s  t  e  w     a  u  n     r  a  e        o    
+ h  y     i     p           t        e     t           e  t  y        p    
+ e        r     e                    r                                e    
+ r              r                                                     r    
+                l                                                     l    
+                y                                                     y    
+
+Alignment:
+            ( )( )                   #             | on
+( )( )( )( )( )( )       #                         | y
+            ( )( )                   #             | retrouve
+                                     #             | en
+                         #                         | effet
+                  [#]                              | toutes
+                   # [ ]                           | les
+                        [#]                        | tensions
+                           [#]                     | et
+                              [#]                  | toutes
+                   #             [ ]               | les
+                                    [#]            | divergences
+                                       [#]         | de
+                                          [#]      | notre
+                                             [#]   | pays
+                                                [#]| .
+---------------------------------------------------'
+ i  o  n  c  w  h  a  t  s  a  a  t  d  o  o  c  . 
+ n  u  a  a  e  a  l  h  t  n  l  h  i  f  u  o    
+    r  t  p     v  l  e  r  d  l  e  v     r  u    
+       i  i     e        a           e        n    
+       o  t              i           r        t    
+       n  a              n           g        r    
+       a  l              s           e        y    
+       l                             n             
+                                     c             
+                                     i             
+                                     e             
+                                     s             
+
+Alignment:
+(#)                                 | le
+[ ]          #                      | hon.
+   [#]                              | John
+      [#]                           | N
+         [#]                        | .
+            [#]                     | Turner
+               [#]                  | (
+                  [#]               | ministre
+                     [#]            | de
+                        (#)         | les
+                        [#]         | Finances
+                           [#]      | )
+                              (#)   | propose
+                                 [#]| :
+------------------------------------'
+ h  J  N  .  T  (  M  o  F  )  m  : 
+ o  o        u     i  f  i     o    
+ n  h        r     n     n     v    
+ .  n        n     i     a     e    
+             e     s     n     d    
+             r     t     c          
+                   e     e          
+                   r                
+
+Alignment:
+( )( )( )( )( )( )                   #                               | bien
+( )( )(#)( )( )( )                                                   | que
+( )( )( )( )(#)( )( )( )                                             | il
+( )( )( )( )(#)( )( )( )                                             | me
+( )( )( )( )(#)( )( )( )                                             | co?te
+( )( )( )( )( )(#)( )( )                                             | de
+         ( )( )( )( )(#)                                             | le
+         ( )( )( )[#]( )                                             | admettre
+                        [#]                                          | ,
+                                  #                   ( )            | les
+                                                      [#]            | gouvernements
+                                                   [#]               | lib?raux
+                                              #          ( )( )( )   | ?
+                                                         ( )(#)( )   | le
+                                                         ( )( )(#)   | Canada
+                           ( )( )( )      (#)( )                     | ont
+                           ( )( )( )      ( )( )                   # | pr?sent?
+                                  #    ( )( )( )                     | de
+                                    [#]                              | bonnes
+                                       ( )                         # | mesures
+                                       (#)                           | l?gislatives
+                                                                  (#)| ...
+---------------------------------------------------------------------'
+ a  m  a  I  h  t  a  i  ,  t  h  b  g  l  b  i  b  L  g  i  t  c  - 
+ s  u  s     a  o  d  t     h  a  e  o  e  r  n  y  i  o  n  h  o  - 
+    c        t     m        e  s  e  o  g  o        b  v     i  u    
+    h        e     i        r     n  d  i  u        e  e     s  n    
+                   t        e           s  g        r  r        t    
+                                        l  h        a  n        r    
+                                        a  t        l  m        y    
+                                        t              e             
+                                        i              n             
+                                        o              t             
+                                        n              s             
+
+Alignment:
+(#)                                                   | en
+( )             #                                     | tant
+(#)                                                   | que
+   ( )[#]                                             | d?put?
+         [ ]                      #                   | de
+            ( ) #                                     | une
+                  (#)                                 | circonscription
+               [#]                                    | voisine
+ #                                                    | ,
+                     [#]                              | je
+                #       ( )   ( )( )                  | connais
+                           ( )                #       | fort
+                           [#]                        | bien
+                                    (#)               | sa
+                                       [#]            | pers?v?rance
+                                          [#]         | et
+                                    (#)               | son
+                                        #    ( )( )   | acharnement
+                               #             ( )( )   | ?
+    #                                        ( )( )   | le
+                                             ( )[#]   | travail
+                                                   [#]| .
+------------------------------------------------------'
+ a  t  m  f  t  n  r  I  a  w  a  o  h  p  a  h  w  . 
+ s  h  e  o  h  e  i     m  e  w  f  i  e  n  a  o    
+    e  m  r  e  i  d        l  a     s  r  d  r  r    
+       b        g  i        l  r        s     d  k    
+       e        h  n           e        i             
+       r        b  g                    s             
+                o                       t             
+                u                       e             
+                r                       n             
+                i                       c             
+                n                       e             
+                g                                     
+
+Alignment:
+[#]            | o?
+   [#]         | est
+      [#]      | la
+         [#]   | CAI
+            [#]| ?
+---------------'
+ w  i  t  A  ? 
+ h  s  h  I    
+ e     e  B    
+ r             
+ e             
+
+Alignment:
+                     [#]                                                                  | malheureusement
+                        [#]                                                               | ,
+[#]( )( )                                                                                 | ?
+( )[ ]( )                                        #                                        | le
+( )( )( )                                                                      #          | heure
+( )( )( )                                                                      #          | actuelle
+         [ ]                                                       #                      | ,
+            [ ]                                                                #          | cette
+               (#)                                                                        | r?alit?
+                           [#]                                                            | est
+                              [ ]                                              #          | per?ue
+                                 ( )       #                                              | par
+                                    ( )( )( )    #                                        | les
+                                    [#]( )( )                                             | deux
+                                    ( )( )[#]                                             | tiers
+                                             [#]                                          | de
+                                                [ ]             #                         | la
+                                                   ( )                         #          | population
+                                                      [ ]                      #          | non
+                                                      [#]                                 | pas
+                                                         [#]                              | comme
+                                                            [#]                           | un
+                                                               ( )             #          | avantage
+                                                                  [#]                     | ,
+                                                                     [#]                  | mais
+                                                                        [#]               | comme
+                                                                           [#]            | un
+                                                                              [#]( )( )   | obstacle
+                                                                                       [#]| .
+------------------------------------------------------------------------------------------'
+ a  t  m  ,  t  f  ,  u  ,  i  s  i  t  -  t  o  t  c  n  a  a  o  ,  b  a  a  b  t  o  . 
+ t  h  o     h  a     n     s  e  n  w     h  f  h  o  o  s  n  p     u  s     a  o  p    
+    e  m     a  c     f        e     o     i     e  u  t        p     t        r     p    
+       e     t  t     o        n           r        n           o              r     o    
+       n              r                    d        t           r              i     r    
+       t              t                    s        r           t              e     t    
+                      u                             y           u              r     u    
+                      n                                         n                    n    
+                      a                                         i                    i    
+                      t                                         t                    t    
+                      e                                         y                    y    
+                      l                                                                   
+                      y                                                                   
+
+Alignment:
+(#)[ ]( )      ( )( )( )   | ne
+( )( )( )      ( )(#)( )   | nous
+( )( )[ ]      ( )( )(#)   | forcez
+( )[#]( )      ( )( )( )   | pas
+( )( )(#)      ( )( )( )   | ?
+( )( )( )      ( )( )(#)   | accepter
+         [#]               | un
+            [ ]       #    | moratoire
+                        [#]| .
+---------------------------'
+ d  n  f  a  m  d  o  t  . 
+ o  o  o     o  o  u  h    
+    t  r     r  w  r  r    
+       c     a  n     o    
+       e     t        a    
+             o        t    
+             r        s    
+             i             
+             u             
+             m             
+
+Alignment:
+[#]                                          | ce
+   [#]                                       | ne
+             #                               | est
+   [#]                                       | pas
+      [#]                                    | la
+         [#]                                 | premi?re
+            [#]                              | fois
+               [ ]                      #    | que
+                  ( )( )( ) #                | les
+                  [#]( )( )                  | d?put?s
+             #                         ( )   | en
+                         # ( )( )( )( )      | entendront
+                           ( )( )( )(#)      | parler
+                                          [#]| .
+---------------------------------------------'
+ t  n  t  f  t  t  m  o  p  a  g  t  h  t  . 
+ h  o  h  i  i  h  e  f  a  r  o  o  e  h    
+ i  t  e  r  m  a  m     r  e  i     a  a    
+ s        s  e  t  b     l     n     r  t    
+          t        e     i     g             
+                   r     a                   
+                   s     m                   
+                         e                   
+                         n                   
+                         t                   
+
+Alignment:
+         ( )( )                         #                            | on
+         ( )( )                         #                            | trouvait
+[ ]    #                                                             | la
+   [#]                                                               | m?me
+      [#]                                                            | recommandation
+               [#]                                                   | dans
+                  [#]                                                | le
+                     [#]                                             | rapport
+                         #                      ( )                  | de
+                            #                   ( )                  | le
+                                                      [#]            | 29
+                                                   [#]               | avril
+                         #                               [ ]         | de
+                            #                                  ( )   | le
+                                        #                      [ ]   | an
+                                        #                   [ ]      | dernier
+                        [ ]          #                               | de
+                           [ ]                   #                   | le
+                                 [ ]          #                      | comit?
+                              [ ]             #                      | permanent
+                                    [ ]                   #          | de
+             #                         ( )                           | les
+                                       [#]                           | privil?ges
+                                          [#]                        | et
+                                             [#]                     | ?lections
+                                                                  [#]| .
+---------------------------------------------------------------------'
+ t  s  r  w  m  i  t  r  o  t  S  C  o  P  a  E  o  A  2  o  l  y  . 
+ h  a  e  a  a  n  h  e  f  h  t  o  n  r  n  l  n  p  9  f  a  e    
+ e  m  c  s  d     e  p     e  a  m     i  d  e     r        s  a    
+    e  o     e        o        n  m     v     c     i        t  r    
+       m              r        d  i     i     t     l                
+       m              t        i  t     l     i                      
+       e                       n  t     e     o                      
+       n                       g  e     g     n                      
+       d                          e     e     s                      
+       a                                s                            
+       t                                                             
+       i                                                             
+       o                                                             
+       n                                                             
+
+Alignment:
+         [#]( )( )                     | je
+         ( )( )(#)                     | crois
+       #                               | ,
+[#]                                    | monsieur
+   ( )             #                   | le
+   ( )          #                      | pr?sident
+      [#]                              | ,
+                #                      | que
+                  [#]                  | le
+                #    ( )( )            | ministre
+                           [#]         | est
+                              [#]      | mal
+                                 [#]   | inform?
+                                    [#]| .
+---------------------------------------'
+ M  S  ,  I  a  a  t  h  m  i  i  i  . 
+ r  p        m  f  h  o  e  s  l  n    
+ .  e           r  e  n  m     l  f    
+    a           a     .  b        o    
+    k           i        e        r    
+    e           d        r        m    
+    r                             e    
+                                  d    
+
+Alignment:
+[#]                        | dans
+   [#]                     | le
+      ( )( )[#]            | rapport
+ #    ( )( )( )            | de
+    # ( )( )( )            | le
+      [#]( )( )            | minist?re
+      [ ]( )(#)            | de
+      [#]( )( )            | les
+      [#]( )( )            | Transports
+      (#)( )( )            | sur
+    # ( )( )( )            | le
+      (#)[ ]( )            | accident
+                   #       | ,
+               [#]         | il
+                  [#]      | est
+                     [#]   | dit
+                        [#]| :
+---------------------------'
+ i  t  M  a  r  i  i  s  : 
+ n  h  O  c  e  t  s  t    
+    e  T  c  p        a    
+          i  o        t    
+          d  r        e    
+          e  t        d    
+          n                
+          t                
+
+Alignment:
+[#]                                       | monsieur
+   (#)                                    | le
+   [ ]                         #          | Orateur
+      [#]                                 | ,
+         [#]( )( )( )( )                  | le
+         ( )( )(#)( )( )                  | gouvernement
+         ( )[#]( )( )( )                  | f?d?ral
+         ( )( )( )(#)( )                  | a
+         ( )( )( )( )( )       #          | offert
+                        [#]( )( )( )( )   | un
+                        ( )( )( )( )[#]   | programme
+                        ( )(#)( )( )( )   | de
+                        ( )( )[#]( )( )   | 100
+                        ( )( )( )[#]( )   | millions
+                        ( )(#)( )( )( )   | de
+                        ( )[#]( )( )( )   | dollars
+                                       [#]| .
+------------------------------------------'
+ M  S  ,  t  f  o  w  f  a  $  1  m  p  . 
+ r  p     h  e  f  a  o        0  i  r    
+ .  e     e  d  f  s  r        0  l  o    
+    a        e  e                 l  g    
+    k        r  r                 i  r    
+    e        a                    o  a    
+    r        l                    n  m    
+
+Alignment:
+[#]                                                               | dans
+   (#)                                                            | la
+   [#]                                                            | plupart
+   ( )    #                                                       | de
+   ( )(#)                                                         | les
+      [#]                                                         | ?chantillons
+         [#]                                                      | de
+            [#]                                                   | cette
+               ( ) #                                              | importance
+                  ( )       #                                     | ,
+             #       ( )( )                                       | ce
+                     ( )(#)                                       | est
+                     ( )( )                #                      | -
+                #    ( )( )                                       | ?
+                     ( )( )                #                      | -
+                     ( )( )                                  #    | dire
+                              [#]                                 | un
+                                 [#]                              | groupe
+                                    [#]                           | de
+                                       [#]                        | plus
+                                     # ( )                        | de
+                                          [#]                     | 500
+                   #                                              | personnes
+                                             ( )    #             | ,
+                                              # [ ]               | cela
+                                                   ( )( )( ) #    | serait
+                                                   ( )( )( ) #    | consid?r?
+                   #                                              | comme
+                                                            [#]   | n?gligeable
+                                                               [#]| .
+------------------------------------------------------------------'
+ i  m  s  o  t  s  -  t  i  ,  a  g  o  o  5  -  t  w  b  c  n  . 
+ n  o  a  f  h  i  -  h  s        r  f  v  0  -  h  o  e  a  e    
+    s  m     i  z     a           o     e  0     i  u     l  g    
+    t  p     s  e     t           u     r        s  l     l  l    
+       l                          p                 d     e  i    
+       e                                                  d  g    
+       s                                                     i    
+                                                             b    
+                                                             l    
+                                                             e    
+
+Alignment:
+( )( )( ) #                                                    | de
+( )(#)( )                                                      | ordinaire
+         [#]                                                   | pour
+       #    ( )                                                | demander
+          # ( )( )                                             | de
+               [#]                                             | nouveaux
+                     [#]                                       | pouvoirs
+             #    ( )                                          | de
+                  ( )          #                               | emprunt
+                               #                               | ou
+                   #       ( )[ ]                              | annexer
+                                 [#]                           | un
+                               #    [ ]                        | article
+                                       [#]                     | ?
+                                       ( ) # ( )               | les
+                                             [#]               | bills
+                                        # ( )                  | de
+                                          ( ) #                | finances
+                                          ( ) #                | provisoires
+                                              # ( )            | pr?sent?s
+                                                   (#)         | ?
+                                                      [ ] #    | la
+                                                         [#]   | Chambre
+                                                            [#]| .
+---------------------------------------------------------------'
+ t  t  p  f  s  n  b  p  i  t  a  a  c  t  s  b  b  b  t  H  . 
+ h  r  r  o  e  e  o  o  s  o  t     l  o  u  i  r  e  h  o    
+ e  a  o  r  e  w  r  w        t     a     p  l  o  f  e  u    
+    d  c     k     r  e        a     u     p  l  u  o     s    
+    i  e     i     o  r        c     s     l  s  g  r     e    
+    t  d     n     w  s        h     e     y     h  e          
+    i  u     g     i                             t             
+    o  r           n                                           
+    n  e           g                                           
+    a                                                          
+    l                                                          
+
+Alignment:
+[#]                                                      | cela
+   (#)                                                   | touche
+      [#]                                                | ?
+         [#]                                             | le
+    #       ( )                                          | coeur
+            (#)                                          | m?me
+               [#]                                       | de
+             #                                           | notre
+                  [#]                                    | d?mocratie
+    #                   ( )                              | puisque
+                           [#]( )                        | il
+             #             ( )( )                        | se
+    #                      ( )( )                        | agit
+                           ( )( )       #                | de
+                                 [#]                     | le
+                                    [#]                  | droit
+                                       [#]               | de
+                                          [#]            | le
+                                             [#]         | peuple
+       #                                        ( )( )   | ?
+                                           #    ( )( )   | le
+    #                                           ( )( )   | information
+                                                      [#]| .
+---------------------------------------------------------'
+ t  s  a  t  r  o  d  ,  a  i  i  t  r  o  t  p  t  k  . 
+ h  t  t  h  o  f  e     n  t  s  h  i  f  h  e  o  n    
+ i  r     e  o     m     d        e  g     e  o     o    
+ s  i        t     o                 h        p     w    
+    k        s     c                 t        l          
+    e              r                          e          
+    s              a                                     
+                   c                                     
+                   y                                     
+
+Alignment:
+[#]                     | cela
+   ( )( )          #    | r?duirait
+         [#]            | la
+            (#)         | demande
+               (#)      | de
+                  [#]   | p?trole
+                     [#]| .
+------------------------'
+ t  w  r  t  p  o  o  . 
+ h  o  e  h  r  n  i    
+ i  u  l  e  e     l    
+ s  l  i     s          
+    d  e     s          
+       v     u          
+       e     r          
+             e          
+
+Alignment:
+[#]                                    | la
+   (#)( )[ ]                           | Division
+   (#)( )( )                           | de
+   ( )(#)( )                           | les
+   ( )[ ](#)                           | enqu?tes
+   [ ]( )(#)                           | sp?ciales
+            [#]( )( )( )( )            | a
+            ( )( )[#]( )( )            | ?t?
+          # ( )( )( )( )( )            | abolie
+                      #    ( )( )      | ?
+ #                         ( )( )      | le
+                           ( )(#)      | d?but
+                   #       ( )( )      | de
+                                 [#]   | 1975
+                                    [#]| .
+---------------------------------------'
+ t  S  I  D  h  n  b  i  e  s  e  1  . 
+ h  p  n  i  a  o  e  n  x  i  a  9    
+ e  e  v  v  s  t  e     i  n  r  7    
+    c  e  i        n     s  c  l  5    
+    i  s  s              t  e  y       
+    a  t  i              e             
+    l  i  o              n             
+       g  n              c             
+       a                 e             
+       t                               
+       i                               
+       o                               
+       n                               
+
+
+### Evaluation Results ###
+Precision:	0.6213
+Recall:	0.7516
+AER:	0.3312
