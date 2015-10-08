@@ -34,17 +34,17 @@ public class PMIAligner implements WordAligner {
     int sourceId, targetId = 0;
     
     for (int i = 0; i < sourceWords.size(); i++) {
-    	sourceId = i;
-    	maxScore = 0.0;
-  		for (int j= 0; j < targetWords.size(); j++) {
-  			score = scoreAlignment(sourceWords.get(i), targetWords.get(j));
-  			if (score > maxScore) {
-  				maxScore = score;
-  				targetId = j;
-  			}
-  		}
-  		alignment.addPredictedAlignment(targetId, sourceId);
-  	}
+      sourceId = i;
+      maxScore = 0.0;
+      for (int j= 0; j < targetWords.size(); j++) {
+        score = scoreAlignment(sourceWords.get(i), targetWords.get(j));
+        if (score > maxScore) {
+          maxScore = score;
+          targetId = j;
+        }
+      }
+      alignment.addPredictedAlignment(targetId, sourceId);
+    }
     return alignment;
   }
 
@@ -53,27 +53,27 @@ public class PMIAligner implements WordAligner {
     sourceTargetCounts = new CounterMap<String,String>();
     sourceCounts = new Counter<String>();
     targetCounts = new Counter<String>();
-    
+
     List<String> sourceWords;
     List<String> targetWords;
   	
     for (SentencePair p : trainingPairs) {
-    	sourceWords = p.getSourceWords();
-    	targetWords = p.getTargetWords();
-    	for (String sWord : sourceWords) {
-    		sourceCounts.incrementCount(sWord, 1.0);
-    		for (String tWord : targetWords) {
-    			targetCounts.incrementCount(tWord, 1.0);
-    			sourceTargetCounts.incrementCount(sWord, tWord, 1.0);
-    		}
-    	}
+      sourceWords = p.getSourceWords();
+      targetWords = p.getTargetWords();
+      for (String sWord : sourceWords) {
+        sourceCounts.incrementCount(sWord, 1.0);
+        for (String tWord : targetWords) {
+          targetCounts.incrementCount(tWord, 1.0);
+          sourceTargetCounts.incrementCount(sWord, tWord, 1.0);
+        }
+      }
     }
   }
        
   public double scoreAlignment(String sWord, String tWord) {
-  	double sCount = sourceCounts.getCount(sWord) + 1;
-  	double tCount = targetCounts.getCount(tWord) + 1;
-  	double count = sourceTargetCounts.getCount(sWord, tWord) + 1;
-  	return count/(sCount*tCount);
+    double sCount = sourceCounts.getCount(sWord);
+    double tCount = targetCounts.getCount(tWord);
+    double count = sourceTargetCounts.getCount(sWord, tWord);
+    return count/(sCount*tCount);
   }
 }

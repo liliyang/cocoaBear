@@ -1,0 +1,1869 @@
+delta = 0.1
+/// CS224n Word Alignment Tester ///
+Language: french
+Data path: /afs/ir/class/cs224n/data/pa1//french
+Evaluation set: dev
+Using up to 10000 training sentences.
+Training set size: 10000
+Evaluation set size: 37
+Model: cs224n.wordaligner.IBMModel2Aligner
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.3442066194666582
+Iteration 3 Max Delta: 0.29795389206144723
+Iteration 4 Max Delta: 0.1820930077290232
+Iteration 5 Max Delta: 0.12157373351027945
+Iteration 6 Max Delta: 0.10448040344342369
+Iteration 7 Max Delta: 0.08036357656116877
+Iteration 8 Max Delta: 0.06742258604917906
+Iteration 9 Max Delta: 0.05589233160421886
+Iteration 10 Max Delta: 0.0569233009849843
+Iteration 11 Max Delta: 0.05228768751264401
+Iteration 12 Max Delta: 0.05162459982880831
+Iteration 13 Max Delta: 0.04930289902307619
+Iteration 14 Max Delta: 0.04328600915844236
+Iteration 15 Max Delta: 0.03486013202367286
+Iteration 16 Max Delta: 0.03045415440359664
+Iteration 17 Max Delta: 0.02827727914338063
+Iteration 18 Max Delta: 0.02751240889861062
+Iteration 19 Max Delta: 0.024797737393468994
+Iteration 20 Max Delta: 0.02109721487903085
+Iteration 21 Max Delta: 0.026310311901224737
+Iteration 22 Max Delta: 0.03056785805675065
+Iteration 23 Max Delta: 0.02872280265766386
+Iteration 24 Max Delta: 0.023161229201196343
+Iteration 25 Max Delta: 0.019753683804968836
+Iteration 26 Max Delta: 0.018041917961057946
+Iteration 27 Max Delta: 0.01761704690489703
+Iteration 28 Max Delta: 0.015181014049411093
+Iteration 29 Max Delta: 0.013509919657059524
+Iteration 30 Max Delta: 0.012195833053546726
+Iteration 31 Max Delta: 0.011648945455692145
+Iteration 32 Max Delta: 0.011101193772030851
+Iteration 33 Max Delta: 0.012413196038812123
+Iteration 34 Max Delta: 0.019004012090703872
+Iteration 35 Max Delta: 0.01938408660971712
+Iteration 36 Max Delta: 0.01388549134171492
+Iteration 37 Max Delta: 0.008537345385866021
+Iteration 38 Max Delta: 0.008261353494653574
+Iteration 39 Max Delta: 0.008140749108784553
+Iteration 40 Max Delta: 0.007762924141151317
+Iteration 41 Max Delta: 0.007204651042401922
+Iteration 42 Max Delta: 0.008296865122791276
+Iteration 43 Max Delta: 0.011174296981106061
+Iteration 44 Max Delta: 0.012107933943185423
+Iteration 45 Max Delta: 0.010632907647529492
+Iteration 46 Max Delta: 0.008060576316199657
+Iteration 47 Max Delta: 0.005939174052469329
+Iteration 48 Max Delta: 0.007059894675386695
+Iteration 49 Max Delta: 0.008181296379099801
+Iteration 50 Max Delta: 0.00866214915711816
+Iteration 51 Max Delta: 0.008386176912194183
+Iteration 52 Max Delta: 0.00750875328624355
+Iteration 53 Max Delta: 0.006336157343905184
+Iteration 54 Max Delta: 0.005150531954691437
+Iteration 55 Max Delta: 0.004119005746139631
+Iteration 56 Max Delta: 0.003298355840534714
+Iteration 57 Max Delta: 0.0030851728975909154
+Iteration 58 Max Delta: 0.0029981425685187135
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.5201870382372167
+Iteration 3 Max Delta: 0.4041078806996181
+Iteration 4 Max Delta: 0.3401939633880837
+Iteration 5 Max Delta: 0.3534577459749401
+Iteration 6 Max Delta: 0.3002919278785311
+Iteration 7 Max Delta: 0.4002392670675041
+Iteration 8 Max Delta: 0.49481209629493794
+Iteration 9 Max Delta: 0.31712892922375946
+Iteration 10 Max Delta: 0.35772937488907985
+Iteration 11 Max Delta: 0.372719867052192
+Iteration 12 Max Delta: 0.5130513415573001
+Iteration 13 Max Delta: 0.29528323450405664
+Iteration 14 Max Delta: 0.3217436992774482
+Iteration 15 Max Delta: 0.3043212785392469
+Iteration 16 Max Delta: 0.2676783900902938
+Iteration 17 Max Delta: 0.4138648160620451
+Iteration 18 Max Delta: 0.23023951157430145
+Iteration 19 Max Delta: 0.2662912300723659
+Iteration 20 Max Delta: 0.3362360974497173
+Iteration 21 Max Delta: 0.24203008466969828
+Iteration 22 Max Delta: 0.20694213699659358
+Iteration 23 Max Delta: 0.20504631308152615
+Iteration 24 Max Delta: 0.264896706193366
+Iteration 25 Max Delta: 0.23315233039145322
+Iteration 26 Max Delta: 0.21033809298181705
+Iteration 27 Max Delta: 0.25258379914976703
+Iteration 28 Max Delta: 0.16477210719443322
+Iteration 29 Max Delta: 0.22758797365531025
+Iteration 30 Max Delta: 0.20267555674704918
+Iteration 31 Max Delta: 0.17795034043986602
+Iteration 32 Max Delta: 0.21456865095880928
+Iteration 33 Max Delta: 0.20780068682365693
+Iteration 34 Max Delta: 0.19522284256581213
+Iteration 35 Max Delta: 0.17822995907746098
+Iteration 36 Max Delta: 0.4156467562793292
+Iteration 37 Max Delta: 0.30535272267157487
+Iteration 38 Max Delta: 0.11591443526542333
+Iteration 39 Max Delta: 0.16214909411337267
+Iteration 40 Max Delta: 0.16538214898163411
+Iteration 41 Max Delta: 0.2737721973086766
+Iteration 42 Max Delta: 0.31472685640401926
+Iteration 43 Max Delta: 0.198381740156188
+Iteration 44 Max Delta: 0.1959461767377222
+Iteration 45 Max Delta: 0.3695743621038156
+Iteration 46 Max Delta: 0.26057154171053454
+Iteration 47 Max Delta: 0.2258781537202585
+Iteration 48 Max Delta: 0.21195482490685735
+Iteration 49 Max Delta: 0.17959952496463372
+Iteration 50 Max Delta: 0.16088395438570666
+Iteration 51 Max Delta: 0.2484465125316303
+Iteration 52 Max Delta: 0.2833415214479079
+Iteration 53 Max Delta: 0.25724249723818804
+Iteration 54 Max Delta: 0.276997562530348
+Iteration 55 Max Delta: 0.23958831082448562
+Iteration 56 Max Delta: 0.26343825265699783
+Iteration 57 Max Delta: 0.25651091070553644
+Iteration 58 Max Delta: 0.1891190298706369
+Iteration 59 Max Delta: 0.20221346746311752
+Iteration 60 Max Delta: 0.2306450989561593
+Iteration 61 Max Delta: 0.26948142041237566
+Iteration 62 Max Delta: 0.13708451967674873
+Iteration 63 Max Delta: 0.10524901375236197
+Iteration 64 Max Delta: 0.1307644020130846
+Iteration 65 Max Delta: 0.19228887163121966
+Iteration 66 Max Delta: 0.320824904456446
+Iteration 67 Max Delta: 0.2805704220996219
+Iteration 68 Max Delta: 0.4180760261854928
+Iteration 69 Max Delta: 0.32054871948036745
+Iteration 70 Max Delta: 0.22056119051880607
+Iteration 71 Max Delta: 0.20136414690932375
+Iteration 72 Max Delta: 0.2568731252738813
+Iteration 73 Max Delta: 0.19537060969931333
+Iteration 74 Max Delta: 0.26918539712062767
+Iteration 75 Max Delta: 0.21758526830979874
+Iteration 76 Max Delta: 0.14052353227164138
+Iteration 77 Max Delta: 0.16320968567822636
+Iteration 78 Max Delta: 0.1933388090889574
+Iteration 79 Max Delta: 0.27898088084930384
+Iteration 80 Max Delta: 0.2295590996705953
+Iteration 81 Max Delta: 0.09480620952322413
+
+### Evaluation Results ###
+Precision:	0.5673
+Recall:	0.7278
+AER:	0.3815
+
+delta = 0.075
+/// CS224n Word Alignment Tester ///
+Language: french
+Data path: /afs/ir/class/cs224n/data/pa1//french
+Evaluation set: dev
+Using up to 10000 training sentences.
+Training set size: 10000
+Evaluation set size: 37
+Model: cs224n.wordaligner.IBMModel2Aligner
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.3442066194666582
+Iteration 3 Max Delta: 0.29795389206144723
+Iteration 4 Max Delta: 0.1820930077290232
+Iteration 5 Max Delta: 0.12157373351027945
+Iteration 6 Max Delta: 0.10448040344342369
+Iteration 7 Max Delta: 0.08036357656116877
+Iteration 8 Max Delta: 0.06742258604917906
+Iteration 9 Max Delta: 0.05589233160421886
+Iteration 10 Max Delta: 0.0569233009849843
+Iteration 11 Max Delta: 0.05228768751264401
+Iteration 12 Max Delta: 0.05162459982880831
+Iteration 13 Max Delta: 0.04930289902307619
+Iteration 14 Max Delta: 0.04328600915844236
+Iteration 15 Max Delta: 0.03486013202367286
+Iteration 16 Max Delta: 0.03045415440359664
+Iteration 17 Max Delta: 0.02827727914338063
+Iteration 18 Max Delta: 0.02751240889861062
+Iteration 19 Max Delta: 0.024797737393468994
+Iteration 20 Max Delta: 0.02109721487903085
+Iteration 21 Max Delta: 0.026310311901224737
+Iteration 22 Max Delta: 0.03056785805675065
+Iteration 23 Max Delta: 0.02872280265766386
+Iteration 24 Max Delta: 0.023161229201196343
+Iteration 25 Max Delta: 0.019753683804968836
+Iteration 26 Max Delta: 0.018041917961057946
+Iteration 27 Max Delta: 0.01761704690489703
+Iteration 28 Max Delta: 0.015181014049411093
+Iteration 29 Max Delta: 0.013509919657059524
+Iteration 30 Max Delta: 0.012195833053546726
+Iteration 31 Max Delta: 0.011648945455692145
+Iteration 32 Max Delta: 0.011101193772030851
+Iteration 33 Max Delta: 0.012413196038812123
+Iteration 34 Max Delta: 0.019004012090703872
+Iteration 35 Max Delta: 0.01938408660971712
+Iteration 36 Max Delta: 0.01388549134171492
+Iteration 37 Max Delta: 0.008537345385866021
+Iteration 38 Max Delta: 0.008261353494653574
+Iteration 39 Max Delta: 0.008140749108784553
+Iteration 40 Max Delta: 0.007762924141151317
+Iteration 41 Max Delta: 0.007204651042401922
+Iteration 42 Max Delta: 0.008296865122791276
+Iteration 43 Max Delta: 0.011174296981106061
+Iteration 44 Max Delta: 0.012107933943185423
+Iteration 45 Max Delta: 0.010632907647529492
+Iteration 46 Max Delta: 0.008060576316199657
+Iteration 47 Max Delta: 0.005939174052469329
+Iteration 48 Max Delta: 0.007059894675386695
+Iteration 49 Max Delta: 0.008181296379099801
+Iteration 50 Max Delta: 0.00866214915711816
+Iteration 51 Max Delta: 0.008386176912194183
+Iteration 52 Max Delta: 0.00750875328624355
+Iteration 53 Max Delta: 0.006336157343905184
+Iteration 54 Max Delta: 0.005150531954691437
+Iteration 55 Max Delta: 0.004119005746139631
+Iteration 56 Max Delta: 0.003298355840534714
+Iteration 57 Max Delta: 0.0030851728975909154
+Iteration 58 Max Delta: 0.0029981425685187135
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.5201870382372167
+Iteration 3 Max Delta: 0.4041078806996181
+Iteration 4 Max Delta: 0.3401939633880837
+Iteration 5 Max Delta: 0.3534577459749401
+Iteration 6 Max Delta: 0.3002919278785311
+Iteration 7 Max Delta: 0.4002392670675041
+Iteration 8 Max Delta: 0.49481209629493794
+Iteration 9 Max Delta: 0.31712892922375946
+Iteration 10 Max Delta: 0.35772937488907985
+Iteration 11 Max Delta: 0.372719867052192
+Iteration 12 Max Delta: 0.5130513415573001
+Iteration 13 Max Delta: 0.29528323450405664
+Iteration 14 Max Delta: 0.3217436992774482
+Iteration 15 Max Delta: 0.3043212785392469
+Iteration 16 Max Delta: 0.2676783900902938
+Iteration 17 Max Delta: 0.4138648160620451
+Iteration 18 Max Delta: 0.23023951157430145
+Iteration 19 Max Delta: 0.2662912300723659
+Iteration 20 Max Delta: 0.3362360974497173
+Iteration 21 Max Delta: 0.24203008466969828
+Iteration 22 Max Delta: 0.20694213699659358
+Iteration 23 Max Delta: 0.20504631308152615
+Iteration 24 Max Delta: 0.264896706193366
+Iteration 25 Max Delta: 0.23315233039145322
+Iteration 26 Max Delta: 0.21033809298181705
+Iteration 27 Max Delta: 0.25258379914976703
+Iteration 28 Max Delta: 0.16477210719443322
+Iteration 29 Max Delta: 0.22758797365531025
+Iteration 30 Max Delta: 0.20267555674704918
+Iteration 31 Max Delta: 0.17795034043986602
+Iteration 32 Max Delta: 0.21456865095880928
+Iteration 33 Max Delta: 0.20780068682365693
+Iteration 34 Max Delta: 0.19522284256581213
+Iteration 35 Max Delta: 0.17822995907746098
+Iteration 36 Max Delta: 0.4156467562793292
+Iteration 37 Max Delta: 0.30535272267157487
+Iteration 38 Max Delta: 0.11591443526542333
+Iteration 39 Max Delta: 0.16214909411337267
+Iteration 40 Max Delta: 0.16538214898163411
+Iteration 41 Max Delta: 0.2737721973086766
+Iteration 42 Max Delta: 0.31472685640401926
+Iteration 43 Max Delta: 0.198381740156188
+Iteration 44 Max Delta: 0.1959461767377222
+Iteration 45 Max Delta: 0.3695743621038156
+Iteration 46 Max Delta: 0.26057154171053454
+Iteration 47 Max Delta: 0.2258781537202585
+Iteration 48 Max Delta: 0.21195482490685735
+Iteration 49 Max Delta: 0.17959952496463372
+Iteration 50 Max Delta: 0.16088395438570666
+Iteration 51 Max Delta: 0.2484465125316303
+Iteration 52 Max Delta: 0.2833415214479079
+Iteration 53 Max Delta: 0.25724249723818804
+Iteration 54 Max Delta: 0.276997562530348
+Iteration 55 Max Delta: 0.23958831082448562
+Iteration 56 Max Delta: 0.26343825265699783
+Iteration 57 Max Delta: 0.25651091070553644
+Iteration 58 Max Delta: 0.1891190298706369
+Iteration 59 Max Delta: 0.20221346746311752
+Iteration 60 Max Delta: 0.2306450989561593
+Iteration 61 Max Delta: 0.26948142041237566
+Iteration 62 Max Delta: 0.13708451967674873
+Iteration 63 Max Delta: 0.10524901375236197
+Iteration 64 Max Delta: 0.1307644020130846
+Iteration 65 Max Delta: 0.19228887163121966
+Iteration 66 Max Delta: 0.320824904456446
+Iteration 67 Max Delta: 0.2805704220996219
+Iteration 68 Max Delta: 0.4180760261854928
+Iteration 69 Max Delta: 0.32054871948036745
+Iteration 70 Max Delta: 0.22056119051880607
+Iteration 71 Max Delta: 0.20136414690932375
+Iteration 72 Max Delta: 0.2568731252738813
+Iteration 73 Max Delta: 0.19537060969931333
+Iteration 74 Max Delta: 0.26918539712062767
+Iteration 75 Max Delta: 0.21758526830979874
+Iteration 76 Max Delta: 0.14052353227164138
+Iteration 77 Max Delta: 0.16320968567822636
+Iteration 78 Max Delta: 0.1933388090889574
+Iteration 79 Max Delta: 0.27898088084930384
+Iteration 80 Max Delta: 0.2295590996705953
+Iteration 81 Max Delta: 0.09480620952322413
+Iteration 82 Max Delta: 0.07148996369779294
+
+### Evaluation Results ###
+Precision:	0.5659
+Recall:	0.7278
+AER:	0.3824
+
+delta = 0.125
+/// CS224n Word Alignment Tester ///
+Language: french
+Data path: /afs/ir/class/cs224n/data/pa1//french
+Evaluation set: dev
+Using up to 10000 training sentences.
+Training set size: 10000
+Evaluation set size: 37
+Model: cs224n.wordaligner.IBMModel2Aligner
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.3442066194666582
+Iteration 3 Max Delta: 0.29795389206144723
+Iteration 4 Max Delta: 0.1820930077290232
+Iteration 5 Max Delta: 0.12157373351027945
+Iteration 6 Max Delta: 0.10448040344342369
+Iteration 7 Max Delta: 0.08036357656116877
+Iteration 8 Max Delta: 0.06742258604917906
+Iteration 9 Max Delta: 0.05589233160421886
+Iteration 10 Max Delta: 0.0569233009849843
+Iteration 11 Max Delta: 0.05228768751264401
+Iteration 12 Max Delta: 0.05162459982880831
+Iteration 13 Max Delta: 0.04930289902307619
+Iteration 14 Max Delta: 0.04328600915844236
+Iteration 15 Max Delta: 0.03486013202367286
+Iteration 16 Max Delta: 0.03045415440359664
+Iteration 17 Max Delta: 0.02827727914338063
+Iteration 18 Max Delta: 0.02751240889861062
+Iteration 19 Max Delta: 0.024797737393468994
+Iteration 20 Max Delta: 0.02109721487903085
+Iteration 21 Max Delta: 0.026310311901224737
+Iteration 22 Max Delta: 0.03056785805675065
+Iteration 23 Max Delta: 0.02872280265766386
+Iteration 24 Max Delta: 0.023161229201196343
+Iteration 25 Max Delta: 0.019753683804968836
+Iteration 26 Max Delta: 0.018041917961057946
+Iteration 27 Max Delta: 0.01761704690489703
+Iteration 28 Max Delta: 0.015181014049411093
+Iteration 29 Max Delta: 0.013509919657059524
+Iteration 30 Max Delta: 0.012195833053546726
+Iteration 31 Max Delta: 0.011648945455692145
+Iteration 32 Max Delta: 0.011101193772030851
+Iteration 33 Max Delta: 0.012413196038812123
+Iteration 34 Max Delta: 0.019004012090703872
+Iteration 35 Max Delta: 0.01938408660971712
+Iteration 36 Max Delta: 0.01388549134171492
+Iteration 37 Max Delta: 0.008537345385866021
+Iteration 38 Max Delta: 0.008261353494653574
+Iteration 39 Max Delta: 0.008140749108784553
+Iteration 40 Max Delta: 0.007762924141151317
+Iteration 41 Max Delta: 0.007204651042401922
+Iteration 42 Max Delta: 0.008296865122791276
+Iteration 43 Max Delta: 0.011174296981106061
+Iteration 44 Max Delta: 0.012107933943185423
+Iteration 45 Max Delta: 0.010632907647529492
+Iteration 46 Max Delta: 0.008060576316199657
+Iteration 47 Max Delta: 0.005939174052469329
+Iteration 48 Max Delta: 0.007059894675386695
+Iteration 49 Max Delta: 0.008181296379099801
+Iteration 50 Max Delta: 0.00866214915711816
+Iteration 51 Max Delta: 0.008386176912194183
+Iteration 52 Max Delta: 0.00750875328624355
+Iteration 53 Max Delta: 0.006336157343905184
+Iteration 54 Max Delta: 0.005150531954691437
+Iteration 55 Max Delta: 0.004119005746139631
+Iteration 56 Max Delta: 0.003298355840534714
+Iteration 57 Max Delta: 0.0030851728975909154
+Iteration 58 Max Delta: 0.0029981425685187135
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.5201870382372167
+Iteration 3 Max Delta: 0.4041078806996181
+Iteration 4 Max Delta: 0.3401939633880837
+Iteration 5 Max Delta: 0.3534577459749401
+Iteration 6 Max Delta: 0.3002919278785311
+Iteration 7 Max Delta: 0.4002392670675041
+Iteration 8 Max Delta: 0.49481209629493794
+Iteration 9 Max Delta: 0.31712892922375946
+Iteration 10 Max Delta: 0.35772937488907985
+Iteration 11 Max Delta: 0.372719867052192
+Iteration 12 Max Delta: 0.5130513415573001
+Iteration 13 Max Delta: 0.29528323450405664
+Iteration 14 Max Delta: 0.3217436992774482
+Iteration 15 Max Delta: 0.3043212785392469
+Iteration 16 Max Delta: 0.2676783900902938
+Iteration 17 Max Delta: 0.4138648160620451
+Iteration 18 Max Delta: 0.23023951157430145
+Iteration 19 Max Delta: 0.2662912300723659
+Iteration 20 Max Delta: 0.3362360974497173
+Iteration 21 Max Delta: 0.24203008466969828
+Iteration 22 Max Delta: 0.20694213699659358
+Iteration 23 Max Delta: 0.20504631308152615
+Iteration 24 Max Delta: 0.264896706193366
+Iteration 25 Max Delta: 0.23315233039145322
+Iteration 26 Max Delta: 0.21033809298181705
+Iteration 27 Max Delta: 0.25258379914976703
+Iteration 28 Max Delta: 0.16477210719443322
+Iteration 29 Max Delta: 0.22758797365531025
+Iteration 30 Max Delta: 0.20267555674704918
+Iteration 31 Max Delta: 0.17795034043986602
+Iteration 32 Max Delta: 0.21456865095880928
+Iteration 33 Max Delta: 0.20780068682365693
+Iteration 34 Max Delta: 0.19522284256581213
+Iteration 35 Max Delta: 0.17822995907746098
+Iteration 36 Max Delta: 0.4156467562793292
+Iteration 37 Max Delta: 0.30535272267157487
+Iteration 38 Max Delta: 0.11591443526542333
+
+### Evaluation Results ###
+Precision:	0.5728
+Recall:	0.7278
+AER:	0.3777
+
+delta = 0.15
+/// CS224n Word Alignment Tester ///
+Language: french
+Data path: /afs/ir/class/cs224n/data/pa1//french
+Evaluation set: dev
+Using up to 10000 training sentences.
+Training set size: 10000
+Evaluation set size: 37
+Model: cs224n.wordaligner.IBMModel2Aligner
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.3442066194666582
+Iteration 3 Max Delta: 0.29795389206144723
+Iteration 4 Max Delta: 0.1820930077290232
+Iteration 5 Max Delta: 0.12157373351027945
+Iteration 6 Max Delta: 0.10448040344342369
+Iteration 7 Max Delta: 0.08036357656116877
+Iteration 8 Max Delta: 0.06742258604917906
+Iteration 9 Max Delta: 0.05589233160421886
+Iteration 10 Max Delta: 0.0569233009849843
+Iteration 11 Max Delta: 0.05228768751264401
+Iteration 12 Max Delta: 0.05162459982880831
+Iteration 13 Max Delta: 0.04930289902307619
+Iteration 14 Max Delta: 0.04328600915844236
+Iteration 15 Max Delta: 0.03486013202367286
+Iteration 16 Max Delta: 0.03045415440359664
+Iteration 17 Max Delta: 0.02827727914338063
+Iteration 18 Max Delta: 0.02751240889861062
+Iteration 19 Max Delta: 0.024797737393468994
+Iteration 20 Max Delta: 0.02109721487903085
+Iteration 21 Max Delta: 0.026310311901224737
+Iteration 22 Max Delta: 0.03056785805675065
+Iteration 23 Max Delta: 0.02872280265766386
+Iteration 24 Max Delta: 0.023161229201196343
+Iteration 25 Max Delta: 0.019753683804968836
+Iteration 26 Max Delta: 0.018041917961057946
+Iteration 27 Max Delta: 0.01761704690489703
+Iteration 28 Max Delta: 0.015181014049411093
+Iteration 29 Max Delta: 0.013509919657059524
+Iteration 30 Max Delta: 0.012195833053546726
+Iteration 31 Max Delta: 0.011648945455692145
+Iteration 32 Max Delta: 0.011101193772030851
+Iteration 33 Max Delta: 0.012413196038812123
+Iteration 34 Max Delta: 0.019004012090703872
+Iteration 35 Max Delta: 0.01938408660971712
+Iteration 36 Max Delta: 0.01388549134171492
+Iteration 37 Max Delta: 0.008537345385866021
+Iteration 38 Max Delta: 0.008261353494653574
+Iteration 39 Max Delta: 0.008140749108784553
+Iteration 40 Max Delta: 0.007762924141151317
+Iteration 41 Max Delta: 0.007204651042401922
+Iteration 42 Max Delta: 0.008296865122791276
+Iteration 43 Max Delta: 0.011174296981106061
+Iteration 44 Max Delta: 0.012107933943185423
+Iteration 45 Max Delta: 0.010632907647529492
+Iteration 46 Max Delta: 0.008060576316199657
+Iteration 47 Max Delta: 0.005939174052469329
+Iteration 48 Max Delta: 0.007059894675386695
+Iteration 49 Max Delta: 0.008181296379099801
+Iteration 50 Max Delta: 0.00866214915711816
+Iteration 51 Max Delta: 0.008386176912194183
+Iteration 52 Max Delta: 0.00750875328624355
+Iteration 53 Max Delta: 0.006336157343905184
+Iteration 54 Max Delta: 0.005150531954691437
+Iteration 55 Max Delta: 0.004119005746139631
+Iteration 56 Max Delta: 0.003298355840534714
+Iteration 57 Max Delta: 0.0030851728975909154
+Iteration 58 Max Delta: 0.0029981425685187135
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.5201870382372167
+Iteration 3 Max Delta: 0.4041078806996181
+Iteration 4 Max Delta: 0.3401939633880837
+Iteration 5 Max Delta: 0.3534577459749401
+Iteration 6 Max Delta: 0.3002919278785311
+Iteration 7 Max Delta: 0.4002392670675041
+Iteration 8 Max Delta: 0.49481209629493794
+Iteration 9 Max Delta: 0.31712892922375946
+Iteration 10 Max Delta: 0.35772937488907985
+Iteration 11 Max Delta: 0.372719867052192
+Iteration 12 Max Delta: 0.5130513415573001
+Iteration 13 Max Delta: 0.29528323450405664
+Iteration 14 Max Delta: 0.3217436992774482
+Iteration 15 Max Delta: 0.3043212785392469
+Iteration 16 Max Delta: 0.2676783900902938
+Iteration 17 Max Delta: 0.4138648160620451
+Iteration 18 Max Delta: 0.23023951157430145
+Iteration 19 Max Delta: 0.2662912300723659
+Iteration 20 Max Delta: 0.3362360974497173
+Iteration 21 Max Delta: 0.24203008466969828
+Iteration 22 Max Delta: 0.20694213699659358
+Iteration 23 Max Delta: 0.20504631308152615
+Iteration 24 Max Delta: 0.264896706193366
+Iteration 25 Max Delta: 0.23315233039145322
+Iteration 26 Max Delta: 0.21033809298181705
+Iteration 27 Max Delta: 0.25258379914976703
+Iteration 28 Max Delta: 0.16477210719443322
+Iteration 29 Max Delta: 0.22758797365531025
+Iteration 30 Max Delta: 0.20267555674704918
+Iteration 31 Max Delta: 0.17795034043986602
+Iteration 32 Max Delta: 0.21456865095880928
+Iteration 33 Max Delta: 0.20780068682365693
+Iteration 34 Max Delta: 0.19522284256581213
+Iteration 35 Max Delta: 0.17822995907746098
+Iteration 36 Max Delta: 0.4156467562793292
+Iteration 37 Max Delta: 0.30535272267157487
+Iteration 38 Max Delta: 0.11591443526542333
+
+### Evaluation Results ###
+Precision:	0.5728
+Recall:	0.7278
+AER:	0.3777
+
+delta = 0.175
+/// CS224n Word Alignment Tester ///
+Language: french
+Data path: /afs/ir/class/cs224n/data/pa1//french
+Evaluation set: dev
+Using up to 10000 training sentences.
+Training set size: 10000
+Evaluation set size: 37
+Model: cs224n.wordaligner.IBMModel2Aligner
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.3442066194666582
+Iteration 3 Max Delta: 0.29795389206144723
+Iteration 4 Max Delta: 0.1820930077290232
+Iteration 5 Max Delta: 0.12157373351027945
+Iteration 6 Max Delta: 0.10448040344342369
+Iteration 7 Max Delta: 0.08036357656116877
+Iteration 8 Max Delta: 0.06742258604917906
+Iteration 9 Max Delta: 0.05589233160421886
+Iteration 10 Max Delta: 0.0569233009849843
+Iteration 11 Max Delta: 0.05228768751264401
+Iteration 12 Max Delta: 0.05162459982880831
+Iteration 13 Max Delta: 0.04930289902307619
+Iteration 14 Max Delta: 0.04328600915844236
+Iteration 15 Max Delta: 0.03486013202367286
+Iteration 16 Max Delta: 0.03045415440359664
+Iteration 17 Max Delta: 0.02827727914338063
+Iteration 18 Max Delta: 0.02751240889861062
+Iteration 19 Max Delta: 0.024797737393468994
+Iteration 20 Max Delta: 0.02109721487903085
+Iteration 21 Max Delta: 0.026310311901224737
+Iteration 22 Max Delta: 0.03056785805675065
+Iteration 23 Max Delta: 0.02872280265766386
+Iteration 24 Max Delta: 0.023161229201196343
+Iteration 25 Max Delta: 0.019753683804968836
+Iteration 26 Max Delta: 0.018041917961057946
+Iteration 27 Max Delta: 0.01761704690489703
+Iteration 28 Max Delta: 0.015181014049411093
+Iteration 29 Max Delta: 0.013509919657059524
+Iteration 30 Max Delta: 0.012195833053546726
+Iteration 31 Max Delta: 0.011648945455692145
+Iteration 32 Max Delta: 0.011101193772030851
+Iteration 33 Max Delta: 0.012413196038812123
+Iteration 34 Max Delta: 0.019004012090703872
+Iteration 35 Max Delta: 0.01938408660971712
+Iteration 36 Max Delta: 0.01388549134171492
+Iteration 37 Max Delta: 0.008537345385866021
+Iteration 38 Max Delta: 0.008261353494653574
+Iteration 39 Max Delta: 0.008140749108784553
+Iteration 40 Max Delta: 0.007762924141151317
+Iteration 41 Max Delta: 0.007204651042401922
+Iteration 42 Max Delta: 0.008296865122791276
+Iteration 43 Max Delta: 0.011174296981106061
+Iteration 44 Max Delta: 0.012107933943185423
+Iteration 45 Max Delta: 0.010632907647529492
+Iteration 46 Max Delta: 0.008060576316199657
+Iteration 47 Max Delta: 0.005939174052469329
+Iteration 48 Max Delta: 0.007059894675386695
+Iteration 49 Max Delta: 0.008181296379099801
+Iteration 50 Max Delta: 0.00866214915711816
+Iteration 51 Max Delta: 0.008386176912194183
+Iteration 52 Max Delta: 0.00750875328624355
+Iteration 53 Max Delta: 0.006336157343905184
+Iteration 54 Max Delta: 0.005150531954691437
+Iteration 55 Max Delta: 0.004119005746139631
+Iteration 56 Max Delta: 0.003298355840534714
+Iteration 57 Max Delta: 0.0030851728975909154
+Iteration 58 Max Delta: 0.0029981425685187135
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.5201870382372167
+Iteration 3 Max Delta: 0.4041078806996181
+Iteration 4 Max Delta: 0.3401939633880837
+Iteration 5 Max Delta: 0.3534577459749401
+Iteration 6 Max Delta: 0.3002919278785311
+Iteration 7 Max Delta: 0.4002392670675041
+Iteration 8 Max Delta: 0.49481209629493794
+Iteration 9 Max Delta: 0.31712892922375946
+Iteration 10 Max Delta: 0.35772937488907985
+Iteration 11 Max Delta: 0.372719867052192
+Iteration 12 Max Delta: 0.5130513415573001
+Iteration 13 Max Delta: 0.29528323450405664
+Iteration 14 Max Delta: 0.3217436992774482
+Iteration 15 Max Delta: 0.3043212785392469
+Iteration 16 Max Delta: 0.2676783900902938
+Iteration 17 Max Delta: 0.4138648160620451
+Iteration 18 Max Delta: 0.23023951157430145
+Iteration 19 Max Delta: 0.2662912300723659
+Iteration 20 Max Delta: 0.3362360974497173
+Iteration 21 Max Delta: 0.24203008466969828
+Iteration 22 Max Delta: 0.20694213699659358
+Iteration 23 Max Delta: 0.20504631308152615
+Iteration 24 Max Delta: 0.264896706193366
+Iteration 25 Max Delta: 0.23315233039145322
+Iteration 26 Max Delta: 0.21033809298181705
+Iteration 27 Max Delta: 0.25258379914976703
+Iteration 28 Max Delta: 0.16477210719443322
+
+### Evaluation Results ###
+Precision:	0.5714
+Recall:	0.7249
+AER:	0.3796
+
+delta = 0.225
+/// CS224n Word Alignment Tester ///
+Language: french
+Data path: /afs/ir/class/cs224n/data/pa1//french
+Evaluation set: dev
+Using up to 10000 training sentences.
+Training set size: 10000
+Evaluation set size: 37
+Model: cs224n.wordaligner.IBMModel2Aligner
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.3442066194666582
+Iteration 3 Max Delta: 0.29795389206144723
+Iteration 4 Max Delta: 0.1820930077290232
+Iteration 5 Max Delta: 0.12157373351027945
+Iteration 6 Max Delta: 0.10448040344342369
+Iteration 7 Max Delta: 0.08036357656116877
+Iteration 8 Max Delta: 0.06742258604917906
+Iteration 9 Max Delta: 0.05589233160421886
+Iteration 10 Max Delta: 0.0569233009849843
+Iteration 11 Max Delta: 0.05228768751264401
+Iteration 12 Max Delta: 0.05162459982880831
+Iteration 13 Max Delta: 0.04930289902307619
+Iteration 14 Max Delta: 0.04328600915844236
+Iteration 15 Max Delta: 0.03486013202367286
+Iteration 16 Max Delta: 0.03045415440359664
+Iteration 17 Max Delta: 0.02827727914338063
+Iteration 18 Max Delta: 0.02751240889861062
+Iteration 19 Max Delta: 0.024797737393468994
+Iteration 20 Max Delta: 0.02109721487903085
+Iteration 21 Max Delta: 0.026310311901224737
+Iteration 22 Max Delta: 0.03056785805675065
+Iteration 23 Max Delta: 0.02872280265766386
+Iteration 24 Max Delta: 0.023161229201196343
+Iteration 25 Max Delta: 0.019753683804968836
+Iteration 26 Max Delta: 0.018041917961057946
+Iteration 27 Max Delta: 0.01761704690489703
+Iteration 28 Max Delta: 0.015181014049411093
+Iteration 29 Max Delta: 0.013509919657059524
+Iteration 30 Max Delta: 0.012195833053546726
+Iteration 31 Max Delta: 0.011648945455692145
+Iteration 32 Max Delta: 0.011101193772030851
+Iteration 33 Max Delta: 0.012413196038812123
+Iteration 34 Max Delta: 0.019004012090703872
+Iteration 35 Max Delta: 0.01938408660971712
+Iteration 36 Max Delta: 0.01388549134171492
+Iteration 37 Max Delta: 0.008537345385866021
+Iteration 38 Max Delta: 0.008261353494653574
+Iteration 39 Max Delta: 0.008140749108784553
+Iteration 40 Max Delta: 0.007762924141151317
+Iteration 41 Max Delta: 0.007204651042401922
+Iteration 42 Max Delta: 0.008296865122791276
+Iteration 43 Max Delta: 0.011174296981106061
+Iteration 44 Max Delta: 0.012107933943185423
+Iteration 45 Max Delta: 0.010632907647529492
+Iteration 46 Max Delta: 0.008060576316199657
+Iteration 47 Max Delta: 0.005939174052469329
+Iteration 48 Max Delta: 0.007059894675386695
+Iteration 49 Max Delta: 0.008181296379099801
+Iteration 50 Max Delta: 0.00866214915711816
+Iteration 51 Max Delta: 0.008386176912194183
+Iteration 52 Max Delta: 0.00750875328624355
+Iteration 53 Max Delta: 0.006336157343905184
+Iteration 54 Max Delta: 0.005150531954691437
+Iteration 55 Max Delta: 0.004119005746139631
+Iteration 56 Max Delta: 0.003298355840534714
+Iteration 57 Max Delta: 0.0030851728975909154
+Iteration 58 Max Delta: 0.0029981425685187135
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.5201870382372167
+Iteration 3 Max Delta: 0.4041078806996181
+Iteration 4 Max Delta: 0.3401939633880837
+Iteration 5 Max Delta: 0.3534577459749401
+Iteration 6 Max Delta: 0.3002919278785311
+Iteration 7 Max Delta: 0.4002392670675041
+Iteration 8 Max Delta: 0.49481209629493794
+Iteration 9 Max Delta: 0.31712892922375946
+Iteration 10 Max Delta: 0.35772937488907985
+Iteration 11 Max Delta: 0.372719867052192
+Iteration 12 Max Delta: 0.5130513415573001
+Iteration 13 Max Delta: 0.29528323450405664
+Iteration 14 Max Delta: 0.3217436992774482
+Iteration 15 Max Delta: 0.3043212785392469
+Iteration 16 Max Delta: 0.2676783900902938
+Iteration 17 Max Delta: 0.4138648160620451
+Iteration 18 Max Delta: 0.23023951157430145
+Iteration 19 Max Delta: 0.2662912300723659
+Iteration 20 Max Delta: 0.3362360974497173
+Iteration 21 Max Delta: 0.24203008466969828
+Iteration 22 Max Delta: 0.20694213699659358
+
+### Evaluation Results ###
+Precision:	0.5728
+Recall:	0.7308
+AER:	0.3768
+
+delta = 0.25
+/// CS224n Word Alignment Tester ///
+Language: french
+Data path: /afs/ir/class/cs224n/data/pa1//french
+Evaluation set: dev
+Using up to 10000 training sentences.
+Training set size: 10000
+Evaluation set size: 37
+Model: cs224n.wordaligner.IBMModel2Aligner
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.3442066194666582
+Iteration 3 Max Delta: 0.29795389206144723
+Iteration 4 Max Delta: 0.1820930077290232
+Iteration 5 Max Delta: 0.12157373351027945
+Iteration 6 Max Delta: 0.10448040344342369
+Iteration 7 Max Delta: 0.08036357656116877
+Iteration 8 Max Delta: 0.06742258604917906
+Iteration 9 Max Delta: 0.05589233160421886
+Iteration 10 Max Delta: 0.0569233009849843
+Iteration 11 Max Delta: 0.05228768751264401
+Iteration 12 Max Delta: 0.05162459982880831
+Iteration 13 Max Delta: 0.04930289902307619
+Iteration 14 Max Delta: 0.04328600915844236
+Iteration 15 Max Delta: 0.03486013202367286
+Iteration 16 Max Delta: 0.03045415440359664
+Iteration 17 Max Delta: 0.02827727914338063
+Iteration 18 Max Delta: 0.02751240889861062
+Iteration 19 Max Delta: 0.024797737393468994
+Iteration 20 Max Delta: 0.02109721487903085
+Iteration 21 Max Delta: 0.026310311901224737
+Iteration 22 Max Delta: 0.03056785805675065
+Iteration 23 Max Delta: 0.02872280265766386
+Iteration 24 Max Delta: 0.023161229201196343
+Iteration 25 Max Delta: 0.019753683804968836
+Iteration 26 Max Delta: 0.018041917961057946
+Iteration 27 Max Delta: 0.01761704690489703
+Iteration 28 Max Delta: 0.015181014049411093
+Iteration 29 Max Delta: 0.013509919657059524
+Iteration 30 Max Delta: 0.012195833053546726
+Iteration 31 Max Delta: 0.011648945455692145
+Iteration 32 Max Delta: 0.011101193772030851
+Iteration 33 Max Delta: 0.012413196038812123
+Iteration 34 Max Delta: 0.019004012090703872
+Iteration 35 Max Delta: 0.01938408660971712
+Iteration 36 Max Delta: 0.01388549134171492
+Iteration 37 Max Delta: 0.008537345385866021
+Iteration 38 Max Delta: 0.008261353494653574
+Iteration 39 Max Delta: 0.008140749108784553
+Iteration 40 Max Delta: 0.007762924141151317
+Iteration 41 Max Delta: 0.007204651042401922
+Iteration 42 Max Delta: 0.008296865122791276
+Iteration 43 Max Delta: 0.011174296981106061
+Iteration 44 Max Delta: 0.012107933943185423
+Iteration 45 Max Delta: 0.010632907647529492
+Iteration 46 Max Delta: 0.008060576316199657
+Iteration 47 Max Delta: 0.005939174052469329
+Iteration 48 Max Delta: 0.007059894675386695
+Iteration 49 Max Delta: 0.008181296379099801
+Iteration 50 Max Delta: 0.00866214915711816
+Iteration 51 Max Delta: 0.008386176912194183
+Iteration 52 Max Delta: 0.00750875328624355
+Iteration 53 Max Delta: 0.006336157343905184
+Iteration 54 Max Delta: 0.005150531954691437
+Iteration 55 Max Delta: 0.004119005746139631
+Iteration 56 Max Delta: 0.003298355840534714
+Iteration 57 Max Delta: 0.0030851728975909154
+Iteration 58 Max Delta: 0.0029981425685187135
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.5201870382372167
+Iteration 3 Max Delta: 0.4041078806996181
+Iteration 4 Max Delta: 0.3401939633880837
+Iteration 5 Max Delta: 0.3534577459749401
+Iteration 6 Max Delta: 0.3002919278785311
+Iteration 7 Max Delta: 0.4002392670675041
+Iteration 8 Max Delta: 0.49481209629493794
+Iteration 9 Max Delta: 0.31712892922375946
+Iteration 10 Max Delta: 0.35772937488907985
+Iteration 11 Max Delta: 0.372719867052192
+Iteration 12 Max Delta: 0.5130513415573001
+Iteration 13 Max Delta: 0.29528323450405664
+Iteration 14 Max Delta: 0.3217436992774482
+Iteration 15 Max Delta: 0.3043212785392469
+Iteration 16 Max Delta: 0.2676783900902938
+Iteration 17 Max Delta: 0.4138648160620451
+Iteration 18 Max Delta: 0.23023951157430145
+
+### Evaluation Results ###
+Precision:	0.5728
+Recall:	0.7249
+AER:	0.3787
+
+delta = 0.275
+/// CS224n Word Alignment Tester ///
+Language: french
+Data path: /afs/ir/class/cs224n/data/pa1//french
+Evaluation set: dev
+Using up to 10000 training sentences.
+Training set size: 10000
+Evaluation set size: 37
+Model: cs224n.wordaligner.IBMModel2Aligner
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.3442066194666582
+Iteration 3 Max Delta: 0.29795389206144723
+Iteration 4 Max Delta: 0.1820930077290232
+Iteration 5 Max Delta: 0.12157373351027945
+Iteration 6 Max Delta: 0.10448040344342369
+Iteration 7 Max Delta: 0.08036357656116877
+Iteration 8 Max Delta: 0.06742258604917906
+Iteration 9 Max Delta: 0.05589233160421886
+Iteration 10 Max Delta: 0.0569233009849843
+Iteration 11 Max Delta: 0.05228768751264401
+Iteration 12 Max Delta: 0.05162459982880831
+Iteration 13 Max Delta: 0.04930289902307619
+Iteration 14 Max Delta: 0.04328600915844236
+Iteration 15 Max Delta: 0.03486013202367286
+Iteration 16 Max Delta: 0.03045415440359664
+Iteration 17 Max Delta: 0.02827727914338063
+Iteration 18 Max Delta: 0.02751240889861062
+Iteration 19 Max Delta: 0.024797737393468994
+Iteration 20 Max Delta: 0.02109721487903085
+Iteration 21 Max Delta: 0.026310311901224737
+Iteration 22 Max Delta: 0.03056785805675065
+Iteration 23 Max Delta: 0.02872280265766386
+Iteration 24 Max Delta: 0.023161229201196343
+Iteration 25 Max Delta: 0.019753683804968836
+Iteration 26 Max Delta: 0.018041917961057946
+Iteration 27 Max Delta: 0.01761704690489703
+Iteration 28 Max Delta: 0.015181014049411093
+Iteration 29 Max Delta: 0.013509919657059524
+Iteration 30 Max Delta: 0.012195833053546726
+Iteration 31 Max Delta: 0.011648945455692145
+Iteration 32 Max Delta: 0.011101193772030851
+Iteration 33 Max Delta: 0.012413196038812123
+Iteration 34 Max Delta: 0.019004012090703872
+Iteration 35 Max Delta: 0.01938408660971712
+Iteration 36 Max Delta: 0.01388549134171492
+Iteration 37 Max Delta: 0.008537345385866021
+Iteration 38 Max Delta: 0.008261353494653574
+Iteration 39 Max Delta: 0.008140749108784553
+Iteration 40 Max Delta: 0.007762924141151317
+Iteration 41 Max Delta: 0.007204651042401922
+Iteration 42 Max Delta: 0.008296865122791276
+Iteration 43 Max Delta: 0.011174296981106061
+Iteration 44 Max Delta: 0.012107933943185423
+Iteration 45 Max Delta: 0.010632907647529492
+Iteration 46 Max Delta: 0.008060576316199657
+Iteration 47 Max Delta: 0.005939174052469329
+Iteration 48 Max Delta: 0.007059894675386695
+Iteration 49 Max Delta: 0.008181296379099801
+Iteration 50 Max Delta: 0.00866214915711816
+Iteration 51 Max Delta: 0.008386176912194183
+Iteration 52 Max Delta: 0.00750875328624355
+Iteration 53 Max Delta: 0.006336157343905184
+Iteration 54 Max Delta: 0.005150531954691437
+Iteration 55 Max Delta: 0.004119005746139631
+Iteration 56 Max Delta: 0.003298355840534714
+Iteration 57 Max Delta: 0.0030851728975909154
+Iteration 58 Max Delta: 0.0029981425685187135
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.5201870382372167
+Iteration 3 Max Delta: 0.4041078806996181
+Iteration 4 Max Delta: 0.3401939633880837
+Iteration 5 Max Delta: 0.3534577459749401
+Iteration 6 Max Delta: 0.3002919278785311
+Iteration 7 Max Delta: 0.4002392670675041
+Iteration 8 Max Delta: 0.49481209629493794
+Iteration 9 Max Delta: 0.31712892922375946
+Iteration 10 Max Delta: 0.35772937488907985
+Iteration 11 Max Delta: 0.372719867052192
+Iteration 12 Max Delta: 0.5130513415573001
+Iteration 13 Max Delta: 0.29528323450405664
+Iteration 14 Max Delta: 0.3217436992774482
+Iteration 15 Max Delta: 0.3043212785392469
+Iteration 16 Max Delta: 0.2676783900902938
+
+### Evaluation Results ###
+Precision:	0.5742
+Recall:	0.7249
+AER:	0.3777
+
+delta = 0.3
+/// CS224n Word Alignment Tester ///
+Language: french
+Data path: /afs/ir/class/cs224n/data/pa1//french
+Evaluation set: dev
+Using up to 10000 training sentences.
+Training set size: 10000
+Evaluation set size: 37
+Model: cs224n.wordaligner.IBMModel2Aligner
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.3442066194666582
+Iteration 3 Max Delta: 0.29795389206144723
+Iteration 4 Max Delta: 0.1820930077290232
+Iteration 5 Max Delta: 0.12157373351027945
+Iteration 6 Max Delta: 0.10448040344342369
+Iteration 7 Max Delta: 0.08036357656116877
+Iteration 8 Max Delta: 0.06742258604917906
+Iteration 9 Max Delta: 0.05589233160421886
+Iteration 10 Max Delta: 0.0569233009849843
+Iteration 11 Max Delta: 0.05228768751264401
+Iteration 12 Max Delta: 0.05162459982880831
+Iteration 13 Max Delta: 0.04930289902307619
+Iteration 14 Max Delta: 0.04328600915844236
+Iteration 15 Max Delta: 0.03486013202367286
+Iteration 16 Max Delta: 0.03045415440359664
+Iteration 17 Max Delta: 0.02827727914338063
+Iteration 18 Max Delta: 0.02751240889861062
+Iteration 19 Max Delta: 0.024797737393468994
+Iteration 20 Max Delta: 0.02109721487903085
+Iteration 21 Max Delta: 0.026310311901224737
+Iteration 22 Max Delta: 0.03056785805675065
+Iteration 23 Max Delta: 0.02872280265766386
+Iteration 24 Max Delta: 0.023161229201196343
+Iteration 25 Max Delta: 0.019753683804968836
+Iteration 26 Max Delta: 0.018041917961057946
+Iteration 27 Max Delta: 0.01761704690489703
+Iteration 28 Max Delta: 0.015181014049411093
+Iteration 29 Max Delta: 0.013509919657059524
+Iteration 30 Max Delta: 0.012195833053546726
+Iteration 31 Max Delta: 0.011648945455692145
+Iteration 32 Max Delta: 0.011101193772030851
+Iteration 33 Max Delta: 0.012413196038812123
+Iteration 34 Max Delta: 0.019004012090703872
+Iteration 35 Max Delta: 0.01938408660971712
+Iteration 36 Max Delta: 0.01388549134171492
+Iteration 37 Max Delta: 0.008537345385866021
+Iteration 38 Max Delta: 0.008261353494653574
+Iteration 39 Max Delta: 0.008140749108784553
+Iteration 40 Max Delta: 0.007762924141151317
+Iteration 41 Max Delta: 0.007204651042401922
+Iteration 42 Max Delta: 0.008296865122791276
+Iteration 43 Max Delta: 0.011174296981106061
+Iteration 44 Max Delta: 0.012107933943185423
+Iteration 45 Max Delta: 0.010632907647529492
+Iteration 46 Max Delta: 0.008060576316199657
+Iteration 47 Max Delta: 0.005939174052469329
+Iteration 48 Max Delta: 0.007059894675386695
+Iteration 49 Max Delta: 0.008181296379099801
+Iteration 50 Max Delta: 0.00866214915711816
+Iteration 51 Max Delta: 0.008386176912194183
+Iteration 52 Max Delta: 0.00750875328624355
+Iteration 53 Max Delta: 0.006336157343905184
+Iteration 54 Max Delta: 0.005150531954691437
+Iteration 55 Max Delta: 0.004119005746139631
+Iteration 56 Max Delta: 0.003298355840534714
+Iteration 57 Max Delta: 0.0030851728975909154
+Iteration 58 Max Delta: 0.0029981425685187135
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.5201870382372167
+Iteration 3 Max Delta: 0.4041078806996181
+Iteration 4 Max Delta: 0.3401939633880837
+Iteration 5 Max Delta: 0.3534577459749401
+Iteration 6 Max Delta: 0.3002919278785311
+Iteration 7 Max Delta: 0.4002392670675041
+Iteration 8 Max Delta: 0.49481209629493794
+Iteration 9 Max Delta: 0.31712892922375946
+Iteration 10 Max Delta: 0.35772937488907985
+Iteration 11 Max Delta: 0.372719867052192
+Iteration 12 Max Delta: 0.5130513415573001
+Iteration 13 Max Delta: 0.29528323450405664
+
+### Evaluation Results ###
+Precision:	0.5700
+Recall:	0.7189
+AER:	0.3824
+
+~~~~~~~~
+
+delta = 0.001
+/// CS224n Word Alignment Tester ///
+Language: french
+Data path: /afs/ir/class/cs224n/data/pa1//french
+Evaluation set: dev
+Using up to 10000 training sentences.
+Training set size: 10000
+Evaluation set size: 37
+Model: cs224n.wordaligner.IBMModel1Aligner
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.3442066194666582
+Iteration 3 Max Delta: 0.29795389206144723
+Iteration 4 Max Delta: 0.1820930077290232
+Iteration 5 Max Delta: 0.12157373351027945
+Iteration 6 Max Delta: 0.10448040344342369
+Iteration 7 Max Delta: 0.08036357656116877
+Iteration 8 Max Delta: 0.06742258604917906
+Iteration 9 Max Delta: 0.05589233160421886
+Iteration 10 Max Delta: 0.0569233009849843
+Iteration 11 Max Delta: 0.05228768751264401
+Iteration 12 Max Delta: 0.05162459982880831
+Iteration 13 Max Delta: 0.04930289902307619
+Iteration 14 Max Delta: 0.04328600915844236
+Iteration 15 Max Delta: 0.03486013202367286
+Iteration 16 Max Delta: 0.03045415440359664
+Iteration 17 Max Delta: 0.02827727914338063
+Iteration 18 Max Delta: 0.02751240889861062
+Iteration 19 Max Delta: 0.024797737393468994
+Iteration 20 Max Delta: 0.02109721487903085
+Iteration 21 Max Delta: 0.026310311901224737
+Iteration 22 Max Delta: 0.03056785805675065
+Iteration 23 Max Delta: 0.02872280265766386
+Iteration 24 Max Delta: 0.023161229201196343
+Iteration 25 Max Delta: 0.019753683804968836
+Iteration 26 Max Delta: 0.018041917961057946
+Iteration 27 Max Delta: 0.01761704690489703
+Iteration 28 Max Delta: 0.015181014049411093
+Iteration 29 Max Delta: 0.013509919657059524
+Iteration 30 Max Delta: 0.012195833053546726
+Iteration 31 Max Delta: 0.011648945455692145
+Iteration 32 Max Delta: 0.011101193772030851
+Iteration 33 Max Delta: 0.012413196038812123
+Iteration 34 Max Delta: 0.019004012090703872
+Iteration 35 Max Delta: 0.01938408660971712
+Iteration 36 Max Delta: 0.01388549134171492
+Iteration 37 Max Delta: 0.008537345385866021
+Iteration 38 Max Delta: 0.008261353494653574
+Iteration 39 Max Delta: 0.008140749108784553
+Iteration 40 Max Delta: 0.007762924141151317
+Iteration 41 Max Delta: 0.007204651042401922
+Iteration 42 Max Delta: 0.008296865122791276
+Iteration 43 Max Delta: 0.011174296981106061
+Iteration 44 Max Delta: 0.012107933943185423
+Iteration 45 Max Delta: 0.010632907647529492
+Iteration 46 Max Delta: 0.008060576316199657
+Iteration 47 Max Delta: 0.005939174052469329
+Iteration 48 Max Delta: 0.007059894675386695
+Iteration 49 Max Delta: 0.008181296379099801
+Iteration 50 Max Delta: 0.00866214915711816
+Iteration 51 Max Delta: 0.008386176912194183
+Iteration 52 Max Delta: 0.00750875328624355
+Iteration 53 Max Delta: 0.006336157343905184
+Iteration 54 Max Delta: 0.005150531954691437
+Iteration 55 Max Delta: 0.004119005746139631
+Iteration 56 Max Delta: 0.003298355840534714
+Iteration 57 Max Delta: 0.0030851728975909154
+Iteration 58 Max Delta: 0.0029981425685187135
+Iteration 59 Max Delta: 0.0029136105512785893
+Iteration 60 Max Delta: 0.002877162641284653
+Iteration 61 Max Delta: 0.00285053470637725
+Iteration 62 Max Delta: 0.002855694988530298
+Iteration 63 Max Delta: 0.002960772233698245
+Iteration 64 Max Delta: 0.003183494046110142
+Iteration 65 Max Delta: 0.0033253654737652703
+Iteration 66 Max Delta: 0.0033736809571929156
+Iteration 67 Max Delta: 0.0033272951504425483
+Iteration 68 Max Delta: 0.0031964491988335855
+Iteration 69 Max Delta: 0.0033600192168627696
+Iteration 70 Max Delta: 0.003617266511889785
+Iteration 71 Max Delta: 0.003836648554086313
+Iteration 72 Max Delta: 0.004009069698299728
+Iteration 73 Max Delta: 0.005233767977768693
+Iteration 74 Max Delta: 0.006451857245222566
+Iteration 75 Max Delta: 0.007404553278694669
+Iteration 76 Max Delta: 0.007847629077430987
+Iteration 77 Max Delta: 0.007671802725028244
+Iteration 78 Max Delta: 0.006964110879705374
+Iteration 79 Max Delta: 0.005947579966534021
+Iteration 80 Max Delta: 0.004859863534231484
+Iteration 81 Max Delta: 0.0038671206560386973
+Iteration 82 Max Delta: 0.003332390663288262
+Iteration 83 Max Delta: 0.00316348033779168
+Iteration 84 Max Delta: 0.002999042502032395
+Iteration 85 Max Delta: 0.003219959936230213
+Iteration 86 Max Delta: 0.0034854271780031115
+Iteration 87 Max Delta: 0.003650897863210715
+Iteration 88 Max Delta: 0.0036988686135059276
+Iteration 89 Max Delta: 0.0036283722065235703
+Iteration 90 Max Delta: 0.003454871267186216
+Iteration 91 Max Delta: 0.003205518361246773
+Iteration 92 Max Delta: 0.0029120155449059368
+Iteration 93 Max Delta: 0.00260393402495232
+Iteration 94 Max Delta: 0.0023044218348094447
+Iteration 95 Max Delta: 0.00216476725884978
+Iteration 96 Max Delta: 0.0021327269117985548
+Iteration 97 Max Delta: 0.002106009357014882
+Iteration 98 Max Delta: 0.002069618167725603
+Iteration 99 Max Delta: 0.0019949604885310494
+Iteration 100 Max Delta: 0.0018908137713562478
+Iteration 101 Max Delta: 0.0018241461201030582
+Iteration 102 Max Delta: 0.0017562415690930006
+Iteration 103 Max Delta: 0.001688030606556097
+Iteration 104 Max Delta: 0.0016203013281184814
+Iteration 105 Max Delta: 0.0015536987331380842
+Iteration 106 Max Delta: 0.0014887291601639457
+Iteration 107 Max Delta: 0.0014257687579979639
+Iteration 108 Max Delta: 0.0013714975757511683
+Iteration 109 Max Delta: 0.001430319495051232
+Iteration 110 Max Delta: 0.001587031639826624
+Iteration 111 Max Delta: 0.0015498268380832493
+Iteration 112 Max Delta: 0.001351715058507381
+Iteration 113 Max Delta: 0.001304717947150591
+Iteration 114 Max Delta: 0.0012918335371371326
+Iteration 115 Max Delta: 0.0013447435095445808
+Iteration 116 Max Delta: 0.0014221746408288397
+Iteration 117 Max Delta: 0.0014914028446900117
+Iteration 118 Max Delta: 0.0015503380511993174
+Iteration 119 Max Delta: 0.0015971468273124345
+Iteration 120 Max Delta: 0.001630383008214345
+Iteration 121 Max Delta: 0.0016490945261595398
+Iteration 122 Max Delta: 0.001652892476870317
+Iteration 123 Max Delta: 0.001641973315674769
+Iteration 124 Max Delta: 0.0016170917473301918
+Iteration 125 Max Delta: 0.0015794889561370935
+Iteration 126 Max Delta: 0.0015307868001894175
+Iteration 127 Max Delta: 0.0014728622932089416
+Iteration 128 Max Delta: 0.0014077176052738616
+Iteration 129 Max Delta: 0.0013373591414386626
+Iteration 130 Max Delta: 0.0012636957703714286
+Iteration 131 Max Delta: 0.0011884619849385977
+Iteration 132 Max Delta: 0.0011131676290229778
+Iteration 133 Max Delta: 0.001074714247755959
+Iteration 134 Max Delta: 0.0010646028266175778
+Iteration 135 Max Delta: 0.0010546088901648432
+Iteration 136 Max Delta: 0.001044730642588254
+Iteration 137 Max Delta: 0.0010349663276294496
+Iteration 138 Max Delta: 0.001025314228661811
+Iteration 139 Max Delta: 0.0010157726690789293
+Iteration 140 Max Delta: 0.0010063400129719513
+Iteration 141 Max Delta: 9.970146660375212E-4
+
+### Evaluation Results ###
+Precision:	0.5326
+Recall:	0.6953
+AER:	0.4155
+
+delta = 0.003
+/// CS224n Word Alignment Tester ///
+Language: french
+Data path: /afs/ir/class/cs224n/data/pa1//french
+Evaluation set: dev
+Using up to 10000 training sentences.
+Training set size: 10000
+Evaluation set size: 37
+Model: cs224n.wordaligner.IBMModel1Aligner
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.3442066194666582
+Iteration 3 Max Delta: 0.29795389206144723
+Iteration 4 Max Delta: 0.1820930077290232
+Iteration 5 Max Delta: 0.12157373351027945
+Iteration 6 Max Delta: 0.10448040344342369
+Iteration 7 Max Delta: 0.08036357656116877
+Iteration 8 Max Delta: 0.06742258604917906
+Iteration 9 Max Delta: 0.05589233160421886
+Iteration 10 Max Delta: 0.0569233009849843
+Iteration 11 Max Delta: 0.05228768751264401
+Iteration 12 Max Delta: 0.05162459982880831
+Iteration 13 Max Delta: 0.04930289902307619
+Iteration 14 Max Delta: 0.04328600915844236
+Iteration 15 Max Delta: 0.03486013202367286
+Iteration 16 Max Delta: 0.03045415440359664
+Iteration 17 Max Delta: 0.02827727914338063
+Iteration 18 Max Delta: 0.02751240889861062
+Iteration 19 Max Delta: 0.024797737393468994
+Iteration 20 Max Delta: 0.02109721487903085
+Iteration 21 Max Delta: 0.026310311901224737
+Iteration 22 Max Delta: 0.03056785805675065
+Iteration 23 Max Delta: 0.02872280265766386
+Iteration 24 Max Delta: 0.023161229201196343
+Iteration 25 Max Delta: 0.019753683804968836
+Iteration 26 Max Delta: 0.018041917961057946
+Iteration 27 Max Delta: 0.01761704690489703
+Iteration 28 Max Delta: 0.015181014049411093
+Iteration 29 Max Delta: 0.013509919657059524
+Iteration 30 Max Delta: 0.012195833053546726
+Iteration 31 Max Delta: 0.011648945455692145
+Iteration 32 Max Delta: 0.011101193772030851
+Iteration 33 Max Delta: 0.012413196038812123
+Iteration 34 Max Delta: 0.019004012090703872
+Iteration 35 Max Delta: 0.01938408660971712
+Iteration 36 Max Delta: 0.01388549134171492
+Iteration 37 Max Delta: 0.008537345385866021
+Iteration 38 Max Delta: 0.008261353494653574
+Iteration 39 Max Delta: 0.008140749108784553
+Iteration 40 Max Delta: 0.007762924141151317
+Iteration 41 Max Delta: 0.007204651042401922
+Iteration 42 Max Delta: 0.008296865122791276
+Iteration 43 Max Delta: 0.011174296981106061
+Iteration 44 Max Delta: 0.012107933943185423
+Iteration 45 Max Delta: 0.010632907647529492
+Iteration 46 Max Delta: 0.008060576316199657
+Iteration 47 Max Delta: 0.005939174052469329
+Iteration 48 Max Delta: 0.007059894675386695
+Iteration 49 Max Delta: 0.008181296379099801
+Iteration 50 Max Delta: 0.00866214915711816
+Iteration 51 Max Delta: 0.008386176912194183
+Iteration 52 Max Delta: 0.00750875328624355
+Iteration 53 Max Delta: 0.006336157343905184
+Iteration 54 Max Delta: 0.005150531954691437
+Iteration 55 Max Delta: 0.004119005746139631
+Iteration 56 Max Delta: 0.003298355840534714
+Iteration 57 Max Delta: 0.0030851728975909154
+Iteration 58 Max Delta: 0.0029981425685187135
+
+### Evaluation Results ###
+Precision:	0.5340
+Recall:	0.6923
+AER:	0.4155
+
+delta = 0.005
+/// CS224n Word Alignment Tester ///
+Language: french
+Data path: /afs/ir/class/cs224n/data/pa1//french
+Evaluation set: dev
+Using up to 10000 training sentences.
+Training set size: 10000
+Evaluation set size: 37
+Model: cs224n.wordaligner.IBMModel1Aligner
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.3442066194666582
+Iteration 3 Max Delta: 0.29795389206144723
+Iteration 4 Max Delta: 0.1820930077290232
+Iteration 5 Max Delta: 0.12157373351027945
+Iteration 6 Max Delta: 0.10448040344342369
+Iteration 7 Max Delta: 0.08036357656116877
+Iteration 8 Max Delta: 0.06742258604917906
+Iteration 9 Max Delta: 0.05589233160421886
+Iteration 10 Max Delta: 0.0569233009849843
+Iteration 11 Max Delta: 0.05228768751264401
+Iteration 12 Max Delta: 0.05162459982880831
+Iteration 13 Max Delta: 0.04930289902307619
+Iteration 14 Max Delta: 0.04328600915844236
+Iteration 15 Max Delta: 0.03486013202367286
+Iteration 16 Max Delta: 0.03045415440359664
+Iteration 17 Max Delta: 0.02827727914338063
+Iteration 18 Max Delta: 0.02751240889861062
+Iteration 19 Max Delta: 0.024797737393468994
+Iteration 20 Max Delta: 0.02109721487903085
+Iteration 21 Max Delta: 0.026310311901224737
+Iteration 22 Max Delta: 0.03056785805675065
+Iteration 23 Max Delta: 0.02872280265766386
+Iteration 24 Max Delta: 0.023161229201196343
+Iteration 25 Max Delta: 0.019753683804968836
+Iteration 26 Max Delta: 0.018041917961057946
+Iteration 27 Max Delta: 0.01761704690489703
+Iteration 28 Max Delta: 0.015181014049411093
+Iteration 29 Max Delta: 0.013509919657059524
+Iteration 30 Max Delta: 0.012195833053546726
+Iteration 31 Max Delta: 0.011648945455692145
+Iteration 32 Max Delta: 0.011101193772030851
+Iteration 33 Max Delta: 0.012413196038812123
+Iteration 34 Max Delta: 0.019004012090703872
+Iteration 35 Max Delta: 0.01938408660971712
+Iteration 36 Max Delta: 0.01388549134171492
+Iteration 37 Max Delta: 0.008537345385866021
+Iteration 38 Max Delta: 0.008261353494653574
+Iteration 39 Max Delta: 0.008140749108784553
+Iteration 40 Max Delta: 0.007762924141151317
+Iteration 41 Max Delta: 0.007204651042401922
+Iteration 42 Max Delta: 0.008296865122791276
+Iteration 43 Max Delta: 0.011174296981106061
+Iteration 44 Max Delta: 0.012107933943185423
+Iteration 45 Max Delta: 0.010632907647529492
+Iteration 46 Max Delta: 0.008060576316199657
+Iteration 47 Max Delta: 0.005939174052469329
+Iteration 48 Max Delta: 0.007059894675386695
+Iteration 49 Max Delta: 0.008181296379099801
+Iteration 50 Max Delta: 0.00866214915711816
+Iteration 51 Max Delta: 0.008386176912194183
+Iteration 52 Max Delta: 0.00750875328624355
+Iteration 53 Max Delta: 0.006336157343905184
+Iteration 54 Max Delta: 0.005150531954691437
+Iteration 55 Max Delta: 0.004119005746139631
+
+### Evaluation Results ###
+Precision:	0.5340
+Recall:	0.6923
+AER:	0.4155
+
+delta = 0.006
+/// CS224n Word Alignment Tester ///
+Language: french
+Data path: /afs/ir/class/cs224n/data/pa1//french
+Evaluation set: dev
+Using up to 10000 training sentences.
+Training set size: 10000
+Evaluation set size: 37
+Model: cs224n.wordaligner.IBMModel1Aligner
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.3442066194666582
+Iteration 3 Max Delta: 0.29795389206144723
+Iteration 4 Max Delta: 0.1820930077290232
+Iteration 5 Max Delta: 0.12157373351027945
+Iteration 6 Max Delta: 0.10448040344342369
+Iteration 7 Max Delta: 0.08036357656116877
+Iteration 8 Max Delta: 0.06742258604917906
+Iteration 9 Max Delta: 0.05589233160421886
+Iteration 10 Max Delta: 0.0569233009849843
+Iteration 11 Max Delta: 0.05228768751264401
+Iteration 12 Max Delta: 0.05162459982880831
+Iteration 13 Max Delta: 0.04930289902307619
+Iteration 14 Max Delta: 0.04328600915844236
+Iteration 15 Max Delta: 0.03486013202367286
+Iteration 16 Max Delta: 0.03045415440359664
+Iteration 17 Max Delta: 0.02827727914338063
+Iteration 18 Max Delta: 0.02751240889861062
+Iteration 19 Max Delta: 0.024797737393468994
+Iteration 20 Max Delta: 0.02109721487903085
+Iteration 21 Max Delta: 0.026310311901224737
+Iteration 22 Max Delta: 0.03056785805675065
+Iteration 23 Max Delta: 0.02872280265766386
+Iteration 24 Max Delta: 0.023161229201196343
+Iteration 25 Max Delta: 0.019753683804968836
+Iteration 26 Max Delta: 0.018041917961057946
+Iteration 27 Max Delta: 0.01761704690489703
+Iteration 28 Max Delta: 0.015181014049411093
+Iteration 29 Max Delta: 0.013509919657059524
+Iteration 30 Max Delta: 0.012195833053546726
+Iteration 31 Max Delta: 0.011648945455692145
+Iteration 32 Max Delta: 0.011101193772030851
+Iteration 33 Max Delta: 0.012413196038812123
+Iteration 34 Max Delta: 0.019004012090703872
+Iteration 35 Max Delta: 0.01938408660971712
+Iteration 36 Max Delta: 0.01388549134171492
+Iteration 37 Max Delta: 0.008537345385866021
+Iteration 38 Max Delta: 0.008261353494653574
+Iteration 39 Max Delta: 0.008140749108784553
+Iteration 40 Max Delta: 0.007762924141151317
+Iteration 41 Max Delta: 0.007204651042401922
+Iteration 42 Max Delta: 0.008296865122791276
+Iteration 43 Max Delta: 0.011174296981106061
+Iteration 44 Max Delta: 0.012107933943185423
+Iteration 45 Max Delta: 0.010632907647529492
+Iteration 46 Max Delta: 0.008060576316199657
+Iteration 47 Max Delta: 0.005939174052469329
+
+### Evaluation Results ###
+Precision:	0.5326
+Recall:	0.6923
+AER:	0.4164
+
+delta = 0.01
+/// CS224n Word Alignment Tester ///
+Language: french
+Data path: /afs/ir/class/cs224n/data/pa1//french
+Evaluation set: dev
+Using up to 10000 training sentences.
+Training set size: 10000
+Evaluation set size: 37
+Model: cs224n.wordaligner.IBMModel1Aligner
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.3442066194666582
+Iteration 3 Max Delta: 0.29795389206144723
+Iteration 4 Max Delta: 0.1820930077290232
+Iteration 5 Max Delta: 0.12157373351027945
+Iteration 6 Max Delta: 0.10448040344342369
+Iteration 7 Max Delta: 0.08036357656116877
+Iteration 8 Max Delta: 0.06742258604917906
+Iteration 9 Max Delta: 0.05589233160421886
+Iteration 10 Max Delta: 0.0569233009849843
+Iteration 11 Max Delta: 0.05228768751264401
+Iteration 12 Max Delta: 0.05162459982880831
+Iteration 13 Max Delta: 0.04930289902307619
+Iteration 14 Max Delta: 0.04328600915844236
+Iteration 15 Max Delta: 0.03486013202367286
+Iteration 16 Max Delta: 0.03045415440359664
+Iteration 17 Max Delta: 0.02827727914338063
+Iteration 18 Max Delta: 0.02751240889861062
+Iteration 19 Max Delta: 0.024797737393468994
+Iteration 20 Max Delta: 0.02109721487903085
+Iteration 21 Max Delta: 0.026310311901224737
+Iteration 22 Max Delta: 0.03056785805675065
+Iteration 23 Max Delta: 0.02872280265766386
+Iteration 24 Max Delta: 0.023161229201196343
+Iteration 25 Max Delta: 0.019753683804968836
+Iteration 26 Max Delta: 0.018041917961057946
+Iteration 27 Max Delta: 0.01761704690489703
+Iteration 28 Max Delta: 0.015181014049411093
+Iteration 29 Max Delta: 0.013509919657059524
+Iteration 30 Max Delta: 0.012195833053546726
+Iteration 31 Max Delta: 0.011648945455692145
+Iteration 32 Max Delta: 0.011101193772030851
+Iteration 33 Max Delta: 0.012413196038812123
+Iteration 34 Max Delta: 0.019004012090703872
+Iteration 35 Max Delta: 0.01938408660971712
+Iteration 36 Max Delta: 0.01388549134171492
+Iteration 37 Max Delta: 0.008537345385866021
+
+### Evaluation Results ###
+Precision:	0.5326
+Recall:	0.6923
+AER:	0.4164
+
+~~~~~~~~~~~
+
+lambda = 0.5
+/// CS224n Word Alignment Tester ///
+Language: french
+Data path: /afs/ir/class/cs224n/data/pa1//french
+Evaluation set: dev
+Using up to 10000 training sentences.
+Training set size: 10000
+Evaluation set size: 37
+Model: cs224n.wordaligner.IBMModel2Aligner
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.3442066194666582
+Iteration 3 Max Delta: 0.29795389206144723
+Iteration 4 Max Delta: 0.1820930077290232
+Iteration 5 Max Delta: 0.12157373351027945
+Iteration 6 Max Delta: 0.10448040344342369
+Iteration 7 Max Delta: 0.08036357656116877
+Iteration 8 Max Delta: 0.06742258604917906
+Iteration 9 Max Delta: 0.05589233160421886
+Iteration 10 Max Delta: 0.0569233009849843
+Iteration 11 Max Delta: 0.05228768751264401
+Iteration 12 Max Delta: 0.05162459982880831
+Iteration 13 Max Delta: 0.04930289902307619
+Iteration 14 Max Delta: 0.04328600915844236
+Iteration 15 Max Delta: 0.03486013202367286
+Iteration 16 Max Delta: 0.03045415440359664
+Iteration 17 Max Delta: 0.02827727914338063
+Iteration 18 Max Delta: 0.02751240889861062
+Iteration 19 Max Delta: 0.024797737393468994
+Iteration 20 Max Delta: 0.02109721487903085
+Iteration 21 Max Delta: 0.026310311901224737
+Iteration 22 Max Delta: 0.03056785805675065
+Iteration 23 Max Delta: 0.02872280265766386
+Iteration 24 Max Delta: 0.023161229201196343
+Iteration 25 Max Delta: 0.019753683804968836
+Iteration 26 Max Delta: 0.018041917961057946
+Iteration 27 Max Delta: 0.01761704690489703
+Iteration 28 Max Delta: 0.015181014049411093
+Iteration 29 Max Delta: 0.013509919657059524
+Iteration 30 Max Delta: 0.012195833053546726
+Iteration 31 Max Delta: 0.011648945455692145
+Iteration 32 Max Delta: 0.011101193772030851
+Iteration 33 Max Delta: 0.012413196038812123
+Iteration 34 Max Delta: 0.019004012090703872
+Iteration 35 Max Delta: 0.01938408660971712
+Iteration 36 Max Delta: 0.01388549134171492
+Iteration 37 Max Delta: 0.008537345385866021
+Iteration 38 Max Delta: 0.008261353494653574
+Iteration 39 Max Delta: 0.008140749108784553
+Iteration 40 Max Delta: 0.007762924141151317
+Iteration 41 Max Delta: 0.007204651042401922
+Iteration 42 Max Delta: 0.008296865122791276
+Iteration 43 Max Delta: 0.011174296981106061
+Iteration 44 Max Delta: 0.012107933943185423
+Iteration 45 Max Delta: 0.010632907647529492
+Iteration 46 Max Delta: 0.008060576316199657
+Iteration 47 Max Delta: 0.005939174052469329
+Iteration 48 Max Delta: 0.007059894675386695
+Iteration 49 Max Delta: 0.008181296379099801
+Iteration 50 Max Delta: 0.00866214915711816
+Iteration 51 Max Delta: 0.008386176912194183
+Iteration 52 Max Delta: 0.00750875328624355
+Iteration 53 Max Delta: 0.006336157343905184
+Iteration 54 Max Delta: 0.005150531954691437
+Iteration 55 Max Delta: 0.004119005746139631
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.5212578716701759
+Iteration 3 Max Delta: 0.42039392160139194
+Iteration 4 Max Delta: 0.3437793182216313
+Iteration 5 Max Delta: 0.34749857306560566
+Iteration 6 Max Delta: 0.3019334109062351
+Iteration 7 Max Delta: 0.40106774007438817
+Iteration 8 Max Delta: 0.27869909057834613
+Iteration 9 Max Delta: 0.3167457358300381
+Iteration 10 Max Delta: 0.3682109665120242
+Iteration 11 Max Delta: 0.37319884531549896
+Iteration 12 Max Delta: 0.4477935913186366
+Iteration 13 Max Delta: 0.45759985788400753
+Iteration 14 Max Delta: 0.3119950270531667
+Iteration 15 Max Delta: 0.31923660492086453
+Iteration 16 Max Delta: 0.3275930367188481
+Iteration 17 Max Delta: 0.3774108877877077
+Iteration 18 Max Delta: 0.22644327816248064
+Iteration 19 Max Delta: 0.3413920674013306
+Iteration 20 Max Delta: 0.23090827743958903
+Iteration 21 Max Delta: 0.24575543293557844
+Iteration 22 Max Delta: 0.19692745968306213
+
+### Evaluation Results ###
+Precision:	0.5742
+Recall:	0.7337
+AER:	0.3749
+
+lambda = 0.7
+/// CS224n Word Alignment Tester ///
+Language: french
+Data path: /afs/ir/class/cs224n/data/pa1//french
+Evaluation set: dev
+Using up to 10000 training sentences.
+Training set size: 10000
+Evaluation set size: 37
+Model: cs224n.wordaligner.IBMModel2Aligner
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.3442066194666582
+Iteration 3 Max Delta: 0.29795389206144723
+Iteration 4 Max Delta: 0.1820930077290232
+Iteration 5 Max Delta: 0.12157373351027945
+Iteration 6 Max Delta: 0.10448040344342369
+Iteration 7 Max Delta: 0.08036357656116877
+Iteration 8 Max Delta: 0.06742258604917906
+Iteration 9 Max Delta: 0.05589233160421886
+Iteration 10 Max Delta: 0.0569233009849843
+Iteration 11 Max Delta: 0.05228768751264401
+Iteration 12 Max Delta: 0.05162459982880831
+Iteration 13 Max Delta: 0.04930289902307619
+Iteration 14 Max Delta: 0.04328600915844236
+Iteration 15 Max Delta: 0.03486013202367286
+Iteration 16 Max Delta: 0.03045415440359664
+Iteration 17 Max Delta: 0.02827727914338063
+Iteration 18 Max Delta: 0.02751240889861062
+Iteration 19 Max Delta: 0.024797737393468994
+Iteration 20 Max Delta: 0.02109721487903085
+Iteration 21 Max Delta: 0.026310311901224737
+Iteration 22 Max Delta: 0.03056785805675065
+Iteration 23 Max Delta: 0.02872280265766386
+Iteration 24 Max Delta: 0.023161229201196343
+Iteration 25 Max Delta: 0.019753683804968836
+Iteration 26 Max Delta: 0.018041917961057946
+Iteration 27 Max Delta: 0.01761704690489703
+Iteration 28 Max Delta: 0.015181014049411093
+Iteration 29 Max Delta: 0.013509919657059524
+Iteration 30 Max Delta: 0.012195833053546726
+Iteration 31 Max Delta: 0.011648945455692145
+Iteration 32 Max Delta: 0.011101193772030851
+Iteration 33 Max Delta: 0.012413196038812123
+Iteration 34 Max Delta: 0.019004012090703872
+Iteration 35 Max Delta: 0.01938408660971712
+Iteration 36 Max Delta: 0.01388549134171492
+Iteration 37 Max Delta: 0.008537345385866021
+Iteration 38 Max Delta: 0.008261353494653574
+Iteration 39 Max Delta: 0.008140749108784553
+Iteration 40 Max Delta: 0.007762924141151317
+Iteration 41 Max Delta: 0.007204651042401922
+Iteration 42 Max Delta: 0.008296865122791276
+Iteration 43 Max Delta: 0.011174296981106061
+Iteration 44 Max Delta: 0.012107933943185423
+Iteration 45 Max Delta: 0.010632907647529492
+Iteration 46 Max Delta: 0.008060576316199657
+Iteration 47 Max Delta: 0.005939174052469329
+Iteration 48 Max Delta: 0.007059894675386695
+Iteration 49 Max Delta: 0.008181296379099801
+Iteration 50 Max Delta: 0.00866214915711816
+Iteration 51 Max Delta: 0.008386176912194183
+Iteration 52 Max Delta: 0.00750875328624355
+Iteration 53 Max Delta: 0.006336157343905184
+Iteration 54 Max Delta: 0.005150531954691437
+Iteration 55 Max Delta: 0.004119005746139631
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.5212578716701759
+Iteration 3 Max Delta: 0.42039392160139194
+Iteration 4 Max Delta: 0.3437793182216313
+Iteration 5 Max Delta: 0.34749857306560566
+Iteration 6 Max Delta: 0.3019334109062351
+Iteration 7 Max Delta: 0.40106774007438817
+Iteration 8 Max Delta: 0.27869909057834613
+Iteration 9 Max Delta: 0.3167457358300381
+Iteration 10 Max Delta: 0.3682109665120242
+Iteration 11 Max Delta: 0.37319884531549896
+Iteration 12 Max Delta: 0.4477935913186366
+Iteration 13 Max Delta: 0.45759985788400753
+Iteration 14 Max Delta: 0.3119950270531667
+Iteration 15 Max Delta: 0.31923660492086453
+Iteration 16 Max Delta: 0.3275930367188481
+Iteration 17 Max Delta: 0.3774108877877077
+Iteration 18 Max Delta: 0.22644327816248064
+Iteration 19 Max Delta: 0.3413920674013306
+Iteration 20 Max Delta: 0.23090827743958903
+Iteration 21 Max Delta: 0.24575543293557844
+Iteration 22 Max Delta: 0.19692745968306213
+
+### Evaluation Results ###
+Precision:	0.5756
+Recall:	0.7367
+AER:	0.3730
+
+lambda = 0.85
+/// CS224n Word Alignment Tester ///
+Language: french
+Data path: /afs/ir/class/cs224n/data/pa1//french
+Evaluation set: dev
+Using up to 10000 training sentences.
+Training set size: 10000
+Evaluation set size: 37
+Model: cs224n.wordaligner.IBMModel2Aligner
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.3442066194666582
+Iteration 3 Max Delta: 0.29795389206144723
+Iteration 4 Max Delta: 0.1820930077290232
+Iteration 5 Max Delta: 0.12157373351027945
+Iteration 6 Max Delta: 0.10448040344342369
+Iteration 7 Max Delta: 0.08036357656116877
+Iteration 8 Max Delta: 0.06742258604917906
+Iteration 9 Max Delta: 0.05589233160421886
+Iteration 10 Max Delta: 0.0569233009849843
+Iteration 11 Max Delta: 0.05228768751264401
+Iteration 12 Max Delta: 0.05162459982880831
+Iteration 13 Max Delta: 0.04930289902307619
+Iteration 14 Max Delta: 0.04328600915844236
+Iteration 15 Max Delta: 0.03486013202367286
+Iteration 16 Max Delta: 0.03045415440359664
+Iteration 17 Max Delta: 0.02827727914338063
+Iteration 18 Max Delta: 0.02751240889861062
+Iteration 19 Max Delta: 0.024797737393468994
+Iteration 20 Max Delta: 0.02109721487903085
+Iteration 21 Max Delta: 0.026310311901224737
+Iteration 22 Max Delta: 0.03056785805675065
+Iteration 23 Max Delta: 0.02872280265766386
+Iteration 24 Max Delta: 0.023161229201196343
+Iteration 25 Max Delta: 0.019753683804968836
+Iteration 26 Max Delta: 0.018041917961057946
+Iteration 27 Max Delta: 0.01761704690489703
+Iteration 28 Max Delta: 0.015181014049411093
+Iteration 29 Max Delta: 0.013509919657059524
+Iteration 30 Max Delta: 0.012195833053546726
+Iteration 31 Max Delta: 0.011648945455692145
+Iteration 32 Max Delta: 0.011101193772030851
+Iteration 33 Max Delta: 0.012413196038812123
+Iteration 34 Max Delta: 0.019004012090703872
+Iteration 35 Max Delta: 0.01938408660971712
+Iteration 36 Max Delta: 0.01388549134171492
+Iteration 37 Max Delta: 0.008537345385866021
+Iteration 38 Max Delta: 0.008261353494653574
+Iteration 39 Max Delta: 0.008140749108784553
+Iteration 40 Max Delta: 0.007762924141151317
+Iteration 41 Max Delta: 0.007204651042401922
+Iteration 42 Max Delta: 0.008296865122791276
+Iteration 43 Max Delta: 0.011174296981106061
+Iteration 44 Max Delta: 0.012107933943185423
+Iteration 45 Max Delta: 0.010632907647529492
+Iteration 46 Max Delta: 0.008060576316199657
+Iteration 47 Max Delta: 0.005939174052469329
+Iteration 48 Max Delta: 0.007059894675386695
+Iteration 49 Max Delta: 0.008181296379099801
+Iteration 50 Max Delta: 0.00866214915711816
+Iteration 51 Max Delta: 0.008386176912194183
+Iteration 52 Max Delta: 0.00750875328624355
+Iteration 53 Max Delta: 0.006336157343905184
+Iteration 54 Max Delta: 0.005150531954691437
+Iteration 55 Max Delta: 0.004119005746139631
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.5212578716701759
+Iteration 3 Max Delta: 0.42039392160139194
+Iteration 4 Max Delta: 0.3437793182216313
+Iteration 5 Max Delta: 0.34749857306560566
+Iteration 6 Max Delta: 0.3019334109062351
+Iteration 7 Max Delta: 0.40106774007438817
+Iteration 8 Max Delta: 0.27869909057834613
+Iteration 9 Max Delta: 0.3167457358300381
+Iteration 10 Max Delta: 0.3682109665120242
+Iteration 11 Max Delta: 0.37319884531549896
+Iteration 12 Max Delta: 0.4477935913186366
+Iteration 13 Max Delta: 0.45759985788400753
+Iteration 14 Max Delta: 0.3119950270531667
+Iteration 15 Max Delta: 0.31923660492086453
+Iteration 16 Max Delta: 0.3275930367188481
+Iteration 17 Max Delta: 0.3774108877877077
+Iteration 18 Max Delta: 0.22644327816248064
+Iteration 19 Max Delta: 0.3413920674013306
+Iteration 20 Max Delta: 0.23090827743958903
+Iteration 21 Max Delta: 0.24575543293557844
+Iteration 22 Max Delta: 0.19692745968306213
+
+### Evaluation Results ###
+Precision:	0.5742
+Recall:	0.7337
+AER:	0.3749
+
+lambda = 0.75
+/// CS224n Word Alignment Tester ///
+Language: french
+Data path: /afs/ir/class/cs224n/data/pa1//french
+Evaluation set: dev
+Using up to 10000 training sentences.
+Training set size: 10000
+Evaluation set size: 37
+Model: cs224n.wordaligner.IBMModel2Aligner
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.3442066194666582
+Iteration 3 Max Delta: 0.29795389206144723
+Iteration 4 Max Delta: 0.1820930077290232
+Iteration 5 Max Delta: 0.12157373351027945
+Iteration 6 Max Delta: 0.10448040344342369
+Iteration 7 Max Delta: 0.08036357656116877
+Iteration 8 Max Delta: 0.06742258604917906
+Iteration 9 Max Delta: 0.05589233160421886
+Iteration 10 Max Delta: 0.0569233009849843
+Iteration 11 Max Delta: 0.05228768751264401
+Iteration 12 Max Delta: 0.05162459982880831
+Iteration 13 Max Delta: 0.04930289902307619
+Iteration 14 Max Delta: 0.04328600915844236
+Iteration 15 Max Delta: 0.03486013202367286
+Iteration 16 Max Delta: 0.03045415440359664
+Iteration 17 Max Delta: 0.02827727914338063
+Iteration 18 Max Delta: 0.02751240889861062
+Iteration 19 Max Delta: 0.024797737393468994
+Iteration 20 Max Delta: 0.02109721487903085
+Iteration 21 Max Delta: 0.026310311901224737
+Iteration 22 Max Delta: 0.03056785805675065
+Iteration 23 Max Delta: 0.02872280265766386
+Iteration 24 Max Delta: 0.023161229201196343
+Iteration 25 Max Delta: 0.019753683804968836
+Iteration 26 Max Delta: 0.018041917961057946
+Iteration 27 Max Delta: 0.01761704690489703
+Iteration 28 Max Delta: 0.015181014049411093
+Iteration 29 Max Delta: 0.013509919657059524
+Iteration 30 Max Delta: 0.012195833053546726
+Iteration 31 Max Delta: 0.011648945455692145
+Iteration 32 Max Delta: 0.011101193772030851
+Iteration 33 Max Delta: 0.012413196038812123
+Iteration 34 Max Delta: 0.019004012090703872
+Iteration 35 Max Delta: 0.01938408660971712
+Iteration 36 Max Delta: 0.01388549134171492
+Iteration 37 Max Delta: 0.008537345385866021
+Iteration 38 Max Delta: 0.008261353494653574
+Iteration 39 Max Delta: 0.008140749108784553
+Iteration 40 Max Delta: 0.007762924141151317
+Iteration 41 Max Delta: 0.007204651042401922
+Iteration 42 Max Delta: 0.008296865122791276
+Iteration 43 Max Delta: 0.011174296981106061
+Iteration 44 Max Delta: 0.012107933943185423
+Iteration 45 Max Delta: 0.010632907647529492
+Iteration 46 Max Delta: 0.008060576316199657
+Iteration 47 Max Delta: 0.005939174052469329
+Iteration 48 Max Delta: 0.007059894675386695
+Iteration 49 Max Delta: 0.008181296379099801
+Iteration 50 Max Delta: 0.00866214915711816
+Iteration 51 Max Delta: 0.008386176912194183
+Iteration 52 Max Delta: 0.00750875328624355
+Iteration 53 Max Delta: 0.006336157343905184
+Iteration 54 Max Delta: 0.005150531954691437
+Iteration 55 Max Delta: 0.004119005746139631
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.5212578716701759
+Iteration 3 Max Delta: 0.42039392160139194
+Iteration 4 Max Delta: 0.3437793182216313
+Iteration 5 Max Delta: 0.34749857306560566
+Iteration 6 Max Delta: 0.3019334109062351
+Iteration 7 Max Delta: 0.40106774007438817
+Iteration 8 Max Delta: 0.27869909057834613
+Iteration 9 Max Delta: 0.3167457358300381
+Iteration 10 Max Delta: 0.3682109665120242
+Iteration 11 Max Delta: 0.37319884531549896
+Iteration 12 Max Delta: 0.4477935913186366
+Iteration 13 Max Delta: 0.45759985788400753
+Iteration 14 Max Delta: 0.3119950270531667
+Iteration 15 Max Delta: 0.31923660492086453
+Iteration 16 Max Delta: 0.3275930367188481
+Iteration 17 Max Delta: 0.3774108877877077
+Iteration 18 Max Delta: 0.22644327816248064
+Iteration 19 Max Delta: 0.3413920674013306
+Iteration 20 Max Delta: 0.23090827743958903
+Iteration 21 Max Delta: 0.24575543293557844
+Iteration 22 Max Delta: 0.19692745968306213
+
+### Evaluation Results ###
+Precision:	0.5756
+Recall:	0.7367
+AER:	0.3730
+
+lambda = 0.65
+/// CS224n Word Alignment Tester ///
+Language: french
+Data path: /afs/ir/class/cs224n/data/pa1//french
+Evaluation set: dev
+Using up to 10000 training sentences.
+Training set size: 10000
+Evaluation set size: 37
+Model: cs224n.wordaligner.IBMModel2Aligner
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.3442066194666582
+Iteration 3 Max Delta: 0.29795389206144723
+Iteration 4 Max Delta: 0.1820930077290232
+Iteration 5 Max Delta: 0.12157373351027945
+Iteration 6 Max Delta: 0.10448040344342369
+Iteration 7 Max Delta: 0.08036357656116877
+Iteration 8 Max Delta: 0.06742258604917906
+Iteration 9 Max Delta: 0.05589233160421886
+Iteration 10 Max Delta: 0.0569233009849843
+Iteration 11 Max Delta: 0.05228768751264401
+Iteration 12 Max Delta: 0.05162459982880831
+Iteration 13 Max Delta: 0.04930289902307619
+Iteration 14 Max Delta: 0.04328600915844236
+Iteration 15 Max Delta: 0.03486013202367286
+Iteration 16 Max Delta: 0.03045415440359664
+Iteration 17 Max Delta: 0.02827727914338063
+Iteration 18 Max Delta: 0.02751240889861062
+Iteration 19 Max Delta: 0.024797737393468994
+Iteration 20 Max Delta: 0.02109721487903085
+Iteration 21 Max Delta: 0.026310311901224737
+Iteration 22 Max Delta: 0.03056785805675065
+Iteration 23 Max Delta: 0.02872280265766386
+Iteration 24 Max Delta: 0.023161229201196343
+Iteration 25 Max Delta: 0.019753683804968836
+Iteration 26 Max Delta: 0.018041917961057946
+Iteration 27 Max Delta: 0.01761704690489703
+Iteration 28 Max Delta: 0.015181014049411093
+Iteration 29 Max Delta: 0.013509919657059524
+Iteration 30 Max Delta: 0.012195833053546726
+Iteration 31 Max Delta: 0.011648945455692145
+Iteration 32 Max Delta: 0.011101193772030851
+Iteration 33 Max Delta: 0.012413196038812123
+Iteration 34 Max Delta: 0.019004012090703872
+Iteration 35 Max Delta: 0.01938408660971712
+Iteration 36 Max Delta: 0.01388549134171492
+Iteration 37 Max Delta: 0.008537345385866021
+Iteration 38 Max Delta: 0.008261353494653574
+Iteration 39 Max Delta: 0.008140749108784553
+Iteration 40 Max Delta: 0.007762924141151317
+Iteration 41 Max Delta: 0.007204651042401922
+Iteration 42 Max Delta: 0.008296865122791276
+Iteration 43 Max Delta: 0.011174296981106061
+Iteration 44 Max Delta: 0.012107933943185423
+Iteration 45 Max Delta: 0.010632907647529492
+Iteration 46 Max Delta: 0.008060576316199657
+Iteration 47 Max Delta: 0.005939174052469329
+Iteration 48 Max Delta: 0.007059894675386695
+Iteration 49 Max Delta: 0.008181296379099801
+Iteration 50 Max Delta: 0.00866214915711816
+Iteration 51 Max Delta: 0.008386176912194183
+Iteration 52 Max Delta: 0.00750875328624355
+Iteration 53 Max Delta: 0.006336157343905184
+Iteration 54 Max Delta: 0.005150531954691437
+Iteration 55 Max Delta: 0.004119005746139631
+Iteration 1 Max Delta: 0.9
+Iteration 2 Max Delta: 0.5212578716701759
+Iteration 3 Max Delta: 0.42039392160139194
+Iteration 4 Max Delta: 0.3437793182216313
+Iteration 5 Max Delta: 0.34749857306560566
+Iteration 6 Max Delta: 0.3019334109062351
+Iteration 7 Max Delta: 0.40106774007438817
+Iteration 8 Max Delta: 0.27869909057834613
+Iteration 9 Max Delta: 0.3167457358300381
+Iteration 10 Max Delta: 0.3682109665120242
+Iteration 11 Max Delta: 0.37319884531549896
+Iteration 12 Max Delta: 0.4477935913186366
+Iteration 13 Max Delta: 0.45759985788400753
+Iteration 14 Max Delta: 0.3119950270531667
+Iteration 15 Max Delta: 0.31923660492086453
+Iteration 16 Max Delta: 0.3275930367188481
+Iteration 17 Max Delta: 0.3774108877877077
+Iteration 18 Max Delta: 0.22644327816248064
+Iteration 19 Max Delta: 0.3413920674013306
+Iteration 20 Max Delta: 0.23090827743958903
+Iteration 21 Max Delta: 0.24575543293557844
+Iteration 22 Max Delta: 0.19692745968306213
+
+### Evaluation Results ###
+Precision:	0.5756
+Recall:	0.7367
+AER:	0.3730
