@@ -30,24 +30,24 @@ public class MyFeaturizer implements RuleFeaturizer<IString, String> {
 		List<FeatureValue<String>> features = Generics.newLinkedList();
 		//    features.add(new FeatureValue<String>("MyFeature", 1.0));
 
-		// target sentence length 
+	// target sentence length 
 		features.add(new FeatureValue<String>(String.format("%s:%d","TGTD", f.targetPhrase.size()), 1.0)); 
 
 		//  // source sentence length // +0.1
 //		features.add(new FeatureValue<String>(String.format("%s:%d","SRTD", f.sourceSentence.size()), 1.0));
 
 		// sentence length ratio 
-//		features.add(new FeatureValue<String>(String.format("%s:%f","RatioSenLen", f.targetPhrase.size()*1.0/f.sourceSentence.size()), 1.0));
+		features.add(new FeatureValue<String>(String.format("%s:%f","RatioSenLen", f.targetPhrase.size()*1.0/f.sourceSentence.size()), 1.0));
 
 		// sentence length diff 
 //		features.add(new FeatureValue<String>(String.format("%s:%d","RatioSenLen", f.targetPhrase.size() - f.sourceSentence.size()), 1.0));
 
-		// avg len of words in target sentence
+		// avg len of words in source sentence
 		double avgWLenSrc = avgWLen(f.sourcePhrase);
-//		features.add(new FeatureValue<String>(String.format("%s:%f","AvgWordLenTgt", avgWLenSrc), 1.0));
+		features.add(new FeatureValue<String>(String.format("%s:%f","AvgWordLenSrc", avgWLenSrc), 1.0));
 
 		// avg len of words in target sentence
-		double avgWLenTgt = avgWLen(f.targetPhrase);
+//		double avgWLenTgt = avgWLen(f.targetPhrase);
 //		features.add(new FeatureValue<String>( String.format("%s:%f","AvgWordLenTgt", avgWLenTgt), 1.0));
 
 		// ratio of avg word len between target and source sentences
@@ -57,18 +57,18 @@ public class MyFeaturizer implements RuleFeaturizer<IString, String> {
 //		features.add(new FeatureValue<String>( String.format("%s:%f","RatioAvgWordLen", avgWLenTgt - avgWLenSrc), 1.0));
 
 		//num of unique words in source sentence
-//		int uniqWSrc = uniqueWord(f.sourcePhrase);
-//		features.add(new FeatureValue<String>( String.format("%s:%d","uniqWordCntSrc", uniqWSrc), 1.0));
+		int uniqWSrc = uniqueWord(f.sourcePhrase);
+		features.add(new FeatureValue<String>( String.format("%s:%d","uniqWordCntSrc", uniqWSrc), 1.0));
 
 		//num of unique words in target sentence
-//		int uniqWTgt = uniqueWord(f.targetPhrase);
-//		features.add(new FeatureValue<String>( String.format("%s:%d","uniqWordCntTgt", uniqWTgt), 1.0));
+	//	int uniqWTgt = uniqueWord(f.targetPhrase);
+	//	features.add(new FeatureValue<String>( String.format("%s:%d","uniqWordCntTgt", uniqWTgt), 1.0));
 
 		//diff of unique words in target sentence
 //		features.add(new FeatureValue<String>( String.format("%s:%d","uniqWordCntDiff", uniqWTgt-uniqWSrc), 1.0));
 
 		//ratio of unique words in target sentence
-//		features.add(new FeatureValue<String>( String.format("%s:%f","uniqWordCntDiff", uniqWTgt*1.0/uniqWSrc), 1.0));
+//		features.add(new FeatureValue<String>( String.format("%s:%f","uniqWordCntRatio", uniqWTgt*1.0/uniqWSrc), 1.0));
 
 		return features;
 	}
