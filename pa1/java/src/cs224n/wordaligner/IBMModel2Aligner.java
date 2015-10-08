@@ -36,100 +36,101 @@ public class IBMModel2Aligner implements WordAligner {
      int sourceId, targetId = 0;
      // YOUR CODE HERE
      for (int i = 0; i < sourceWords.size(); i++) {
-     	sourceId = i;
-     	maxScore = 0.0;
-   		for (int j= 0; j < targetWords.size(); j++) {
-   			key = i + "-" + targetWords.size() + "-" + sourceWords.size();
-   			score = transProb.getCount(targetWords.get(j), sourceWords.get(i))*distortion.getCount(key, j);
-   			if (score > maxScore) {
-   				maxScore = score;
-   				targetId = j;
-   			}
-   		}
-   		alignment.addPredictedAlignment(targetId, sourceId);
-   	}
-    
+       sourceId = i;
+       maxScore = 0.0;
+       for (int j= 0; j < targetWords.size(); j++) {
+   	     key = i + "-" + targetWords.size() + "-" + sourceWords.size();
+   	     score = transProb.getCount(targetWords.get(j), sourceWords.get(i))*distortion.getCount(key, j);
+   	     if (score > maxScore) {
+   	       maxScore = score;
+   	       targetId = j;
+   	     }
+       }
+       alignment.addPredictedAlignment(targetId, sourceId);
+     }
      return alignment;
   }
 
   public void train(List<SentencePair> trainingPairs) {
     
-  	// initialize transProb with values from model 1
-  	IBMModel1Aligner model1 = new IBMModel1Aligner();
-  	model1.train(trainingPairs);
-  	transProb = model1.getTransProb();
+    // initialize transProb with values from model 1
+    IBMModel1Aligner model1 = new IBMModel1Aligner();
+    model1.train(trainingPairs);
+    transProb = model1.getTransProb();
   	
-  	countAlignment = new CounterMap<String,String>();
-  	countDistortion = new CounterMap<String,Integer>();
-	  distortion = new CounterMap<String,Integer>();
-	  // uniformly initialize distortion
-	  int lenSource, lenTarget;
-	  String key;
-	  for (SentencePair p : trainingPairs) {
-		  lenSource = p.getSourceWords().size();
-		  lenTarget = p.getTargetWords().size();
-		  for (int i = 0; i < lenSource; i++) {
-			  for (int j = 0; j < lenTarget; j++) {
-			  	key = i + "-" + lenTarget + "-" + lenSource;
-			  	distortion.setCount(key, j, 0.1);
-			  }
-		  }
-	  }
+    distortion = new CounterMap<String,Integer>();
+    // uniformly initialize distortion
+    int lenSource, lenTarget;
+    String key;
+    for (SentencePair p : trainingPairs) {
+      lenSource = p.getSourceWords().size();
+      lenTarget = p.getTargetWords().size();
+      for (int i = 0; i < lenSource; i++) {
+	      for (int j = 0; j < lenTarget; j++) {
+	        key = i + "-" + lenTarget + "-" + lenSource;
+	        distortion.setCount(key, j, 0.1);
+	      }
+      }
+    }
 
-	  // iterate 
-	  List<String> sourceWords, targetWords;
-	  double sum = 0.0, delta = 1.0;
-	  double prob, newDelta;
-	  int k = 0;
-	  while (delta > 0.005){
-	  	k++;
-	  	for (SentencePair p : trainingPairs) {
-	  		sourceWords = p.getSourceWords();
-	  		targetWords = p.getTargetWords();
-	  		for (int i = 0; i < sourceWords.size(); i++) {
+    // iterate 
+    List<String> sourceWords, targetWords;
+    double sum = 0.0, delta = 1.0;
+    double prob, newDelta;
+    int k = 0;
+    while (delta > 0.2){
+      k++;
+      // initialize counts
+      countAlignment = new CounterMap<String,String>();
+      countDistortion = new CounterMap<String,Integer>();
+      for (SentencePair p : trainingPairs) {
+	      sourceWords = p.getSourceWords();
+	      targetWords = p.getTargetWords();
+	      for (int i = 0; i < sourceWords.size(); i++) {
 
-	  			// calc the sum once
-	  			sum = 0.0;
-	  			for (int j = 0; j < targetWords.size(); j++) {
-	  				key = i + "-" + targetWords.size() + "-" + sourceWords.size();
-	  				sum += transProb.getCount(targetWords.get(j), sourceWords.get(i))*distortion.getCount(key, j);
-	  			}				  
+	        // calc the sum once per sentence
+	        sum = 0.0;
+	        for (int j = 0; j < targetWords.size(); j++) {
+	          key = i + "-" + targetWords.size() + "-" + sourceWords.size();
+	          sum += transProb.getCount(targetWords.get(j), sourceWords.get(i))*distortion.getCount(key, j);
+	        }				  
 
-	  			for (int j = 0; j < targetWords.size(); j++) {
-	  				key = i + "-" + targetWords.size() + "-" + sourceWords.size();
-	  				prob = transProb.getCount(targetWords.get(j), sourceWords.get(i))*distortion.getCount(key, j);
-	  				countAlignment.incrementCount(targetWords.get(j), sourceWords.get(i), prob/sum);
-	  				countDistortion.incrementCount(key, j, prob/sum);
-	  			}
-	  		}
-	  	}
+	        for (int j = 0; j < targetWords.size(); j++) {
+	          key = i + "-" + targetWords.size() + "-" + sourceWords.size();
+	          prob = transProb.getCount(targetWords.get(j), sourceWords.get(i))*distortion.getCount(key, j);
+	          countAlignment.incrementCount(targetWords.get(j), sourceWords.get(i), prob/sum);
+	          countDistortion.incrementCount(key, j, prob/sum);
+	        }
+        }
+      }
 	  	
-	  	//Renormalize counts
-		  double sCountTotal;
-		  Counter<String> sCounter;
-		  double dCountTotal;
-		  Counter<Integer> dCounter;
-		  delta = 0.0;
-		  for (String tWord: transProb.keySet()){
-			  sCounter = transProb.getCounter(tWord);
-			  sCountTotal = countAlignment.getCounter(tWord).totalCount();
-			  for (String sWord: sCounter.keySet()){
-				  transProb.setCount(tWord, sWord, countAlignment.getCount(tWord, sWord) / sCountTotal);
-			  }
-		  }
-		  for (String base: distortion.keySet()) {
-		  	dCounter = distortion.getCounter(base);
-		  	dCountTotal = countDistortion.getCounter(base).totalCount();
-		  	for (Integer j: dCounter.keySet()){
-		  		prob = countDistortion.getCount(base, j) / dCountTotal;
-			  	newDelta = Math.abs(distortion.getCount(base, j) - prob);
-			  	if (newDelta > delta) {
-			  		delta = newDelta;
-			  	}
-		  		distortion.setCount(base, j, prob);
-		  	}
-		  }
-		  System.out.println("Iteration " + k + " Max Delta: " + delta);
-	  }
+      //Renormalize counts
+      double sCountTotal;
+      Counter<String> sCounter;
+      double dCountTotal;
+      Counter<Integer> dCounter;
+      delta = 0.0;
+      for (String tWord: transProb.keySet()){
+	      sCounter = transProb.getCounter(tWord);
+	      sCountTotal = countAlignment.getCounter(tWord).totalCount();
+	      for (String sWord: sCounter.keySet()){
+	        transProb.setCount(tWord, sWord, countAlignment.getCount(tWord, sWord) / sCountTotal);
+	      }
+      }
+
+      for (String base: distortion.keySet()) {
+	      dCounter = distortion.getCounter(base);
+	      dCountTotal = countDistortion.getCounter(base).totalCount();
+	      for (Integer j: dCounter.keySet()){
+	        prob = countDistortion.getCount(base, j) / dCountTotal;
+	        newDelta = Math.abs(distortion.getCount(base, j) - prob);
+	        if (newDelta > delta) {
+	          delta = newDelta;
+	        }
+	        distortion.setCount(base, j, prob);
+	      }
+      }
+      System.out.println("Iteration " + k + " Max Delta: " + delta);
+    }
   }
 }

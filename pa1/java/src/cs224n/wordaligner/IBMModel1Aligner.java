@@ -52,7 +52,6 @@ public class IBMModel1Aligner implements WordAligner {
     double sum, delta;
 	  
     // start with uniform t
-    countAlignment = new CounterMap<String, String>();
     transProb = new CounterMap<String,String>();
     List<String> sourceWords, targetWords;
     for (SentencePair p : trainingPairs) {
@@ -61,15 +60,17 @@ public class IBMModel1Aligner implements WordAligner {
       for (String sWord : sourceWords) {
         for (String tWord : targetWords) {
           transProb.setCount(tWord, sWord, 0.1);			  
-	      }
+        }
       }
     }
 
     // iterate
     delta = 1.0;
     int i = 0; 
-    while (delta > 0.001){
+    while (delta > 0.005){
       i++;
+      // reinitialize counts
+      countAlignment = new CounterMap<String, String>();
       for (SentencePair p : trainingPairs) {
         sourceWords = p.getSourceWords();
 	      targetWords = p.getTargetWords();
