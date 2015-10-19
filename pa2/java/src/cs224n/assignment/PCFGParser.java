@@ -14,12 +14,12 @@ public class PCFGParser implements Parser {
     private Lexicon lexicon;
 
     public void train(List<Tree<String>> trainTrees) {
-
+    		// Annotate the trees in the training set
+      	for (int i = 0; i < trainTrees.size(); i++) {
+      			trainTrees.set(i, TreeAnnotations.annotateTree(trainTrees.get(i)));
+      	}
         lexicon = new Lexicon(trainTrees);
-        // Annotate the trees in the training set
-        for (int i = 0; i < trainTrees.size(); i++) {
-	          trainTrees.set(i, TreeAnnotations.annotateTree(trainTrees.get(i)));
-        }
+        
         grammar = new Grammar(trainTrees);
     }
 
