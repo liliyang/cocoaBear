@@ -32,7 +32,10 @@ public class TreeAnnotations {
 	}
 	
 	private static void verticalMarkov(Tree<String> tree) {
-		verticalMarkovHelper(tree, "ROOT");
+		String label = tree.getLabel();
+		for (Tree<String> child : tree.getChildren()) {
+			verticalMarkovHelper(child, label);
+		}
 	}
 	
 	private static void verticalMarkovHelper(Tree<String> tree, String parent) {
