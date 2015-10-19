@@ -25,9 +25,24 @@ public class TreeAnnotations {
 
 		// TODO : mark nodes with the label of their parent nodes, giving a second
 		// order vertical markov process
+		verticalMarkov(unAnnotatedTree);
 
 		return binarizeTree(unAnnotatedTree);
 
+	}
+	
+	private static void verticalMarkov(Tree<String> tree) {
+		verticalMarkovHelper(tree, "ROOT");
+	}
+	
+	private static void verticalMarkovHelper(Tree<String> tree, String parent) {
+		if (!tree.isLeaf()) {
+			String label = tree.getLabel();
+			tree.setLabel(label + "^" + parent);
+			for (Tree<String> child : tree.getChildren()) {
+				verticalMarkovHelper(child, label);
+			}
+		}
 	}
 
 	private static Tree<String> binarizeTree(Tree<String> tree) {
