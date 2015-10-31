@@ -1,0 +1,12 @@
+java -Xmx1g -cp classes cs224n.assignment.PCFGParserTester -parser cs224n.assignment.PCFGParser -data treebank
+
+Baseline:
+[Current]    P: 29.41   R: 41.67   F1: 34.48   EX:  0.00 
+[Average]    P: 17.74   R: 20.04   F1: 18.82   EX:  1.94
+
+CKY:
+[Average]    P: 71.01   R: 60.40   F1: 65.28   EX:  0.65 
+
+With Vertical Markov:
+[Average]    P: 75.26   R: 67.63   F1: 71.25   EX:  1.29
+
