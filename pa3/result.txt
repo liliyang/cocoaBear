@@ -23,3 +23,100 @@ MUC F1:        0.6193687618019962
 B^3 Precision: 0.8628232056756321
 B^3 Recall:    0.4489696220708225
 B^3 F1:        0.5906137011461048
+
+
+Better Baseline with Simple Head Matching:
+--------------------
+ COREFERENCE SCORES
+--------------------
+--Training--
+    MUC
+MUC Precision: 0.8176538908246226
+MUC Recall:    0.5317220543806647
+MUC F1:        0.6443935926773456
+    B^3
+B^3 Precision: 0.8754552212725812
+B^3 Recall:    0.5064937977467454
+B^3 F1:        0.6417206911065738
+
+--dev--
+    MUC
+MUC Precision: 0.8028004667444574
+MUC Recall:    0.6029798422436459
+MUC F1:        0.6886886886886887
+    B^3
+B^3 Precision: 0.8340763665128141
+B^3 Recall:    0.5141262310487777
+B^3 F1:        0.6361366451862243
+
+Better Baseline with head matching with trained matches
+--------------------
+ COREFERENCE SCORES
+--------------------
+--Training--
+    MUC
+MUC Precision: 0.8691213999270871
+MUC Recall:    0.9003021148036254
+MUC F1:        0.8844370246707477
+    B^3
+B^3 Precision: 0.7739641065704156
+B^3 Recall:    0.8650544227439595
+B^3 F1:        0.816978040771614
+
+--dev--
+    MUC
+MUC Precision: 0.7841930903928065
+MUC Recall:    0.7261174408413672
+MUC F1:        0.7540386803185438
+    B^3
+B^3 Precision: 0.7002167409761682
+B^3 Recall:    0.644399315164916
+B^3 F1:        0.6711494873071899
+
+Better Baseline with head matching with trained matches and pref matching
+--------------------
+ COREFERENCE SCORES
+--------------------
+--Training--
+    MUC
+MUC Precision: 0.8691213999270871
+MUC Recall:    0.9003021148036254
+MUC F1:        0.8844370246707477
+    B^3
+B^3 Precision: 0.7689753053403998
+B^3 Recall:    0.8721112905781063
+B^3 F1:        0.8173024478184355
+
+--dev--
+    MUC
+MUC Precision: 0.7879791765262659
+MUC Recall:    0.7296231375985978
+MUC F1:        0.7576791808873721
+    B^3
+B^3 Precision: 0.7010439479389577
+B^3 Recall:    0.6519939678167695
+B^3 F1:        0.67562988428947
+
+Better Baseline with head matching with trained matches and pref matching, case insensitive
+--------------------
+ COREFERENCE SCORES
+--------------------
+--Training--
+    MUC
+MUC Precision: 0.8560551124002901
+MUC Recall:    0.8916163141993958
+MUC F1:        0.8734739178690345
+    B^3
+B^3 Precision: 0.7457203672173819
+B^3 Recall:    0.8609075158657589
+B^3 F1:        0.799184771572143
+
+--dev--
+    MUC
+MUC Precision: 0.7901063337956542
+MUC Recall:    0.7489044697633654
+MUC F1:        0.7689538807649045
+    B^3
+B^3 Precision: 0.6855563082879261
+B^3 Recall:    0.6731525685968097
+B^3 F1:        0.679297821178382
