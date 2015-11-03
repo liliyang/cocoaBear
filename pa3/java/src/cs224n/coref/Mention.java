@@ -192,6 +192,23 @@ public class Mention implements Serializable, Decodable {
     //(return)
      return b.toString();
   }
+  
+  /**
+   * Remove coreference from mention
+   * @return boolean true if removed coreference successfully, false if
+     wasn't coreferent to any entity
+   */
+  public boolean removeCoreference(){
+     if(corefferentWith != null){
+       corefferentWith = null;
+       return true;
+     }
+     return false;
+  }
+
+
+
+  
 
   public static Mention decode(String encoded, Document doc){
     Matcher m = encodePattern.matcher(encoded);
@@ -203,4 +220,6 @@ public class Mention implements Serializable, Decodable {
     Tree<String> subParse = Tree.decode(m.group(5));
     return new Mention(doc, doc.sentences.get(sentenceIndex), beginIndex, endIndex, subParse, head);
   }
+  
+  
 }

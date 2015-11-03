@@ -250,6 +250,16 @@ public class Entity implements Serializable, Decodable, Iterable<Mention> {
     }
     return encoded;
   }
+  
+  /** 
+   *  Remove a mention from an entity
+   *  @param mention The mention to remove
+   **/
+  public void remove(Mention mention) {
+     Boolean result = mentions.remove(mention);
+     if (!result)
+       throw new IllegalArgumentException("Trying to remove mention that is not coreferrant with entity");
+  }
 
   public static Entity decode(String encoded,List<Mention> mentionList){
     //(create index map)

@@ -68,7 +68,7 @@ public class IBMModel1Aligner implements WordAligner {
 		// iterate
 		delta = 1.0;
 		int i = 0;
-		while (delta > 0.005) {
+		while (delta > 0.025) {
 			i++;
 			// reinitialize counts
 			countAlignment = new CounterMap<String, String>();

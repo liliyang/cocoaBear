@@ -25,11 +25,73 @@ public class TreeAnnotations {
 
 		// TODO : mark nodes with the label of their parent nodes, giving a second
 		// order vertical markov process
-		verticalMarkov(unAnnotatedTree);
+		
+		
+//		verticalMarkov(unAnnotatedTree);
 
-		return binarizeTree(unAnnotatedTree);
+		verticalMarkovThird(unAnnotatedTree);
+		
+		Tree<String> annotatedTree = binarizeTree(unAnnotatedTree);
+		
+		horizontalMarkov(annotatedTree);
+		return annotatedTree;
 
 	}
+	
+	private static void horizontalMarkov(Tree<String> tree) {
+//		String grandparent = tree.getLabel();
+		for (Tree<String> child : tree.getChildren()) {
+			
+			String label = child.getLabel();
+			
+			if (label.contains("->")){
+				String[] sp0 = label.split("->");
+				if (sp0[1].contains("_")){
+					String[] sp1 = sp0[1].split("_");
+					child.setLabel(sp0[0]+"->_"+sp1[sp1.length-1]);
+				}
+			}
+			horizontalMarkov(child);
+		}
+	}
+	
+	
+//	private static void horizontalMarkovHelper(Tree<String> tree) {
+//		if (!tree.isLeaf()) {
+//			String label = tree.getLabel();
+//			tree.setLabel(parent);
+//			for (Tree<String> child : tree.getChildren()) {
+//				verticalMarkovHelper(child, label);
+//			}
+//		}
+//	}
+//	
+	private static void printTree(Tree<String> tree){
+		for (Tree<String> child : tree.getChildren()) {
+			System.out.println(child.getLabel());
+			printTree(child);
+		}
+	}
+	private static void verticalMarkovThird(Tree<String> tree) {
+		String grandparent = tree.getLabel();
+		for (Tree<String> child : tree.getChildren()) {
+			String parent = child.getLabel();
+			for (Tree<String> grandchild : child.getChildren()) {
+			verticalMarkovThirdHelper(grandchild, parent, grandparent);
+			}
+		}
+	}
+	
+	private static void verticalMarkovThirdHelper(Tree<String> tree, String parent, String grandparent) {
+		if (!tree.isLeaf()) {
+			String label = tree.getLabel();
+			tree.setLabel(label + "^" + parent+ "^"+grandparent);
+			for (Tree<String> child : tree.getChildren()) {
+				verticalMarkovThirdHelper(child, label, parent);
+			}
+		}
+	}
+	
 	
 	private static void verticalMarkov(Tree<String> tree) {
 		String label = tree.getLabel();

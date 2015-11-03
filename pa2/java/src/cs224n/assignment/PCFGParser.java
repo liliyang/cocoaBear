@@ -146,7 +146,15 @@ public class PCFGParser implements Parser {
 	      }
     }
     
+//    private Tree<String> addRoot(Tree<String> tree) {
+//	      return new Tree<String>("ROOT", Collections.singletonList(tree));
+//    }
+    
     private Tree<String> addRoot(Tree<String> tree) {
-	      return new Tree<String>("ROOT", Collections.singletonList(tree));
+    	if (tree.getLabel() == "S") {
+    		return new Tree<String>("ROOT", Collections.singletonList(tree));
+    	} 
+    	Tree<String> newTree = new Tree<String>("S", Collections.singletonList(tree));
+    	return new Tree<String>("ROOT", Collections.singletonList(newTree));
     }
  }

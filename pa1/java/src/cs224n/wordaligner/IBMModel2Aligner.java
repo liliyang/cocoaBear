@@ -80,7 +80,7 @@ public class IBMModel2Aligner implements WordAligner {
 		double sum = 0.0, delta = 1.0;
 		double prob, newDelta;
 		int k = 0;
-		while (delta > 0.2) {
+		while (delta > 0.4) {
 			k++;
 			// initialize counts
 			countAlignment = new CounterMap<String, String>();

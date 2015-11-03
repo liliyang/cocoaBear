@@ -2,6 +2,7 @@ package cs224n.coref;
 
 import cs224n.util.Pair;
 
+import java.util.LinkedList;
 import java.util.Set;
 
 /**
@@ -30,6 +31,8 @@ public interface Feature {
     	return this.getClass().getSimpleName() + "(" + value + ")"; }
   }
 
+
+  
   public static abstract class IntIndicator implements Feature {
     public final int value;
     public IntIndicator(int value){ this.value = value; }
@@ -105,4 +108,44 @@ public interface Feature {
    * TODO: Add values to the indicators here.
    */
 
+  public static class WordDistance extends IntIndicator {
+    public WordDistance(Integer distance){ super(distance); }
+  }
+  
+  public static class SentenceDistance extends IntIndicator {
+	    public SentenceDistance(Integer distance){ super(distance); }
+	  }
+
+  public static class HeadMatch extends Indicator {
+	    public HeadMatch(boolean headMatch){ super(headMatch); }
+	  }
+  
+  public static class ProxIsPron extends Indicator {
+	    public ProxIsPron(boolean isPron){ super(isPron); }
+	  }
+  
+  public static class CandiIsPron extends Indicator {
+	    public CandiIsPron(boolean isPron){ super(isPron); }
+	  }
+
+  public static class ProxPath extends SetIndicator {
+	    public ProxPath(Set<String> path){ super(path); }
+	  }
+  public static class CandiPath extends SetIndicator {
+	    public CandiPath(Set<String> path){ super(path); }
+	  }
+  public static class CandiEntityType extends SetIndicator {
+	    public CandiEntityType(Set<String> path){ super(path); }
+	  }
+  public static class ProxEntityType extends SetIndicator {
+	    public ProxEntityType(Set<String> path){ super(path); }
+	  }
+
+  
+//  public static class HasGender extends Indicator {
+//	    public HasGender(boolean hasGender){ super(hasGender); }
+//	  }
+  public static class SameNumber extends Indicator {
+	    public SameNumber(boolean sameNumber){ super(sameNumber); }
+	  }
 }

@@ -33,10 +33,25 @@ public class ClassifierBased implements CoreferenceSystem {
 			 * TODO: Create a set of active features
 			 */
 
-			Feature.ExactMatch.class,
+//			Feature.ExactMatch.class,
+			
+			Feature.WordDistance.class,//barely help
+			Feature.SentenceDistance.class,//
+			Feature.HeadMatch.class,
+			Feature.ProxIsPron.class,
+			Feature.CandiIsPron.class,
+			Feature.ProxPath.class,
+			Feature.CandiPath.class,
+//			Feature.SameNumber.class,
+//			Feature.ProxEntityType.class,
+//			Feature.CandiEntityType.class,
 
 			//skeleton for how to create a pair feature
-			//Pair.make(Feature.IsFeature1.class, Feature.IsFeature2.class),
+			Pair.make(Feature.WordDistance.class, Feature.SentenceDistance.class),
+			Pair.make(Feature.ProxIsPron.class, Feature.CandiIsPron.class),
+			Pair.make(Feature.ProxPath.class, Feature.CandiPath.class),
+//			Pair.make(Feature.HeadMatch.class, Feature.CandiPath.class),
+//			Pair.make(Feature.ProxEntityType.class, Feature.CandiEntityType.class),
 	});
 
 
@@ -60,11 +75,67 @@ public class ClassifierBased implements CoreferenceSystem {
 			if(clazz.equals(Feature.ExactMatch.class)){
 				//(exact string match)
 				return new Feature.ExactMatch(onPrix.gloss().equals(candidate.gloss()));
-//			} else if(clazz.equals(Feature.NewFeature.class) {
+			} else if(clazz.equals(Feature.WordDistance.class)) {
 				/*
 				 * TODO: Add features to return for specific classes. Implement calculating values of features here.
 				 */
+//				onPrix.sentence.
+//				return new Feature.WordDistance(onPrix.beginIndexInclusive -candidate.endIndexExclusive);
+				return new Feature.WordDistance(onPrix.headWordIndex -candidate.headWordIndex);
+			} else if(clazz.equals(Feature.SentenceDistance.class)) {
+				/*
+				 * TODO: Add features to return for specific classes. Implement calculating values of features here.
+				 */
+				Document doc = onPrix.doc;
+				int s_i = doc.indexOfSentence(onPrix.sentence);
+				int s_j = doc.indexOfSentence(candidate.sentence);
+				return new Feature.SentenceDistance(s_i - s_j);
+			} else if(clazz.equals(Feature.HeadMatch.class)) {
+				// exact head word match
+				return new Feature.HeadMatch(onPrix.headWord().toLowerCase().equals(candidate.headWord().toLowerCase()));
+			} else if(clazz.equals(Feature.ProxIsPron.class)) {
+				// 
+				Pronoun pro = Pronoun.valueOrNull(onPrix.gloss().toUpperCase().replaceAll(" ","_"));
+				return new Feature.ProxIsPron(pro != null);
+			}else if(clazz.equals(Feature.CandiIsPron.class)) {
+				// 
+				Pronoun pro = Pronoun.valueOrNull(candidate.gloss().toUpperCase().replaceAll(" ","_"));
+				return new Feature.CandiIsPron(pro != null);
+			} else if(clazz.equals(Feature.ProxPath.class)) {
+				// 
+				LinkedList<Pair<String, Integer>> path = onPrix.sentence.parse.pathToIndex(onPrix.headWordIndex);
+				Set<String> p_set = new LinkedHashSet<String>();
+				Document doc = onPrix.doc;
+				int s_i = doc.indexOfSentence(onPrix.sentence);
+				int s_j = doc.indexOfSentence(candidate.sentence);
+				if (s_i == s_j) {
+					for (Pair<String, Integer> pair: path){
+						p_set.add(pair.getFirst());
+					}
+				}
+				return new Feature.ProxPath(p_set);
+			}else if(clazz.equals(Feature.CandiPath.class)) {
+				// 
+				LinkedList<Pair<String, Integer>> path = candidate.sentence.parse.pathToIndex(candidate.headWordIndex);
+				Set<String> p_set = new LinkedHashSet<String>();
+				Document doc = onPrix.doc;
+				int s_i = doc.indexOfSentence(onPrix.sentence);
+				int s_j = doc.indexOfSentence(candidate.sentence);
+				if (s_i == s_j) {
+					for (Pair<String, Integer> pair: path){
+						p_set.add(pair.getFirst());
+					}
+				}
+				return new Feature.CandiPath(p_set);
+			} else if(clazz.equals(Feature.CandiEntityType.class)) {
+				return new Feature.CandiEntityType(new LinkedHashSet(candidate.sentence.nerTags));
+			} else if(clazz.equals(Feature.ProxEntityType.class)) {
+				return new Feature.ProxEntityType(new LinkedHashSet(onPrix.sentence.nerTags));
+			} else if(clazz.equals(Feature.SameNumber.class)) {
+				Pair<Boolean,Boolean> pair = Util.haveNumberAndAreSameNumber(onPrix, candidate);
+				return new Feature.SameNumber(pair.getFirst() && pair.getSecond());
 			}
+			
 			else {
 				throw new IllegalArgumentException("Unregistered feature: " + clazz);
 			}

@@ -1,5 +1,53 @@
 java -Xmx500m -cp "extlib/*:classes" cs224n.assignments.CoreferenceTester -path /Users/py95497/Documents/Lili_Documents/CS/Autumn2015/CS224N/pa3-data/pa3 -model baseline -data dev -documents 100
 
+Classifer-based:
+
+--------------------
+ COREFERENCE SCORES
+--------------------
+--Training--
+    MUC
+MUC Precision: 0.8642036944583126
+MUC Recall:    0.6537009063444109
+MUC F1:        0.7443560524618362
+    B^3
+B^3 Precision: 0.8629178232430956
+B^3 Recall:    0.611969898825083
+B^3 F1:        0.7160948255016079
+
+--dev--
+    MUC
+MUC Precision: 0.8225367446924333
+MUC Recall:    0.6621384750219106
+MUC F1:        0.7336732216557417
+    B^3
+B^3 Precision: 0.803148736717184
+B^3 Recall:    0.590979517559877
+B^3 F1:        0.6809193508528061
+
+--------------------
+ COREFERENCE SCORES
+--------------------
+--Training--
+    MUC
+MUC Precision: 0.8642036944583126
+MUC Recall:    0.6537009063444109
+MUC F1:        0.7443560524618362
+    B^3
+B^3 Precision: 0.8629178232430956
+B^3 Recall:    0.611969898825083
+B^3 F1:        0.7160948255016079
+
+--test--
+    MUC
+MUC Precision: 0.8327036104114189
+MUC Recall:    0.6255124566382845
+MUC F1:        0.7143886187646318     [benchmark requested in the hw handout: 0.701]
+    B^3
+B^3 Precision: 0.8455202454654039
+B^3 Recall:    0.6071598189831692
+B^3 F1:        0.7067845587572641     [benchmark requested in the hw handout: 0.685]
+
 Baseline: 
 --------------------
  COREFERENCE SCORES

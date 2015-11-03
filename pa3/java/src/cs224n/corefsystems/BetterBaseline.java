@@ -62,7 +62,7 @@ public class BetterBaseline implements CoreferenceSystem {
         mentions.add(m.markCoreferent(clusters.get(mentionHead)));
         foundCluster = true;
       // otherwise if the head word has a coreference in our training set
-      } else if (!headCounter.isEmpty()) {
+      } else if (!headCounter.isEmpty() ) {
       	// find the best matching reference
       	maxCount = 0;
       	bestRef = "";
