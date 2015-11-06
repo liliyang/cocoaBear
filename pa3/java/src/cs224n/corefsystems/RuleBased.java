@@ -68,7 +68,7 @@ public class RuleBased implements CoreferenceSystem {
 		headMatch(doc);
 		
 		//layer 4: word inclusion
-		wordInclusion(doc);
+		//wordInclusion(doc);
 		
 		//layer 5: similar heads/pronoun assignment
 		similarHead(doc);
@@ -186,13 +186,13 @@ public class RuleBased implements CoreferenceSystem {
 	
 	public void similarHead(Document doc){
 		// keep track of existing clusters
-		Map<String,Entity> clusters = new HashMap<String,Entity>();
+		Map<String,Mention> clusters = new HashMap<String,Mention>();
 		Entity matchingE, curE;
 		String headWord;
 		Counter<String> headCounter;
 		double maxCount;
 		String bestRef;
-		double countLimit = 7;
+		double countLimit = 6;
 
 		for(Mention m : doc.getMentions()){
 			headWord = m.headWord().toLowerCase();
@@ -204,23 +204,38 @@ public class RuleBased implements CoreferenceSystem {
       	// find the best matching reference
       	maxCount = countLimit;
       	bestRef = "";
-      	for (String key: headCounter.keySet()) {
-      		if (clusters.containsKey(key) && headCounter.getCount(key) > maxCount ) {
+      	for (String key: headCounter.keySet()) { 
+      		if (clusters.containsKey(key) 
+//      				&& isSameGenderAndNumber(m, clusters.get(key))
+      				&& headCounter.getCount(key) > maxCount 
+      				&& computeDist(m, clusters.get(key), doc) < 4) {
       			maxCount = headCounter.getCount(key);
       			bestRef = key;
       		}
       	}
       	if (maxCount > countLimit) {
-      		matchingE = clusters.get(bestRef);
+      		matchingE = mentionToCM.get(clusters.get(bestRef)).entity;
   				if (!sameClusters(curE, matchingE)) {
-  					System.out.println(headWord);
-  					System.out.println(bestRef);
+  					//System.out.println(headWord);
+  					//System.out.println(bestRef);
   					mergeClusters(curE, matchingE);
   				}
       	} 
       }
-			clusters.put(headWord,mentionToCM.get(m).entity);
+			clusters.put(headWord,m);
 		}    
+	}
+	
+	private boolean isSameNumberAndGender(Mention a, Mention b) {
+		Pair<Boolean, Boolean> isSameGender = Util.haveGenderAndAreSameGender(a,b);
+		Pair<Boolean, Boolean> isSameNumber = Util.haveNumberAndAreSameNumber(a,b);
+		return isSameGender.getFirst() && isSameGender.getSecond() && isSameNumber.getFirst() && isSameNumber.getSecond();
+	}
+	
+	private int computeDist(Mention a, Mention b, Document doc) {
+		int indexA = doc.indexOfMention(a);
+		int indexB = doc.indexOfMention(b);
+		return Math.abs(indexA - indexB);
 	}
 	
 	public void wordInclusion(Document doc){
@@ -372,8 +387,6 @@ public class RuleBased implements CoreferenceSystem {
 	
 	private boolean isPronoun(String s) {
 		if (Pronoun.isSomePronoun(s)) return true;
-		if (s.equals("this") || s.equals("that")) return true;
-		
 		return false;
 	}
 
