@@ -6,20 +6,15 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import cs224n.coref.ClusteredMention;
 import cs224n.coref.Document;
 import cs224n.coref.Entity;
 import cs224n.coref.Mention;
 import cs224n.coref.Name;
 import cs224n.coref.Pronoun;
-import cs224n.coref.Pronoun.Speaker;
 import cs224n.coref.Sentence;
-import cs224n.coref.Util;
-import cs224n.ling.Tree;
 import cs224n.util.Counter;
 import cs224n.util.CounterMap;
 import cs224n.util.Pair;
@@ -42,9 +37,7 @@ public class RuleBased implements CoreferenceSystem {
         	// get the head word for each mention and add to counter map
         	head1 = mentionPair.getFirst().headWord().toLowerCase();
         	head2 = mentionPair.getSecond().headWord().toLowerCase();
-        	//if (!isPronoun(head1) && !isPronoun(head2)) {
-        		coRefHeads.incrementCount(head1, head2, 1);
-        	//}
+        	coRefHeads.incrementCount(head1, head2, 1);
         }
       }
     }	
@@ -59,7 +52,6 @@ public class RuleBased implements CoreferenceSystem {
 		mentionToCM = new HashMap<Mention,ClusteredMention>();
 		//layer 1: exact text match
 		exactMatch(doc);
-		//closeMatch(doc);
 		
 		//layer 2: Find appositives and predicate nominative
 		preciseConstruct(doc);
@@ -192,7 +184,7 @@ public class RuleBased implements CoreferenceSystem {
 		Counter<String> headCounter;
 		double maxCount;
 		String bestRef;
-		double countLimit = 6;
+		double countLimit = 1;
 
 		for(Mention m : doc.getMentions()){
 			headWord = m.headWord().toLowerCase();
@@ -206,7 +198,6 @@ public class RuleBased implements CoreferenceSystem {
       	bestRef = "";
       	for (String key: headCounter.keySet()) { 
       		if (clusters.containsKey(key) 
-//      				&& isSameGenderAndNumber(m, clusters.get(key))
       				&& headCounter.getCount(key) > maxCount 
       				&& computeDist(m, clusters.get(key), doc) < 4) {
       			maxCount = headCounter.getCount(key);
@@ -224,12 +215,6 @@ public class RuleBased implements CoreferenceSystem {
       }
 			clusters.put(headWord,m);
 		}    
-	}
-	
-	private boolean isSameNumberAndGender(Mention a, Mention b) {
-		Pair<Boolean, Boolean> isSameGender = Util.haveGenderAndAreSameGender(a,b);
-		Pair<Boolean, Boolean> isSameNumber = Util.haveNumberAndAreSameNumber(a,b);
-		return isSameGender.getFirst() && isSameGender.getSecond() && isSameNumber.getFirst() && isSameNumber.getSecond();
 	}
 	
 	private int computeDist(Mention a, Mention b, Document doc) {
@@ -252,6 +237,8 @@ public class RuleBased implements CoreferenceSystem {
 				if(containsPhrase(key, mentionString)){
 					matchingE = clusters.get(key);
 					if (!sameClusters(curE, matchingE)) {
+						System.out.println(key);
+						System.out.println(mentionString);
 						mergeClusters(curE, matchingE);
 					}
 					break;
@@ -276,6 +263,7 @@ public class RuleBased implements CoreferenceSystem {
 			larger = words2;
 			smaller = words1;
 		}
+		
 		if (smaller.length < 2) return false;
 		//if (Pronoun.isSomePronoun(smaller[0]) || smaller[0].equals("this") || smaller[0].equals("that")) return false;
 		
@@ -297,63 +285,6 @@ public class RuleBased implements CoreferenceSystem {
 	}
 	
 	
-	public void closeMatch(Document doc) {
-		//(variables)
-		Map<String,Entity> clusters = new HashMap<String,Entity>();
-		//(for each mention...)
-		for(Mention m : doc.getMentions()){
-			//(...get its text)
-			String mentionString = m.gloss().toLowerCase();
-			// if we're within a certain edit distance of any of the keys
-			if (clusters.containsKey(mentionString)) {
-				mentionToCM.put(m, m.markCoreferent(clusters.get(mentionString)));
-			} else {
-				for (String key: clusters.keySet()) {
-					//System.out.println(key);
-					if(key.length() > 2 && mentionString.length() > 2 && isClose(key, mentionString, 0)){
-						//(...add it to the cluster)
-						mentionToCM.put(m, m.markCoreferent(clusters.get(key)));
-						clusters.put(mentionString, clusters.get(key));
-						break;
-					} 
-				}
-			}
-			if (!mentionToCM.containsKey(m)) {
-				//(...else create a new singleton cluster)
-				ClusteredMention newCluster = m.markSingleton();
-				mentionToCM.put(m, newCluster);
-				clusters.put(mentionString, newCluster.entity);
-			}
-		}
-	}
-	
-	// check that two strings are within 1 edit distance of each other
-	private boolean isClose(String s1, String s2, int dist) {
-		if (dist >= 3) {
-			return false;
-		} 
-		if (s1.length() == 0) {
-			if (dist + s2.length() < 2) {
-				return true;
-			} else {
-				return false;
-			}
-		}
-		if (s2.length() == 0) {
-			if (dist + s1.length() < 2) {
-				return true;
-			} else {
-				return false;
-			}
-		}
-
-		int diff = 1;
-		if (s1.substring(0, 1).equals(s2.substring(0, 1))) {
-			diff = 0;
-		}
-		
-		return isClose(s1.substring(1), s2, dist+1) || isClose(s1, s2.substring(1), dist+1) || isClose(s1.substring(1), s2.substring(1), dist+diff);
-	}
 	
 	private ClusteredMention moveCluster(ClusteredMention cm, Entity cluster) {
 		Mention m = cm.mention;
@@ -383,11 +314,6 @@ public class RuleBased implements CoreferenceSystem {
 		for (Mention m: move) {
 			mentionToCM.put(m, moveCluster(mentionToCM.get(m), e2));
 		}
-	}
-	
-	private boolean isPronoun(String s) {
-		if (Pronoun.isSomePronoun(s)) return true;
-		return false;
 	}
 
 }
