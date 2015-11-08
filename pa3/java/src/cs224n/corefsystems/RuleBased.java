@@ -1,32 +1,20 @@
 package cs224n.corefsystems;
 
-import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Queue;
-import java.util.Set;
-
 import cs224n.coref.ClusteredMention;
 import cs224n.coref.Document;
 import cs224n.coref.Entity;
-import cs224n.coref.Gender;
 import cs224n.coref.Mention;
 import cs224n.coref.Name;
 import cs224n.coref.Pronoun;
-import cs224n.coref.Pronoun.Speaker;
 import cs224n.coref.Sentence;
-import cs224n.coref.Util;
-import cs224n.ling.Tree;
 import cs224n.util.Counter;
 import cs224n.util.CounterMap;
 import cs224n.util.Pair;
@@ -37,124 +25,73 @@ public class RuleBased implements CoreferenceSystem {
 
 	@Override
 	public void train(Collection<Pair<Document, List<Entity>>> trainingData) {
-		// TODO Auto-generated method stub
 		coRefHeads = new CounterMap<String,String>();
-
+		
 		for(Pair<Document, List<Entity>> pair : trainingData){
-			List<Entity> clusters = pair.getSecond();
-
-			String head1, head2;
-			// iterate through co-reference pairs
-			for(Entity e : clusters){
-				for(Pair<Mention, Mention> mentionPair : e.orderedMentionPairs()){
-					// get the head word for each mention and add to counter map
-					head1 = mentionPair.getFirst().headWord().toLowerCase();
-					head2 = mentionPair.getSecond().headWord().toLowerCase();
-					coRefHeads.incrementCount(head1, head2, 1);
-				}
-			}
-		}
-
+      List<Entity> clusters = pair.getSecond();
+      
+      String head1, head2;
+      // iterate through co-reference pairs
+      for(Entity e : clusters){
+        for(Pair<Mention, Mention> mentionPair : e.orderedMentionPairs()){
+        	// get the head word for each mention and add to counter map
+        	head1 = mentionPair.getFirst().headWord().toLowerCase();
+        	head2 = mentionPair.getSecond().headWord().toLowerCase();
+        	coRefHeads.incrementCount(head1, head2, 1);
+        }
+      }
+    }	
 	}
 
+	// map to keep track of most recent mapping of Mention to ClusteredMention
 	private Map<Mention,ClusteredMention> mentionToCM;
 	@Override
 	public List<ClusteredMention> runCoreference(Document doc) {
 
 		List<ClusteredMention> mentions = new ArrayList<ClusteredMention>();
 		mentionToCM = new HashMap<Mention,ClusteredMention>();
-		//layer 1:
-		//		BaselineCoreferenceSystem exactMatch = new BaselineCoreferenceSystem();
+		//layer 1: exact text match
 		exactMatch(doc);
-
-		//layer 2: Precise Construct
-		preciseConstruct(doc);
-		//		acronymMatch(doc);
-		//layer 3: head Match
-		headMatch(doc, 3);
-
-
-		//layer 5: head Match
-		headMatch(doc, 5);
-
-		// pass 6: relaxedHeadMatch
-		//				relaxedHeadMatch(doc); //not helping
 		
-		// pass 7:
-//		pronoun(doc);
+		//layer 2: Find appositives and predicate nominative
+		preciseConstruct(doc);
+		
+		//layer 3: exact head match
+		headMatch(doc);
+		
+		//layer 4: word inclusion
+		//wordInclusion(doc);
+		
+		//layer 5: similar heads/pronoun assignment
+		similarHead(doc);
+		
 
 		for (ClusteredMention cm: mentionToCM.values()) {
 			mentions.add(cm);
 		}
 		return mentions;
 	}
-	  
-	public boolean sameTag(Mention a, Mention b){
-		Pair<Boolean,Boolean> gen, num;		
-		
-	    num = Util.haveNumberAndAreSameNumber(a, b);
-	    if (num.getFirst() && !num.getSecond())//T F
-	    	return false;
-	    
-	    gen = Util.haveGenderAndAreSameGender(a, b);
-	    if (gen.getFirst() && !gen.getSecond())//T F
-	    	return false;
 
-	    if (Pronoun.isSomePronoun(a.headWord()) 
-	    		&& Pronoun.isSomePronoun(b.headWord()
-	    	      //&& not quoted	    				
-	    				)){
-
-	    	Pronoun a_pron = Pronoun.getPronoun(a.gloss());
-	    	Pronoun b_pron = Pronoun.getPronoun(b.gloss());
-	    	if(a_pron!=null && b_pron!= null){
-	    		
-	    		 Speaker a_speaker = a_pron.speaker;
-	    		 Speaker b_speaker = b_pron.speaker;
-	    		 if (a_speaker != null && b_speaker != null){
-//	    			 System.out.println("both have speakers");
-	    			 if (!a_speaker.equals(b_speaker))
-	    				 
-	                     return false;
-	    		 }
-	    	}
-	    }
-	    
-//	    if (!a.sentence.nerTags.get(a.headWordIndex).equals("PERSON")
-//	    		|| !b.sentence.nerTags.get(b.headWordIndex).equals("PERSON")
-//	    		)
-//	    	return false;
-	    
-	    if (!a.sentence.nerTags.equals(b.sentence.nerTags))
-	    	return false;
-
-		return true;
-	}
-	public boolean diff(Integer a, Integer b){
-		if (a == 0 || b==0)
-			return false;
-		return !a.equals(b);
-	}
-	public void pronoun(Document doc){
-		// keep track of existing clusters
-		Entity  curE, matchingE;
-	
-		for(int i=0; i<doc.getMentions().size(); i++){
-			Mention m = doc.getMentions().get(i);
-			
-			for (int j = 0; j<i; j++){
-				Mention candidate = doc.getMentions().get(j);
-				curE = mentionToCM.get(m).entity;
-				matchingE = mentionToCM.get(candidate).entity;
-				if (!sameClusters(curE, matchingE) && m.sentence.equals(candidate.sentence)) {
-					if (sameTag(m,candidate)){					
-						mergeClusters(curE, matchingE);
-					}
-				}
+	public void exactMatch(Document doc) {
+		//(variables)
+		Map<String,Entity> clusters = new HashMap<String,Entity>();
+		//(for each mention...)
+		for(Mention m : doc.getMentions()){
+			//(...get its text)
+			String mentionString = m.gloss().toLowerCase();
+			//(...if we've seen this text before...)
+			if(clusters.containsKey(mentionString)){
+				//(...add it to the cluster)
+				mentionToCM.put(m, m.markCoreferent(clusters.get(mentionString)));
+			} else {
+				//(...else create a new singleton cluster)
+				ClusteredMention newCluster = m.markSingleton();
+				mentionToCM.put(m, newCluster);
+				clusters.put(mentionString, newCluster.entity);
 			}
-		}    
-		
+		}
 	}
+	
 	
 	public void preciseConstruct(Document doc) {
 		Map<Sentence, List<Mention>> sentenceToMentions = new HashMap<Sentence, List<Mention>>();
@@ -175,7 +112,6 @@ public class RuleBased implements CoreferenceSystem {
 			});
 
 			Mention candidate, m;
-			int m_start, candidate_end;
 			for (int i=list.size()-1; i>0; i--){
 				candidate = list.get(i-1);
 				m = list.get(i);
@@ -186,32 +122,13 @@ public class RuleBased implements CoreferenceSystem {
 					
 				if (
 						preciseHelper( m, candidate)
-						&& (/*m.sentence.nerTags.contains("NER")&& */ hasGender(candidate))// role appositive: not helping
-//						&& (isRelativePron(m) && (candidate.headWordIndex < m.headWordIndex) && (m.endIndexExclusive <= candidate.endIndexExclusive)) // relative pronnot helping
-//						&& acronym(m.gloss()).equals(acronym(candidate.gloss())) //worsen
+						&& (hasGender(candidate))
 						&& !sameClusters(curE, matchingE)
 						){	mergeClusters(mentionToCM.get(m).entity, mentionToCM.get(candidate).entity);}		
 			}
 		}
 	}
-	public boolean isNer(Mention m){
-		for (Tree<String> tree: m.parse.getPostOrderTraversal()){
-			if (tree.getLabel().contains("NER")){
-				System.out.println("find NER");
-				return true;
-			}
-		}
-		return  false;//m.parse.getLabel().contains("NER"); //a
-		
-	}
-	public String acronym(String ext){
-		String trueAcr = "";
-		for (Character c: ext.toCharArray()){
-			if (Character.isUpperCase(c))
-				trueAcr += c;
-		}
-		return trueAcr;
-	}
+	
 	public boolean hasGender(Mention a){
 		//(names)
 		Name nameA = Name.get(a.gloss());
@@ -221,6 +138,7 @@ public class RuleBased implements CoreferenceSystem {
 		if(nameA == null && proA == null){ return false; }
 		return true;
 	}
+	
 	public boolean preciseHelper(Mention m, Mention candidate){
 		List<String> tgt = new ArrayList<String>();
 
@@ -237,117 +155,137 @@ public class RuleBased implements CoreferenceSystem {
 		int candidate_end = candidate.endIndexExclusive;
 		return (candidate_end+2 == m_start) && tgt.contains(m.sentence.words.get(m_start-1));
 	}
-
-	public boolean isRelativePron(Mention m){
-		Set<String> relativePron = new HashSet<String>();
-		relativePron.add("which");
-		relativePron.add("where");
-		relativePron.add("that");
-		relativePron.add("what");
-		relativePron.add("who");
-		relativePron.add("whom");
-		boolean result =  relativePron.contains(m.headWord());
-				if (result) 
-					System.out.println("found relative pron: "+m.gloss());
-		return result;
-	}
-
-	public void headMatch(Document doc, int layer){
+	
+	public void headMatch(Document doc){
 		// keep track of existing clusters
 		Map<String,Entity> clusters = new HashMap<String,Entity>();
 		Entity matchingE, curE;
 		String headWord;
-		boolean cluster_Head_Match, word_Inclusion;
+
 		for(Mention m : doc.getMentions()){ 
-			headWord = m.headWord();
+			headWord = m.headWord().toLowerCase();
 			curE = mentionToCM.get(m).entity;
-			cluster_Head_Match = clusters.containsKey(headWord);
-
-			if (cluster_Head_Match) {
+			
+			if (clusters.containsKey(headWord)) {
 				matchingE = clusters.get(headWord);
-
-				boolean det = !sameClusters(curE, matchingE);
-				if (layer == 3){
-					det = det && wordInclusion(curE, matchingE);
-				}
-				if (det) {
-		
+				if (!sameClusters(curE, matchingE)) {
 					mergeClusters(curE, matchingE);
-					//	    			}
 				}
-			} else {
-				clusters.put(headWord,curE);
 			}
+			clusters.put(headWord,mentionToCM.get(m).entity);
 		}    
 	}
-
-	public void relaxedHeadMatch(Document doc){
+	
+	public void similarHead(Document doc){
 		// keep track of existing clusters
-		Map<String,Entity> clusters = new HashMap<String,Entity>();
+		Map<String,Mention> clusters = new HashMap<String,Mention>();
 		Entity matchingE, curE;
 		String headWord;
-		boolean cluster_Head_Match, word_Inclusion;
-		String mentionHead;
 		Counter<String> headCounter;
 		double maxCount;
 		String bestRef;
+		double countLimit = 1;
+
+		for(Mention m : doc.getMentions()){
+			headWord = m.headWord().toLowerCase();
+			headCounter = coRefHeads.getCounter(headWord);
+			curE = mentionToCM.get(m).entity;
+			
+		// find the best matching reference
+			if (!headCounter.isEmpty()) {
+      	// find the best matching reference
+      	maxCount = countLimit;
+      	bestRef = "";
+      	for (String key: headCounter.keySet()) { 
+      		if (clusters.containsKey(key) 
+      				&& headCounter.getCount(key) > maxCount 
+      				&& computeDist(m, clusters.get(key), doc) < 4) {
+      			maxCount = headCounter.getCount(key);
+      			bestRef = key;
+      		}
+      	}
+      	if (maxCount > countLimit) {
+      		matchingE = mentionToCM.get(clusters.get(bestRef)).entity;
+  				if (!sameClusters(curE, matchingE)) {
+  					//System.out.println(headWord);
+  					//System.out.println(bestRef);
+  					mergeClusters(curE, matchingE);
+  				}
+      	} 
+      }
+			clusters.put(headWord,m);
+		}    
+	}
+	
+	private int computeDist(Mention a, Mention b, Document doc) {
+		int indexA = doc.indexOfMention(a);
+		int indexB = doc.indexOfMention(b);
+		return Math.abs(indexA - indexB);
+	}
+	
+	public void wordInclusion(Document doc){
+		// keep track of existing clusters
+		Map<String,Entity> clusters = new HashMap<String,Entity>();
+		Entity matchingE, curE;
+		String mentionString;
 
 		for(Mention m : doc.getMentions()){ 
-			headWord = m.headWord();
+			mentionString = m.gloss().toLowerCase();
 			curE = mentionToCM.get(m).entity;
-			cluster_Head_Match = clusters.containsKey(headWord);
-
-			// get the head word
-			mentionHead = m.headWord().toLowerCase();
-			headCounter = coRefHeads.getCounter(mentionHead);
-
-			if (!headCounter.isEmpty() ) {
-				// find the best matching reference
-				maxCount = 0;
-				bestRef = "";
-				for (String key: headCounter.keySet()) {
-					if (clusters.containsKey(key) && headCounter.getCount(key) > maxCount ) {
-						maxCount = headCounter.getCount(key);
-						bestRef = key;
+			for (String key: clusters.keySet()) {
+				// check if one phrase contains the other phrase, skipping pronouns
+				if(containsPhrase(key, mentionString)){
+					matchingE = clusters.get(key);
+					if (!sameClusters(curE, matchingE)) {
+						System.out.println(key);
+						System.out.println(mentionString);
+						mergeClusters(curE, matchingE);
 					}
-				}
-				if (maxCount > 0) {
-					//	          		mentions.add(m.markCoreferent(clusters.get(bestRef)));
-					mergeClusters(curE, clusters.get(bestRef));
-				}
+					break;
+				} 
 			}
-			else {
-				clusters.put(headWord,curE);
-			}
-		}
-
+			clusters.put(mentionString,mentionToCM.get(m).entity);
+		}    
 	}
-
-	public boolean iWithinI(Entity curE, Entity matchingE){
-		for (Mention m: curE){
-			for (Mention candidate: matchingE.mentions){
-				if (candidate.beginIndexInclusive <= m.beginIndexInclusive
-						&& m.endIndexExclusive <= candidate.endIndexExclusive)
-					return true;
+	
+	private boolean containsPhrase(String s1, String s2) {
+		String[] words1 = s1.split(" ");
+		String[] words2 = s2.split(" ");
+		
+		if (words1.length == words2.length) {
+			return false;
+		}
+		String[] larger, smaller;
+		if (words1.length > words2.length) {
+			larger = words1;
+			smaller = words2;
+		} else {
+			larger = words2;
+			smaller = words1;
+		}
+		
+		if (smaller.length < 2) return false;
+		//if (Pronoun.isSomePronoun(smaller[0]) || smaller[0].equals("this") || smaller[0].equals("that")) return false;
+		
+		int counter = 0;
+		
+		for (String word: larger) {
+			if (counter < smaller.length && word.equals(smaller[counter])) {
+				counter++;
+				if (counter == smaller.length) break;
 			}
 		}
+		if (counter == smaller.length && (larger.length - counter) < 2) {
+			//System.out.println(s1);
+			//System.out.println(s2);
+			return true;
+		}
+		
 		return false;
 	}
-
-	private boolean wordInclusion(Entity small, Entity big){
-		Set<String> smallSet = flattenEntity(small);
-		Set<String> bigSet = flattenEntity(big);
-		return bigSet.containsAll(smallSet);
-	}
-	private Set<String> flattenEntity(Entity e){
-		Set<String> set = new HashSet<String>();
-		for (Mention m: e.mentions){
-			
-			set.addAll(m.text());
-		}
-		return set;
-	}
-
+	
+	
+	
 	private ClusteredMention moveCluster(ClusteredMention cm, Entity cluster) {
 		Mention m = cm.mention;
 		Entity e = cm.entity;
@@ -375,26 +313,6 @@ public class RuleBased implements CoreferenceSystem {
 		}
 		for (Mention m: move) {
 			mentionToCM.put(m, moveCluster(mentionToCM.get(m), e2));
-		}
-	}
-
-	public void exactMatch(Document doc) {
-		//(variables)
-		Map<String,Entity> clusters = new HashMap<String,Entity>();
-		//(for each mention...)
-		for(Mention m : doc.getMentions()){
-			//(...get its text)
-			String mentionString = m.gloss();
-			//(...if we've seen this text before...)
-			if(clusters.containsKey(mentionString)){
-				//(...add it to the cluster)
-				mentionToCM.put(m, m.markCoreferent(clusters.get(mentionString)));
-			} else {
-				//(...else create a new singleton cluster)
-				ClusteredMention newCluster = m.markSingleton();
-				mentionToCM.put(m, newCluster);
-				clusters.put(mentionString,newCluster.entity);
-			}
 		}
 	}
 
