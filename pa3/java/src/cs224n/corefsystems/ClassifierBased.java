@@ -33,23 +33,27 @@ public class ClassifierBased implements CoreferenceSystem {
 			 * TODO: Create a set of active features
 			 */
 
-//			Feature.ExactMatch.class,
+
 			
-			Feature.WordDistance.class,//barely help
-			Feature.SentenceDistance.class,//
+
 			Feature.HeadMatch.class,
-			Feature.ProxIsPron.class,
-			Feature.CandiIsPron.class,
 			Feature.ProxPath.class,
 			Feature.CandiPath.class,
-//			Feature.SameNumber.class,
+			Feature.SameNumber.class,
+			
+//			Feature.ExactMatch.class,
+//			Feature.WordDistance.class,//barely help
+//			Feature.SentenceDistance.class,//
+//			Feature.ProxIsPron.class,
+//			Feature.CandiIsPron.class,
+
 //			Feature.ProxEntityType.class,
 //			Feature.CandiEntityType.class,
 
 			//skeleton for how to create a pair feature
-			Pair.make(Feature.WordDistance.class, Feature.SentenceDistance.class),
-			Pair.make(Feature.ProxIsPron.class, Feature.CandiIsPron.class),
-			Pair.make(Feature.ProxPath.class, Feature.CandiPath.class),
+//			Pair.make(Feature.WordDistance.class, Feature.SentenceDistance.class),
+//			Pair.make(Feature.ProxIsPron.class, Feature.CandiIsPron.class),
+//			Pair.make(Feature.ProxPath.class, Feature.CandiPath.class),
 //			Pair.make(Feature.HeadMatch.class, Feature.CandiPath.class),
 //			Pair.make(Feature.ProxEntityType.class, Feature.CandiEntityType.class),
 	});
