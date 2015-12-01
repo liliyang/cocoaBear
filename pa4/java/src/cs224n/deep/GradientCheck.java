@@ -81,9 +81,10 @@ public class GradientCheck {
 	    
 
 	}
-	
+
+	System.out.println("in GC: error: "+error);
 	error = Math.sqrt(error);
- 
+	
 	System.out.println("Trial " + attempt++ + " Abs | Rel : "
 			   + error + " | " 
 			   + (error / (flops * 1.0)));

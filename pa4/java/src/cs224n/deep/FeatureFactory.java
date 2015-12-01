@@ -52,9 +52,9 @@ public class FeatureFactory {
 			Datum datum = new Datum(word, label);
 			data.add(datum);
 		}
-		data.remove(2);
-		data.remove(1);
-		data.remove(0);
+//		data.remove(2);
+//		data.remove(1);
+//		data.remove(0);
 		data.remove(data.size()-1);
 		return data;
 	}

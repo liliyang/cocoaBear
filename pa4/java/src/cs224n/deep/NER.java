@@ -25,7 +25,7 @@ public class NER {
 	FeatureFactory.sanityCheck();
 
 	// initialize model 
-	WindowModel model = new WindowModel(3, 100,0.001);
+	WindowModel model = new WindowModel(3, 100,0.001, 0.1);
 //	model.initWeights();
 	model.train(trainData);
 	model.test(testData);
