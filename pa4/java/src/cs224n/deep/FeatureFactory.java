@@ -19,32 +19,39 @@ public class FeatureFactory {
 	 
 	static List<Datum> trainData;
 	/** Do not modify this method **/
-	public static List<Datum> readTrainData(String filename) throws IOException {
-        if (trainData==null) trainData= read(filename);
+	public static List<Datum> readTrainData(String filename, int C) throws IOException {
+        if (trainData==null) trainData= read(filename, C);
         return trainData;
 	}
 	
 	static List<Datum> testData;
 	/** Do not modify this method **/
-	public static List<Datum> readTestData(String filename) throws IOException {
-        if (testData==null) testData= read(filename);
+	public static List<Datum> readTestData(String filename, int C) throws IOException {
+        if (testData==null) testData= read(filename, C);
         return testData;
 	}
 	
-	private static List<Datum> read(String filename)
+	private static List<Datum> read(String filename, int C)
 			throws FileNotFoundException, IOException {
 	  
 		List<Datum> data = new ArrayList<Datum>();
 		BufferedReader in = new BufferedReader(new FileReader(filename));
 		// sentence boundaries
+		
 		Datum start = new Datum("<s>", "O");
 		Datum finish = new Datum("</s>", "O");
-		data.add(start);
+		for (int i = 0; i < (C/2);i++) {
+		  data.add(start);
+		}
 		for (String line = in.readLine(); line != null; line = in.readLine()) {
 			// empty line signifies the end of a sentence
 			if (line.trim().length() == 0) {
-				data.add(finish);
-				data.add(start);
+			  for (int i = 0; i < (C/2);i++) {
+			  	data.add(finish);
+				}
+				for (int i = 0; i < (C/2);i++) {
+				  data.add(start);
+				}
 				continue;
 			}
 			String[] bits = line.split("\\s+");

@@ -60,6 +60,7 @@ public class WindowModel implements ObjectiveFunction{
 			for (int j=0; j<L.numCols(); j++){
 				Datum trainWord = _trainData.get(j);
 				SimpleMatrix oneHot = buildOneHot(outputSize, j);
+				//System.out.println("Word vec: " + L.extractVector(false, j).toString());
 				SimpleMatrix X = (WordVec.getWordVec(L.extractVector(false, j))).transpose();
 
 				SimpleMatrix p = forwardProp(X);

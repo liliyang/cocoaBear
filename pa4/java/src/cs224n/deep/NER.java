@@ -10,9 +10,9 @@ public class NER {
     
   public static void main(String[] args) throws IOException {
   	// set parameters here
-  	int C = 3;
+  	int C = 5;
   	int hiddenSize = 100;
-  	double learning = 0.001;	// alpha
+  	double learning = 0.005;	// alpha
   	double regularize = 0;	// lambda
 	  
   	if (args.length < 2) {
@@ -21,8 +21,8 @@ public class NER {
 	  }	    
 
 	  // this reads in the train and test datasets
-	  List<Datum> trainData = FeatureFactory.readTrainData(args[0]);
-	  List<Datum> testData = FeatureFactory.readTestData(args[1]);	
+	  List<Datum> trainData = FeatureFactory.readTrainData(args[0], C);
+	  List<Datum> testData = FeatureFactory.readTestData(args[1], C);	
 	
 	  //	read the train and test data
 	  //TODO: Implement this function (just reads in vocab and word vectors)
