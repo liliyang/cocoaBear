@@ -11,7 +11,7 @@ public class FeatureFactory {
 
 
 	public static int VEC_LEN = 50;
-	public static int NUM_VOCAB;//100232
+	public static int NUM_VOCAB;
 	private FeatureFactory() {
 
 	}
@@ -33,13 +33,15 @@ public class FeatureFactory {
 	
 	private static List<Datum> read(String filename)
 			throws FileNotFoundException, IOException {
-	    // TODO: you'd want to handle sentence boundaries
+	  
 		List<Datum> data = new ArrayList<Datum>();
 		BufferedReader in = new BufferedReader(new FileReader(filename));
+		// sentence boundaries
 		Datum start = new Datum("<s>", "O");
 		Datum finish = new Datum("</s>", "O");
 		data.add(start);
 		for (String line = in.readLine(); line != null; line = in.readLine()) {
+			// empty line signifies the end of a sentence
 			if (line.trim().length() == 0) {
 				data.add(finish);
 				data.add(start);
@@ -52,9 +54,8 @@ public class FeatureFactory {
 			Datum datum = new Datum(word, label);
 			data.add(datum);
 		}
-//		data.remove(2);
-//		data.remove(1);
-//		data.remove(0);
+
+		// remove the extra <s> at the end
 		data.remove(data.size()-1);
 		return data;
 	}
@@ -64,10 +65,7 @@ public class FeatureFactory {
 	static SimpleMatrix allVecs; //access it directly in WindowModel
 	public static SimpleMatrix readWordVectors(String vecFilename) throws IOException {
 		if (allVecs!=null) return allVecs;		
-//		return null;
-		//TODO implement this
-		//set allVecs from filename	
-//		List<List<Double>> data = new ArrayList<List<Double>>();
+
 		double[][] data = new double[NUM_VOCAB][VEC_LEN];
 		BufferedReader in = new BufferedReader(new FileReader(vecFilename));
 	
@@ -76,9 +74,9 @@ public class FeatureFactory {
 			if (line.trim().length() == 0) {
 				continue;
 			}
-//			List<Double> row = new ArrayList<Double>();
 			
 			String[] rowStr = line.split("\\s+");
+			
 			//sanity check:
 			if (rowStr.length != VEC_LEN){
 				System.err.println("Sanity check failed: word vector has length other than 50.");
@@ -100,7 +98,7 @@ public class FeatureFactory {
 	public static HashMap<Integer, String> numToWord = new HashMap<Integer, String>();
 
 	public static HashMap<String, Integer> initializeVocab(String vocabFilename) throws IOException {
-		//TODO: create this
+		
 		BufferedReader in = new BufferedReader(new FileReader(vocabFilename));
 		int ctr = 0;
 		for (String line = in.readLine(); line != null; line = in.readLine()) {

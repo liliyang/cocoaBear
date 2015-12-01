@@ -8,7 +8,7 @@ import org.ejml.simple.SimpleMatrix;
 public class BaselineModel {
 
 	public BaselineModel() {
-		// TODO Auto-generated constructor stub
+
 	}
 
 	protected SimpleMatrix L, W, Wout;
@@ -16,28 +16,23 @@ public class BaselineModel {
 	public int windowSize,wordSize, hiddenSize;
 
 	public BaselineModel(int _windowSize, int _hiddenSize, double _lr){
-		//TODO
+
 	}
 
 	/**
 	 * Initializes the weights randomly. 
 	 */
 	public void initWeights(){
-		//TODO
-		// initialize with bias inside as the last column
-	        // or separately
-		// W = SimpleMatrix...
-		// U for the score
-		// U = SimpleMatrix...
+		// Nothing to do here for baseline
 	}
 
 
 	/**
-	 * Simplest SGD training 
+	 * Baseline - train by remembering all terms in train set
 	 */
 	private HashMap<String, String> trainData;
 	public void train(List<Datum> _trainData ){
-		//	TODO
+
 		trainData = new HashMap<String, String>();
 		for (Datum trainWord: _trainData){
 			trainData.put(trainWord.word, trainWord.label);
@@ -46,9 +41,7 @@ public class BaselineModel {
 
 	
 	public void test(List<Datum> testData){
-		// TODO
-//		EU      ORG     ORG
-//		System.out.println("EU" + "\t" + "ORG" + "\t" + "ORG");
+		// if word occurred in train set, mark the same. Else, mark as "O"
 		for (Datum testWord: testData){
 			String prediction = "O";
 			if (trainData.containsKey(testWord.word)){

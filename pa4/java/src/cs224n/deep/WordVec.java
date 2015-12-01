@@ -10,6 +10,7 @@ public class WordVec {
 
 	private List<Datum> data;
 	private static int windowSize, windowVecSize, wordSize;
+	private List<String> words;
 	private List<Integer> labels;
 	private SimpleMatrix L;
 
@@ -23,6 +24,7 @@ public class WordVec {
 		this.windowSize = windowSize;
 		this.windowVecSize = windowVecSize;
 		this.wordSize = wordSize;
+		words = new ArrayList<String>();	
 		labels = new ArrayList<Integer>();	
 		
 		LABELMAP = new HashMap<String, Integer>();
@@ -79,6 +81,7 @@ public class WordVec {
 			}
 			windowVecList.add(window);
 			labels.add(LABELMAP.get(sentence.get(j+windowSize/2).label));
+			words.add(sentence.get(j+windowSize/2).word);
 		}
 	}
 	public int getWordIdx(Datum datum){
@@ -96,6 +99,9 @@ public class WordVec {
 	}
 	public List<Integer> getLabels(){
 		return labels;
+	}
+	public List<String> getWords(){
+		return words;
 	}
 	public SimpleMatrix getL(){
 		return L;
