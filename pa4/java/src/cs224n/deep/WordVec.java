@@ -15,7 +15,7 @@ public class WordVec {
 	private SimpleMatrix L;
 
 	private static final String NOT_MAPPED_WORD = "UUUNKKK";
-	public final String O = "O", LOC = "LOC", MISC = "MISC", ORG = "ORG", PER = "PER";
+	public final String O = "O", LOC = "LOC", MISC = "MISC", ORG = "ORG", PER = "PER", MISSING = "MISSING";
 	private HashMap<String, Integer> LABELMAP;
 	
 	public WordVec(List<Datum> data, int windowSize, int windowVecSize, int wordSize) {
@@ -33,6 +33,7 @@ public class WordVec {
 		LABELMAP.put(MISC, 2);
 		LABELMAP.put(ORG, 3);
 		LABELMAP.put(PER, 4);
+		LABELMAP.put(MISSING, 5);
 		buildWordVec();
 	}
 	
@@ -80,7 +81,12 @@ public class WordVec {
 				window.add(getWordIdx(sentence.get(k)));
 			}
 			windowVecList.add(window);
-			labels.add(LABELMAP.get(sentence.get(j+windowSize/2).label));
+			Datum datum = sentence.get(j+windowSize/2);
+			if (FeatureFactory.wordToNum.containsKey(datum.word)){
+				labels.add(LABELMAP.get(datum.label));
+			}else{
+				labels.add(5);
+			}
 			words.add(sentence.get(j+windowSize/2).word);
 		}
 	}

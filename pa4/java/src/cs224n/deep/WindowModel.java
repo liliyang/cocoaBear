@@ -13,13 +13,13 @@ public class WindowModel implements ObjectiveFunction{
 	protected SimpleMatrix L, W, U, b1, b2, H, Z; //Wout;
 	public int windowSize,wordSize, hiddenSize, windowVecSize, N;
 
-	public final int outputSize = 5; // K = 5, #class
-	public final String[] LABEL = {"O","LOC", "MISC","ORG", "PER"};
+	public final int outputSize = 6; // K = 5, #class
+	public final String[] LABEL = {"O","LOC", "MISC","ORG", "PER", "MISSING"};
 	private List<Integer> labels;
 	private List<String> words;
 	private double lr;
 	private double lambda;
-	private int niter = 5;
+	private int niter = 15;
 
 	public WindowModel(int _windowSize, int _hiddenSize, double _lr, double _lambda){
 		//TODO
