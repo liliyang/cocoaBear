@@ -45,7 +45,7 @@ public class WordVec {
 		for (int i=0; i<data.size(); i++){
 			Datum datum = data.get(i);
 			sentence.add(datum);
-			if (isSentenceEnd(datum) && i != data.size() && isSentenceStart(data.get(i+1))){				
+			if (isSentenceEnd(datum) && i < (data.size()-1) && isSentenceStart(data.get(i+1))){				
 				processSentence(sentence, windowList, labels);
 				sentence = new ArrayList<Datum>();	
 			}

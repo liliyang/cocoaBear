@@ -100,6 +100,24 @@ public class FeatureFactory {
 //		System.out.println("word vector has numCols: "+allVecs.numCols()+", numRows: "+allVecs.numRows());
 		return allVecs;
 	}
+	
+	// randomly initialize vectors
+	public static SimpleMatrix generateRandomWordVecs() {	
+
+		double[][] data = new double[NUM_VOCAB][VEC_LEN];
+	
+		for (int i = 0; i < NUM_VOCAB; i++) {
+			for (int j = 0; j < VEC_LEN; j++) {
+				// randomly generate value between -0.5 and 0.5
+				data[i][j] = Math.random() - 0.5;
+			}
+		}
+
+		allVecs = new SimpleMatrix(data);
+//		System.out.println("word vector has numCols: "+allVecs.numCols()+", numRows: "+allVecs.numRows());
+		return allVecs;
+	}
+	
 	// might be useful for word to number lookups, just access them directly in WindowModel
 	public static HashMap<String, Integer> wordToNum = new HashMap<String, Integer>(); 
 	public static HashMap<Integer, String> numToWord = new HashMap<Integer, String>();

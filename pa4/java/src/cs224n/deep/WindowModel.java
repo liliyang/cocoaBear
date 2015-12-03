@@ -19,7 +19,7 @@ public class WindowModel implements ObjectiveFunction{
 	private List<String> words;
 	private double lr;
 	private double lambda;
-	private int niter = 5;
+	private int niter = 25;
 
 	public WindowModel(int _windowSize, int _hiddenSize, double _lr, double _lambda){
 		//TODO
@@ -79,7 +79,7 @@ public class WindowModel implements ObjectiveFunction{
 					bufferedWriter.write(words.get(j) + "\t" + LABEL[labels.get(j)] + "\t" + prediction+"\n");
 				}
 
-				double cur_cost = valueAt(oneHot, X);
+				double cur_cost = valueAtP(oneHot, X, p);
 				//				System.out.println("at data "+j+", the cost is "+ cur_cost);		
 
 				cost +=  cur_cost;
@@ -143,50 +143,7 @@ public class WindowModel implements ObjectiveFunction{
 		gradW = gradW.plus(W.scale(lambda));
 
 		SimpleMatrix gradX = (W.transpose().mult(tmp));//.scale(1.0/(double)N);//.scale(1.0/(double)N);//gradW1 = np.dot(x.T,tmp)/N
-
 		
-		SimpleMatrix matr = b2;
-		SimpleMatrix deriv = gradb2;
-		double eps = 1e-4;
-		double error = 0;
-	/*
-    SimpleMatrix analytic = new SimpleMatrix(matr.numRows(), matr.numCols());
-    for (int c = 0; c < matr.numCols(); c++){
-        for (int r = 0; r < matr.numRows(); r++){
-
-            double prior = matr.get(r, c);
-
-            matr.set(r, c, prior + eps);
-            double higher = valueAt(y, X);
-//            double reghigher = higher+regCost();
-            matr.set(r, c, prior - eps);
-            double lower = valueAt(y, X);
-//            double reglower = lower+regCost();
-            matr.set(r, c, prior);
-
-            double analytic_deriv = (higher - lower) / (2.0 * eps);
-//            double reg_analytic_deriv = (reghigher - reglower) / (2.0 * eps);
-
-            double componentError = deriv.get(r, c) - analytic_deriv;
-
-            analytic.set(r,c,analytic_deriv);
-//            System.out.println("higher in matrix loop: "+(higher ));
-//            System.out.println("lower in matrix loop: "+(lower));
-//            System.out.println("analytic_deriv in matrix loop: "+analytic_deriv);
-//            System.out.println("deriv in matrix loop: "+(deriv.get(r, c)));
-//            System.out.println("reghigher in matrix loop: "+(reghigher ));
-//            System.out.println("reglower in matrix loop: "+(reglower));
-//            System.out.println("regderiv in matrix loop: "+((deriv.scale(lambda)).get(r, c)));
-//            System.out.println("reg_analytic_deriv in matrix loop: "+reg_analytic_deriv);
-            //System.out.println("analytic_deriv in matrix loop: "+analytic_deriv);
-            error += (componentError * componentError);
-        }
-    }
-    System.out.println("error: "+error);*/
-//    System.out.println("analytic_deriv: "+analytic.toString());
-//    System.out.println("deriv: "+deriv.toString());
-		 
-
 		//boolean check = GradientCheck.check(y, 
 		//		new ArrayList<SimpleMatrix>(Arrays.asList(W,X)), 
 		//		new ArrayList<SimpleMatrix>(Arrays.asList(W.scale(lambda),gradX.scale(0))), 
@@ -210,14 +167,14 @@ public class WindowModel implements ObjectiveFunction{
 	//		return -label.transpose().dot(VecOp.logVec(p));// + (lambda / 2.0) * W.normF();
 	//	}
 
+	public double valueAtP(SimpleMatrix label, SimpleMatrix input, SimpleMatrix p) {
+		//return (lambda/2)*(normW*normW + normU*normU + normb1*normb1 + normb2*normb2);
+		return -label.transpose().dot(VecOp.logVec(p))+regCost();
+	}
+	
 	@Override
 	public double valueAt(SimpleMatrix label, SimpleMatrix input) {
 		SimpleMatrix p = forwardProp(input);
-		double normW = W.normF();
-		double normU = U.normF();
-		double normb1 = b1.normF();
-		double normb2 = b2.normF();
-		//return (lambda/2)*(normW*normW + normU*normU + normb1*normb1 + normb2*normb2);
 		return -label.transpose().dot(VecOp.logVec(p))+regCost();
 	}
 
@@ -227,8 +184,6 @@ public class WindowModel implements ObjectiveFunction{
 		double normb1 = b1.normF();
 		double normb2 = b2.normF();
 		return  (0.5*lambda)*(normW*normW + normU*normU + normb1*normb1 + normb2*normb2);
-
-		//		return (lambda/2)*(((W.transpose()).mult(W)).elementSum()+((U.transpose()).mult(U)).elementSum());
 	}
 
 	public double netCost(){

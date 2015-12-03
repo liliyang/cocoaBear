@@ -13,7 +13,7 @@ public class NER {
   	int C = 5;
   	int hiddenSize = 100;
   	double learning = 0.005;	// alpha
-  	double regularize = 0.00;	// lambda
+  	double regularize = 0.000025;	// lambda
 	  
   	if (args.length < 2) {
 	    System.out.println("USAGE: java -cp classes NER ../data/train ../data/dev");
@@ -27,6 +27,7 @@ public class NER {
 	  //	read the train and test data
 	  //TODO: Implement this function (just reads in vocab and word vectors)
 	  FeatureFactory.initializeVocab("../data/vocab.txt");
+	  //SimpleMatrix allVecs= FeatureFactory.generateRandomWordVecs();
 	  SimpleMatrix allVecs= FeatureFactory.readWordVectors("../data/wordVectors.txt");
 	  FeatureFactory.sanityCheck();
 
