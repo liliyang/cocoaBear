@@ -19,7 +19,7 @@ public class WindowModel implements ObjectiveFunction{
 	private List<String> words;
 	private double lr;
 	private double lambda;
-	private int niter = 25;
+	private int niter = 5;
 
 	public WindowModel(int _windowSize, int _hiddenSize, double _lr, double _lambda){
 		//TODO
@@ -56,28 +56,29 @@ public class WindowModel implements ObjectiveFunction{
 	 */
 	public void train(List<Datum> _trainData ) throws IOException{
 		//	TODO
+//		System.out.println("in window model");
 		N = _trainData.size();
 		buildWordVec(_trainData);
 		//	
-		FileWriter fileWriter = new FileWriter("../train.out");
-		BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+		//		FileWriter fileWriter = new FileWriter("../train.out");
+		//		BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
-		
+
 		for (int iter=0; iter< niter; iter++){
 
 			double cost = 0;
 			for (int j=0; j<L.numCols(); j++){
-//				Datum trainWord = _trainData.get(j);
+				//				Datum trainWord = _trainData.get(j);
 				SimpleMatrix oneHot = buildOneHot(outputSize, j);
 				//System.out.println("Word vec: " + L.extractVector(false, j).toString());
 				SimpleMatrix X = (WordVec.getWordVec(L.extractVector(false, j))).transpose();
 
 				SimpleMatrix p = forwardProp(X);
 
-				if (iter == niter-1){
-					String prediction = LABEL[VecOp.argmax(p)];			
-					bufferedWriter.write(words.get(j) + "\t" + LABEL[labels.get(j)] + "\t" + prediction+"\n");
-				}
+				//				if (iter == niter-1){
+				//					String prediction = LABEL[VecOp.argmax(p)];			
+				//					bufferedWriter.write(words.get(j) + "\t" + LABEL[labels.get(j)] + "\t" + prediction+"\n");
+				//				}
 
 				double cur_cost = valueAtP(oneHot, X, p);
 				//				System.out.println("at data "+j+", the cost is "+ cur_cost);		
@@ -89,9 +90,9 @@ public class WindowModel implements ObjectiveFunction{
 				//System.out.println(trainWord.word + "\t" + trainWord.label + "\t" + prediction);
 
 			}
-			System.err.println("at iter "+(iter+1)+", the cost is "+ cost);		
+//			System.err.println("at iter "+(iter+1)+", the cost is "+ cost);		
 		}
-		bufferedWriter.close();
+		//		bufferedWriter.close();
 	}
 
 
@@ -99,17 +100,17 @@ public class WindowModel implements ObjectiveFunction{
 		// TODO
 		N = testData.size();
 		buildWordVec(testData);
-		FileWriter fileWriter = new FileWriter("../test.out");
-		BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+		//		FileWriter fileWriter = new FileWriter("../test.out");
+		//		BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 		for (int j=0; j<L.numCols(); j++){
 			SimpleMatrix X = (WordVec.getWordVec(L.extractVector(false, j))).transpose();
 			SimpleMatrix  p = forwardProp(X);
 
 			String prediction = LABEL[VecOp.argmax(p)];			
-			bufferedWriter.write(words.get(j) + "\t" + LABEL[labels.get(j)] + "\t" + prediction+"\n");
-			//			System.out.println(words.get(j) + "\t" + LABEL[labels.get(j)] + "\t" + prediction);
+			//			bufferedWriter.write(words.get(j) + "\t" + LABEL[labels.get(j)] + "\t" + prediction+"\n");
+			System.out.println(words.get(j) + "\t" + LABEL[labels.get(j)] + "\t" + prediction);
 		}
-		bufferedWriter.close();
+		//		bufferedWriter.close();
 	}
 
 
@@ -143,7 +144,7 @@ public class WindowModel implements ObjectiveFunction{
 		gradW = gradW.plus(W.scale(lambda));
 
 		SimpleMatrix gradX = (W.transpose().mult(tmp));//.scale(1.0/(double)N);//.scale(1.0/(double)N);//gradW1 = np.dot(x.T,tmp)/N
-		
+
 		//boolean check = GradientCheck.check(y, 
 		//		new ArrayList<SimpleMatrix>(Arrays.asList(W,X)), 
 		//		new ArrayList<SimpleMatrix>(Arrays.asList(W.scale(lambda),gradX.scale(0))), 
@@ -171,7 +172,7 @@ public class WindowModel implements ObjectiveFunction{
 		//return (lambda/2)*(normW*normW + normU*normU + normb1*normb1 + normb2*normb2);
 		return -label.transpose().dot(VecOp.logVec(p))+regCost();
 	}
-	
+
 	@Override
 	public double valueAt(SimpleMatrix label, SimpleMatrix input) {
 		SimpleMatrix p = forwardProp(input);
@@ -181,8 +182,8 @@ public class WindowModel implements ObjectiveFunction{
 	public double regCost() {
 		double normW = W.normF();
 		double normU = U.normF();
-//		double normb1 = b1.normF();
-//		double normb2 = b2.normF();
+		//		double normb1 = b1.normF();
+		//		double normb2 = b2.normF();
 		return  (0.5*lambda)*(normW*normW + normU*normU /*+ normb1*normb1 + normb2*normb2*/);
 	}
 

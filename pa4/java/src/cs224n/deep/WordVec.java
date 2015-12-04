@@ -17,7 +17,7 @@ public class WordVec {
 	private static final String NOT_MAPPED_WORD = "UUUNKKK";
 	public final String O = "O", LOC = "LOC", MISC = "MISC", ORG = "ORG", PER = "PER";
 	private HashMap<String, Integer> LABELMAP;
-	
+
 	public WordVec(List<Datum> data, int windowSize, int windowVecSize, int wordSize) {
 		// TODO Auto-generated constructor stub
 		this.data = data;
@@ -26,7 +26,7 @@ public class WordVec {
 		this.wordSize = wordSize;
 		words = new ArrayList<String>();	
 		labels = new ArrayList<Integer>();	
-		
+
 		LABELMAP = new HashMap<String, Integer>();
 		LABELMAP.put(O, 0);
 		LABELMAP.put(LOC, 1);
@@ -35,12 +35,12 @@ public class WordVec {
 		LABELMAP.put(PER, 4);
 		buildWordVec();
 	}
-	
+
 
 	public void buildWordVec(){
-//		List<double[]> windowVecList = new ArrayList<double[]>();
+		//		List<double[]> windowVecList = new ArrayList<double[]>();
 		List<List<Integer>> windowList = new ArrayList<List<Integer>>(); // list of 3-int array
-		
+
 		List<Datum> sentence = new ArrayList<Datum>();
 		for (int i=0; i<data.size(); i++){
 			Datum datum = data.get(i);
@@ -50,33 +50,33 @@ public class WordVec {
 				sentence = new ArrayList<Datum>();	
 			}
 		}
-		
+
 		int nWindow = windowList.size();
-//		int[][] windowVecArr = new int[windowVecSize][nWindow];
+		//		int[][] windowVecArr = new int[windowVecSize][nWindow];
 		double[][] windowArr = new double[windowSize][nWindow];	
 		for (int i = 0; i<nWindow; i++){
-//			for (int j = 0; j<windowVecSize; j++){
-//				windowVecArr[j][i] = windowVecList.get(i)[j];
-//			}
+			//			for (int j = 0; j<windowVecSize; j++){
+			//				windowVecArr[j][i] = windowVecList.get(i)[j];
+			//			}
 			for (int j=0; j<windowSize; j++){
-//				System.out.println(windowList.size()+" "+windowList.get(i).size());
+				//				System.out.println(windowList.size()+" "+windowList.get(i).size());
 				windowArr[j][i] = (double)windowList.get(i).get(j);
 			}
 		}
 
 		L = new SimpleMatrix(windowArr);
-//		System.out.println("L has numRows: "+L.numRows()+", numCols: "+L.numCols());
+		//		System.out.println("L has numRows: "+L.numRows()+", numCols: "+L.numCols());
 	}
 
 	public void processSentence(List<Datum> sentence, List<List<Integer>> windowVecList, List<Integer> labels){
 		if (sentence.size() < windowSize)
 			return;
-		
+
 		for (int j=0; j<sentence.size()-(windowSize-1); j++){//per window
 			List<Integer> window = new ArrayList<Integer>();
-//			double[] windowVec = new double[windowVecSize];
+			//			double[] windowVec = new double[windowVecSize];
 			for (int k=j; k<windowSize+j; k++){
-//				getWordVec(sentence.get(k), windowVec, k*wordSize);
+				//				getWordVec(sentence.get(k), windowVec, k*wordSize);
 				window.add(getWordIdx(sentence.get(k)));
 			}
 			windowVecList.add(window);
@@ -108,12 +108,12 @@ public class WordVec {
 	}
 
 
-	
+
 	public static SimpleMatrix getWordVec(SimpleMatrix rowNums){
-//		Integer rowNum = FeatureFactory.wordToNum.get(datum.word);
-//		if (rowNum == null){
-//			rowNum = FeatureFactory.wordToNum.get(NOT_MAPPED_WORD);
-//		}
+		//		Integer rowNum = FeatureFactory.wordToNum.get(datum.word);
+		//		if (rowNum == null){
+		//			rowNum = FeatureFactory.wordToNum.get(NOT_MAPPED_WORD);
+		//		}
 		double[][] windowVec = new double[1][windowVecSize];
 		int head = 0;
 		for (int i=0; i<windowSize; i++){
@@ -128,7 +128,7 @@ public class WordVec {
 			windowVec[col+head] = matrix.get(rowNum, col);
 		}
 	}
-	
+
 	public static void updateWordVec(SimpleMatrix L, SimpleMatrix x){
 		for (int i=0; i<L.numRows(); i++){
 			for (int j=0; j<wordSize; j++){

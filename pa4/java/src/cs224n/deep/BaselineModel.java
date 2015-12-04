@@ -33,6 +33,7 @@ public class BaselineModel {
 	private HashMap<String, String> trainData;
 	public void train(List<Datum> _trainData ){
 
+//		System.out.println("in baseline model");
 		trainData = new HashMap<String, String>();
 		for (Datum trainWord: _trainData){
 			trainData.put(trainWord.word, trainWord.label);

@@ -1,0 +1,14 @@
+Lili Yang:
+Implement the customized gradient checking
+Debug the update on word vectors
+Tune the window model
+Experiment different initialization choices and anaylize the effect of each choice
+
+
+Ye Yuan:
+Implement the baseline model
+Implement the window model
+Debug the gradients of regularization 
+
+Both:
+Report
