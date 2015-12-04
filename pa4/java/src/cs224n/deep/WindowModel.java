@@ -127,7 +127,7 @@ public class WindowModel implements ObjectiveFunction{
 		SimpleMatrix dcost_dtheta = p.minus(y);		
 		SimpleMatrix dtheta_dh = U.transpose();//dtheta_dh = W2.T
 		SimpleMatrix gradb2 = dcost_dtheta;//.scale(1.0/(double)N);//avgColwize(dcost_dtheta) ; //gradb2 = np.sum(dcost_dtheta,0)/N 
-		gradb2 = gradb2.plus(b2.scale(lambda)); // regularization
+		//gradb2 = gradb2.plus(b2.scale(lambda)); // regularization
 
 		SimpleMatrix gradU = (dcost_dtheta.mult(H.transpose()));//.scale(1.0/(double)N);////gradW2 = np.dot(h.T, dcost_dtheta)/N 
 		gradU = gradU.plus(U.scale(lambda));
@@ -138,7 +138,7 @@ public class WindowModel implements ObjectiveFunction{
 		SimpleMatrix tmp = ((prod.transpose()).mult(jacobian)).transpose();//		for (int i=0; i<tmp.numRows(); i++){tmp.set(i,j,tmp_j.get(0,i));} //tmp[i] = np.matrix(prod[i]).dot(jacobian)
 
 		SimpleMatrix gradb1 = tmp;//.scale(1.0/(double)N);//avgColwize(tmp);//gradb1 = np.sum(tmp,0) /N
-		gradb1 = gradb1.plus(b1.scale(lambda));
+		//gradb1 = gradb1.plus(b1.scale(lambda));
 		SimpleMatrix gradW = (tmp.mult(X.transpose()));//.scale(1.0/(double)N);//.scale(1.0/(double)N);//gradW1 = np.dot(x.T,tmp)/N
 		gradW = gradW.plus(W.scale(lambda));
 
@@ -181,9 +181,9 @@ public class WindowModel implements ObjectiveFunction{
 	public double regCost() {
 		double normW = W.normF();
 		double normU = U.normF();
-		double normb1 = b1.normF();
-		double normb2 = b2.normF();
-		return  (0.5*lambda)*(normW*normW + normU*normU + normb1*normb1 + normb2*normb2);
+//		double normb1 = b1.normF();
+//		double normb2 = b2.normF();
+		return  (0.5*lambda)*(normW*normW + normU*normU /*+ normb1*normb1 + normb2*normb2*/);
 	}
 
 	public double netCost(){
