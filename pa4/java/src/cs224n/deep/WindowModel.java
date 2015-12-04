@@ -19,7 +19,7 @@ public class WindowModel implements ObjectiveFunction{
 	private List<String> words;
 	private double lr;
 	private double lambda;
-	private int niter = 5;
+	private int niter = 25;
 
 	public WindowModel(int _windowSize, int _hiddenSize, double _lr, double _lambda){
 		//TODO
